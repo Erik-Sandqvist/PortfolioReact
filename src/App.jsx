@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import './App.css'
+import './App.css';
 import { LoadingScreen } from './components/LoadingScreen';
 import "./index.css";
+import { Navbar } from './components/Navbar';
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(false);
 
   return (
     <>
@@ -13,10 +14,10 @@ function App() {
         isLoaded ? "opacity-100" : "opacity-0"
         } bg- #081A3A text-#D3B60A-100`}>
         
+        <Navbar />  {/* Här ändrade vi till Navbar */}
       </div>
     </>
   );
 }
 
-
-export default App
+export default App;
