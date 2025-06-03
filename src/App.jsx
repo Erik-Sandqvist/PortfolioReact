@@ -7,6 +7,7 @@ import { Navbar } from './components/Navbar';
 import { MobileMenu } from './components/MobileMenu';
 import { Home } from './components/sections/Home';
 import { Contact } from './components/sections/Contact';
+import { RainDots } from './components/RainDots';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <div className={`min-h-screen transition-opacity duration-700 ${
         isLoaded ? "opacity-100" : "opacity-0"
       } bg-[#081A3A] text-custom-yellow-2`}>
+        <RainDots count={40} />
         <Router>
           <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           {menuOpen && <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}

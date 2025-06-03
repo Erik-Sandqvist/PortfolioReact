@@ -38,3 +38,28 @@ html, body {
   }
 
 }
+
+@keyframes rain-dot {
+  0% {
+    top: -20px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
+.animate-rain-dot {
+  animation-name: rain-dot;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.rain-dot-glow {
+  box-shadow: 0 0 10px 4px #c7ac13a6, 0 0 16px 8px #e0c52a93;
+}
