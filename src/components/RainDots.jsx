@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const RainDots = ({ count = 40 }) => {
+export const RainDots = ({ count = 100 }) => {
   const [dots, setDots] = useState([]);
 
   useEffect(() => {
@@ -9,8 +9,8 @@ export const RainDots = ({ count = 40 }) => {
       arr.push({
         left: Math.random() * 100, // procent
         delay: Math.random() * 2, // sekunder
-        duration: 2 + Math.random() * 2, // sekunder
-        size: 2 + Math.random() * 4, // px
+        duration: 8 + Math.random() * 19, // sekunder
+        size: 1 + Math.random() * 2, // px
         opacity: 0.5 + Math.random() * 0.5,
       });
     }
