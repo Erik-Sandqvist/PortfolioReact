@@ -2,10 +2,10 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import { FerrariModel } from './FerrariModel';
 import { ScrollCameraController } from '../ScrollCameraController';
+import { ProjectDiv } from '../ProjectDiv';
+
 
 // import { OrbitControls } from '@react-three/drei';
-
-
 
 export const Home = () => {
   return (
@@ -30,23 +30,7 @@ export const Home = () => {
 </Canvas>
 
       </div>
-      <p className='text-#D3B60A text-lg mb-8 max-w-lg mx-auto'>
-        I am 20 years old, born and raised in Jönköping. I’m currently a student at Jönköping University, 
-        with a strong interest in programming and coding, specializing in web development for both backend and frontend.
-         I also have experience in media design and enjoy creating visually engaging digital content. 
-        </p> <p className='text-#D3B60A text-lg mb-8 max-w-lg mx-auto'>
-        I am 20 years old, born and raised in Jönköping. I’m currently a student at Jönköping University, 
-        with a strong interest in programming and coding, specializing in web development for both backend and frontend.
-         I also have experience in media design and enjoy creating visually engaging digital content. 
-        </p> <p className='text-#D3B60A text-lg mb-8 max-w-lg mx-auto'>
-        I am 20 years old, born and raised in Jönköping. I’m currently a student at Jönköping University, 
-        with a strong interest in programming and coding, specializing in web development for both backend and frontend.
-         I also have experience in media design and enjoy creating visually engaging digital content. 
-        </p> <p className='text-#D3B60A text-lg mb-8 max-w-lg mx-auto'>
-        I am 20 years old, born and raised in Jönköping. I’m currently a student at Jönköping University, 
-        with a strong interest in programming and coding, specializing in web development for both backend and frontend.
-         I also have experience in media design and enjoy creating visually engaging digital content. 
-        </p>
+       <ProjectDiv />
     </section>
     
   );

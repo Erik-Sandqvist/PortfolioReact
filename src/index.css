@@ -61,5 +61,5 @@ html, body {
   animation-iteration-count: infinite;
 }
 .rain-dot-glow {
-  box-shadow: 0 0 5px 2px #c7ac13a6, 0 0 8px 4px #e0c52a93;
+  box-shadow: 0 0 3px 1px #c7ac13a6, 0 0 4px 2px #e0c52a93;
 }

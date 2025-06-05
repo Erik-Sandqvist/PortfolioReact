@@ -5,15 +5,17 @@ export const RainDots = ({ count = 100 }) => {
 
   useEffect(() => {
     const arr = [];
-    for (let i = 0; i < count; i++) {
-      arr.push({
-        left: Math.random() * 100, // procent
-        delay: Math.random() * 2, // sekunder
-        duration: 8 + Math.random() * 19, // sekunder
-        size: 1 + Math.random() * 2, // px
-        opacity: 0.5 + Math.random() * 0.5,
-      });
-    }
+   // ...existing code...
+for (let i = 0; i < count; i++) {
+  arr.push({
+    left: Math.random() * 100, // procent
+    delay: Math.random() * 2, // sekunder
+    duration: 8 + Math.random() * 19, // sekunder
+    size: 0.3 + Math.random() * 0.7, // px, mycket mindre
+    opacity: 0.5 + Math.random() * 0.5,
+  });
+}
+// ...existing code...
     setDots(arr);
   }, [count]);
 
