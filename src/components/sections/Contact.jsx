@@ -13,7 +13,7 @@ export const Contact = () => {
         "DIN_SERVICE_ID", // Byt ut mot din EmailJS service ID
         "DIN_TEMPLATE_ID", // Byt ut mot din EmailJS template ID
         form.current,
-        "DIN_PUBLIC_KEY" // Byt ut mot din EmailJS public key
+        "XXv_jnmcF8H5gotyz" // Byt ut mot din EmailJS public key
       )
       .then(
         () => setStatus("success"),
@@ -24,14 +24,13 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-       className="min-600px flex items-center justify-center bg-gradient-to-br from-custom-yellow-1/10 to-custom-yellow-2/10 py-16 mt-16"
-  >
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-custom-yellow-1/10 to-custom-yellow-2/10 py-16"
+    >
       <form
         ref={form}
         onSubmit={sendEmail}
-         className="w-full max-w-2xl bg-[#081A3A] bg-opacity-95 rounded-3xl shadow-2xl p-8 border-2 border-custom-yellow-2 backdrop-blur-lg"
-  style={{ minHeight: "auto" }}
->
+        className="w-full max-w-lg bg-[#081A3A] bg-opacity-95 rounded-3xl shadow-2xl p-10 border-2 border-custom-yellow-2 backdrop-blur-lg"
+      >
         <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-custom-yellow-1 to-custom-yellow-2 bg-clip-text text-transparent drop-shadow-lg">
           Contact Me
         </h2>

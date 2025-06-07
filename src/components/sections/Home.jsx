@@ -2,10 +2,11 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import { FerrariModel } from './FerrariModel';
 import { ScrollCameraController } from '../ScrollCameraController';
-import { ProjectDiv } from '../ProjectDiv';
-
+import { ProjectDiv } from '../ProjectDiv'; // Justera sökvägen om det behövs
 
 // import { OrbitControls } from '@react-three/drei';
+
+
 
 export const Home = () => {
   return (
@@ -14,7 +15,7 @@ export const Home = () => {
         <h1 className="text-6xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#D3B60A] to-[#eeeef0] bg-clip-text text-transparent leading-right">
           My name is Erik Sandqvist.
         </h1>
-        <p className='text-#D3B60A text-2xl mb-8 max-w-lg mx-auto'>
+        <p className='text-#D3B60A text-lg mb-8 max-w-lg mx-auto'>
         I am 20 years old, born and raised in Jönköping. I’m currently a student at Jönköping University, 
         with a strong interest in programming and coding, specializing in web development for both backend and frontend.
          I also have experience in media design and enjoy creating visually engaging digital content. 
@@ -28,9 +29,10 @@ export const Home = () => {
   </Suspense>
   <ScrollCameraController /> {/* Styr kameran med scroll */}
 </Canvas>
-
+<div className="w-full flex justify-center mt-12">
+<ProjectDiv />
+</div>
       </div>
-       <ProjectDiv />
     </section>
     
   );
