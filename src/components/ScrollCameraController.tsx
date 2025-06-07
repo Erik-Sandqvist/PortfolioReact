@@ -17,7 +17,7 @@ export function ScrollCameraController() {
   }, []);
 
   useFrame(() => {
-    const angle = scroll * 0.0015; // justera för känslighet
+    const angle = scroll * 0.001; // justera för känslighet
     camera.position.x = Math.sin(angle) * 5;
     camera.position.z = Math.cos(angle) * 5;
     camera.position.y = 2; // höjd på kameran

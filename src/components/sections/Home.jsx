@@ -2,7 +2,8 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import { FerrariModel } from './FerrariModel';
 import { ScrollCameraController } from '../ScrollCameraController';
-import { ProjectDiv } from '../ProjectDiv'; // Justera sökvägen om det behövs
+import { ProjectDiv } from '../ProjectDiv'; 
+import { LogoModel } from './LogoModel';
 
 // import { OrbitControls } from '@react-three/drei';
 
@@ -10,7 +11,7 @@ import { ProjectDiv } from '../ProjectDiv'; // Justera sökvägen om det behövs
 
 export const Home = () => {
   return (
-    <section id="home" className="min-h-screen flex flex-col items-center justify-center relative pt-6">
+    <section id="home" className="min-h-screen flex flex-col items-center justify-center relative pt-6 ">
      <div className="text-center z-10 px-4 mt-26 max-w-4xl mx-auto">
         <h1 className="text-6xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#D3B60A] to-[#eeeef0] bg-clip-text text-transparent leading-right">
           My name is Erik Sandqvist.
@@ -22,17 +23,18 @@ export const Home = () => {
         </p>
       </div>
       <div className="w-full h-96 mt-8">
-      <Canvas>
+      <Canvas camera={{ position: [0, 0, 10] }}>
   <ambientLight />
   <Suspense fallback={null}>
-    <FerrariModel />
+    <LogoModel scale={60}/>
   </Suspense>
   <ScrollCameraController /> {/* Styr kameran med scroll */}
 </Canvas>
+</div>
+
 <div className="w-full flex justify-center mt-12">
 <ProjectDiv />
 </div>
-      </div>
     </section>
     
   );
