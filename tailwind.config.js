@@ -1,10 +1,12 @@
+// tailwind.config.js
 module.exports = {
-  darkMode: 'class',
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        'custom-yellow-1': '#E8E100',
-        'custom-yellow-2': '#D3B60A',
+        'theme-bg': '#0b3b39',
+        'theme-text': '#FFEBD0',
+        'theme-highlight': '#D3B60A',
       },
     },
   },
