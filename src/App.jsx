@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import './index.css';
 import { LoadingScreen } from './components/LoadingScreen';
@@ -36,7 +37,7 @@ function App() {
       } bg-[#7794c7] text-custom-yellow-2 dark:bg-[#081A3A] dark:text-[#D3B60A] relative`}>
         <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
         <RainDots count={40} />
-        <Router>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <Navbar
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
@@ -49,7 +50,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects/mern-note-app" element={<MernNoteApp />} />
           </Routes>
-        </Router>
+        </BrowserRouter>
       </div>
     </>
   );
