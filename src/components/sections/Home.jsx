@@ -4,7 +4,7 @@ import { FerrariModel } from './FerrariModel';
 import { ScrollCameraController } from '../ScrollCameraController';
 import { ProjectDiv } from '../ProjectDiv'; 
 import { LogoModel } from './LogoModel';
-import { Link } from "react-router-dom";
+
 // import { OrbitControls } from '@react-three/drei';
 
 

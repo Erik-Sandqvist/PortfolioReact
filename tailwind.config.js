@@ -1,14 +1,17 @@
 // tailwind.config.js
-module.exports = {
-  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+import daisyui from 'daisyui';
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    './index.html',
+    './src/**/*.{js,jsx,ts,tsx}',
+  ],
   theme: {
-    extend: {
-      colors: {
-        'theme-bg': '#0b3b39',
-        'theme-text': '#FFEBD0',
-        'theme-highlight': '#D3B60A',
-      },
-    },
+    extend: {},
   },
-  plugins: [],
+  plugins: [daisyui],
+  daisyui: {
+    themes: ['light', 'dark', 'luxury'], // du kan lägga till fler här vid behov
+  },
 };
