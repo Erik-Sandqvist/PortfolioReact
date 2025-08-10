@@ -27,19 +27,20 @@ export const Home = () => {
   }, [theme])
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center gap-6 text-base-content p-6 mt-16">
+    <section className="min-h-screen flex flex-col items-center justify-center gap-6  p-6 mt-16">
 
-<h1 className="text-6xl md:text-5xl font-bold mb-6 mt-8 bg-gradient-to-r from-[#D3B60A] to-[#eeeef0] bg-clip-text text-transparent leading-right">
-          My name is Erik Sandqvist.
-        </h1>
+      <h1
+        className="text-6xl md:text-5xl font-bold mb-6 mt-8 bg-gradient-to-r from-[#D3B60A] to-[#eeeef0] bg-clip-text text-transparent leading-right animate-slide-in-right"
+      >
+        My name is Erik Sandqvist
+      </h1>
 
-      <p className="max-w-lg text-primary">
+      <p className="max-w-lg text-primary animate-slide-in-right">
         I am 20 years old, born and raised in Jönköping. I’m currently a student at Jönköping University, 
         with a strong interest in programming and coding, specializing in web development for both backend and frontend.
         I also have experience in media design and enjoy creating visually engaging digital content.
       </p>
 
-      <button class="btn">Button</button>
 
       <div className="w-full h-80">
         <Canvas camera={{ position: [0, 0, 10] }}>

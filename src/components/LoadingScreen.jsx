@@ -17,7 +17,7 @@ useEffect(() => {
 
      setTimeout(() => {
        onComplete(); 
-     }, 1000); 
+     }, 500); 
    }
  }, 100);
 

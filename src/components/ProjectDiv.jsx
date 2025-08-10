@@ -11,7 +11,7 @@ export const ProjectDiv = () => {
   >
     <div className="absolute inset-0 bg-black/40 rounded-lg"></div> {/* Mörk overlay för läsbarhet */}
     <div className="relative z-10">
-      <h3 className="text-xl font-bold mb-2 text-white">Projekt 1</h3>
+      <h3 className="text-xl font-bold mb-2 text-primary">Projekt 1</h3>
       <p className="text-white">Beskrivning av projekt 1.</p>
     </div>
   </div>
