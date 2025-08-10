@@ -1,4 +1,7 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 html, body {
   margin: 0;
@@ -16,11 +19,11 @@ html, body {
     50% {
       opacity: 0;
     }
-    
   }
-.animate-blink {
-    animation: loading 0.8s step-end infinite;
+  .animate-blink {
+    animation: blink 0.8s step-end infinite;
   }
+}
 
 
 
@@ -37,6 +40,10 @@ html, body {
     animation: loading 0.9s ease infinite;
   }
 
+/* css */
+@keyframes cursor-blink {
+  0%, 45% { opacity: 1 }
+  50%, 100% { opacity: 0 }
 }
 
 @keyframes rain-dot {
@@ -55,11 +62,28 @@ html, body {
     opacity: 0;
   }
 }
+.animate-cursor {
+  animation: cursor-blink 1s steps(1,end) infinite;
+}
+.animate-cursor {
+  animation: cursor-blink 1s steps(1,end) infinite;
+}
 .animate-rain-dot {
   animation-name: rain-dot;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
+@keyframes loading-sweep {
+  0% { transform: translateX(-60%) }
+  50% { transform: translateX(10%) }
+  100% { transform: translateX(110%) }
+}
 .rain-dot-glow {
   box-shadow: 0 0 3px 1px #c7ac13a6, 0 0 4px 2px #e0c52a93;
+}
+.animate-loading-bar {
+  width: 40%;
+  animation: loading-sweep 1.4s cubic-bezier(.65,.05,.36,1) infinite;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.7); /* Replace with the actual color value */
 }

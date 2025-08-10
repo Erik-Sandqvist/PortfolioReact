@@ -1,17 +1,16 @@
-// tailwind.config.js
 import daisyui from 'daisyui';
 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    './index.html',
-    './src/**/*.{js,jsx,ts,tsx}',
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},
   },
   plugins: [daisyui],
   daisyui: {
-    themes: ['light', 'dark', 'luxury'], // du kan lägga till fler här vid behov
-  },
-};
+    themes: ['luxury','synthwave','cupcake','dark','light','nord']
+  }
+  };

@@ -15,6 +15,8 @@ useEffect(() => {
   <img src="/pics/logosmall.png" alt="Logo" className="h-10 w-auto" />
 </Link>
 
+<input type="checkbox" value="nord" className="toggle theme-controller ml-10" />
+
                 <div className="w-20 h8 relative cursor-pointer z-40 md:hidden" 
                 onClick={() => setMenuOpen((prev) => !prev)}
                 >
