@@ -95,6 +95,6 @@ html, body {
     100% {opacity:1; transform:translateX(0)}
   }
   .animate-slide-in-right {
-    animation: slide-in-right .07s cubic-bezier(.4,0,.2,1) both;
+    animation: slide-in-right 1s cubic-bezier(.4,0,.2,1) both;
   }
 }

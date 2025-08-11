@@ -30,7 +30,7 @@ export const Home = () => {
     <section className="min-h-screen flex flex-col items-center justify-center gap-6  p-6 mt-16">
 
       <h1
-        className="text-6xl md:text-5xl font-bold mb-6 mt-8 bg-gradient-to-r from-[#D3B60A] to-[#eeeef0] bg-clip-text text-transparent leading-right animate-slide-in-right"
+        className="text-6xl md:text-5xl font-bold mb- mt-8 bg-gradient-to-r from-[#D3B60A] to-[#eeeef0] bg-clip-text text-transparent leading-right animate-slide-in-right"
       >
         My name is Erik Sandqvist
       </h1>
