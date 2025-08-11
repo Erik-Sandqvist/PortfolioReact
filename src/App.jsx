@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import './index.css';
 
@@ -10,6 +10,7 @@ import { Home } from './components/sections/Home';
 import { Contact } from './components/sections/Contact';
 import { RainDots } from './components/RainDots';
 import MernNoteApp from './components/projects/MernNoteApp.jsx';
+import vinyl4u from './components/projects/vinyl4u.jsx';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -34,7 +35,7 @@ function App() {
         } bg-base-100 text-base-content relative`}
       >
         <RainDots count={40} />
-        <BrowserRouter basename={import.meta.env.BASE_URL}>
+        
           <Navbar
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
@@ -46,8 +47,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects/mern-note-app" element={<MernNoteApp />} />
+            <Route path="/projects/vinyl4u" element={<vinyl4u />} />
           </Routes>
-        </BrowserRouter>
       </div>
     </>
   );

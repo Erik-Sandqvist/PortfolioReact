@@ -1,9 +1,11 @@
 import { useGLTF } from '@react-three/drei';
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
+import React from 'react';
+import { asset } from '../../utils/asset' 
 
 export function LogoModel({ scale = 10 }) {
-  const gltf = useGLTF('/scene5.glb');
+  const gltf = useGLTF(asset('scene5.glb'))
   const ref = useRef();
 
   useFrame(() => {

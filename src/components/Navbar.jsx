@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from 'react-router-dom';
+import { asset } from '../utils/asset'
 
 export const Navbar = ({ menuOpen, setMenuOpen }) => {
 
@@ -12,7 +13,7 @@ useEffect(() => {
         <div className="max-w-8xl pl-20  ">
             <div className="flex justify-between items-center h-20">
             <Link to="/" className="text-yellow-500 font-bold text-2xl flex items-center h-16 gap-2">
-  <img src="/pics/logosmall.png" alt="Logo" className="h-10 w-auto" />
+            <img src={asset('pics/logosmall.png')} alt="Logo" className="h-10 w-auto" />
 </Link>
 
 <input type="checkbox" value="nord" className="toggle theme-controller ml-10" />

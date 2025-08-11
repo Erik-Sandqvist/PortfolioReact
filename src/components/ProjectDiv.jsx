@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../index.css"; // Ensure this path is correct based on your project structure
+import { asset } from '../utils/asset'
 
 export const ProjectDiv = () => {
   return (
@@ -10,7 +12,8 @@ export const ProjectDiv = () => {
   >
     <div
       className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-      style={{ backgroundImage: "url('/pics/MernHome.png')" }}
+      style={{ backgroundImage: `url(${asset('pics/MernHome.png')})` }}
+
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
     <div className="relative z-10 p-6 flex flex-col h-full justify-end text-secondary-content">
@@ -30,7 +33,7 @@ export const ProjectDiv = () => {
   >
     <div
       className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-      style={{ backgroundImage: "url('/pics/vinyl4u.jpg')" }}
+      style={{ backgroundImage: `url(${asset('pics/vinyl4u.jpg')})` }}
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
     <div className="relative z-10 p-6 flex flex-col h-full justify-end text-secondary-content">
