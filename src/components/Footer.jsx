@@ -2,7 +2,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <footer className="flex justify-between items-center px-48 py-4 w-full bg-base-100">
+    <footer className="flex justify-between items-center sm:px-8 md:px-12 lg:px-24 px-48  py-4 w-full bg-base-100">
       {/* Vänster sektion */}
       <div>
         <h2 className="font-bold uppercase text-lg text-primary">Erik Sandqvists Portfolio</h2>

@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { Link } from 'react-router-dom'
+import { asset } from '../utils/asset'
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   return (
@@ -20,47 +22,45 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         &times;
       </button>
 
-      <a href="#home" 
-      onClick={() => setMenuOpen(false)}
-      className={`text-2xl font-semibold text-#D3B60A my-4 transition-transform duration-300
-                  ${
-                    menuOpen 
-                  ? "opacity-100 translate-y-0" 
-                  :"opacity-0 translate-y-5"}`}
-                  >
-                        Home 
-                    </a>
-                    <a href="#about" 
-                    onClick={() => setMenuOpen(false)}
-                    className={`text-2xl font-semibold text-#D3B60A my-4 transition-transform duration-300
-                      ${
-                        menuOpen 
-                      ? "opacity-100 translate-y-0" 
-                      :"opacity-0 translate-y-5"}`}
-                      >
-                        About 
-                    </a>
-                    <a href="#projects" 
-                    onClick={() => setMenuOpen(false)}
-                    className={`text-2xl font-semibold text-#D3B60A my-4 transition-transform duration-300
-                      ${
-                        menuOpen 
-                      ? "opacity-100 translate-y-0" 
-                      :"opacity-0 translate-y-5"}`}
-                      >
-                        Projects 
-                    </a>
-                    <a href="#contact" 
-                    onClick={() => setMenuOpen(false)}
-                    className={`text-2xl font-semibold text-#D3B60A my-4 transition-transform duration-300
-                      ${
-                        menuOpen 
-                      ? "opacity-100 translate-y-0" 
-                      :"opacity-0 translate-y-5"}`}
-                      >
-                        Contact 
-                    </a>
+      <a
+        href="#home"
+        onClick={() => setMenuOpen(false)}
+        className={`text-2xl font-semibold text-#D3B60A my-4 transition-transform duration-300 ${
+          menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+        }`}
+      >
+        Home
+      </a>
 
+      <Link
+        to="/about"
+        onClick={() => setMenuOpen(false)}
+        className={`text-2xl font-semibold text-primary my-4 transition-all duration-300 ${
+          menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+        }`}
+      >
+        About
+      </Link>
+
+      <Link
+       to="/projects"
+        onClick={() => setMenuOpen(false)}
+        className={`text-2xl font-semibold text-#D3B60A my-4 transition-transform duration-300 ${
+          menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+        }`}
+      >
+        Projects
+      </Link>
+
+      <Link
+        to="/contact"
+        onClick={() => setMenuOpen(false)}
+        className={`text-2xl font-semibold text-#D3B60A my-4 transition-transform duration-300 ${
+          menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+        }`}
+      >
+        Contact
+      </Link>
     </div>
   );
 };

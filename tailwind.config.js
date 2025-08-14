@@ -35,7 +35,7 @@ export default {
           secondary: "#0b145e", // din secondary-färg
           accent: "#00f5ff",
           neutral: "#1f2937",
-          "base-100": "#dfe0ed",
+          "base-100": "#92bed4",
           // "secondary-content": "#ffffff",
         },
       },]
