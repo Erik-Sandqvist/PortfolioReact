@@ -29,7 +29,7 @@ export const Contact = () => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="w-full max-w-lg bg-[#081A3A] bg-opacity-95 rounded-3xl shadow-2xl p-10 border-2 border-custom-yellow-2 backdrop-blur-lg"
+        className="w-full max-w-lg bg-opacity-95 rounded-3xl shadow-2xl p-10 border-2 border-custom-yellow-2 backdrop-blur-lg"
       >
         <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-custom-yellow-1 to-custom-yellow-2 bg-clip-text text-transparent drop-shadow-lg">
           Contact Me
@@ -39,7 +39,7 @@ export const Contact = () => {
             Name
           </label>
           <input
-            className="w-full px-5 py-3 rounded-xl bg-[#0E0724] text-custom-yellow-1 placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner"
+            className="w-full px-5 py-3 rounded-xl  text-custom-yellow-1 placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner"
             type="text"
             name="user_name"
             id="user_name"
@@ -52,7 +52,7 @@ export const Contact = () => {
             Email
           </label>
           <input
-            className="w-full px-5 py-3 rounded-xl bg-[#0E0724] text-custom-yellow-1 placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner"
+            className="w-full px-5 py-3 rounded-xl  text-custom-yellow-1 placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner"
             type="email"
             name="user_email"
             id="user_email"
@@ -65,7 +65,7 @@ export const Contact = () => {
             Message
           </label>
           <textarea
-            className="w-full px-5 py-3 rounded-xl bg-[#0E0724] text-custom-yellow-1 placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner resize-none min-h-[120px]"
+            className="w-full px-5 py-3 rounded-xl  text-custom-yellow-1 placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner resize-none min-h-[120px]"
             name="message"
             id="message"
             required
@@ -74,7 +74,7 @@ export const Contact = () => {
         </div>
         <button
           type="submit"
-          className="w-full py-3 rounded-xl bg-gradient-to-r from-custom-yellow-1 to-custom-yellow-2 text-[#081A3A] font-bold text-xl shadow-lg hover:scale-105 hover:shadow-yellow-400/40 transition-all duration-300"
+          className="w-full py-3 rounded-xl bg-gradient-to-r from-custom-yellow-1 to-custom-yellow-2 font-bold text-xl shadow-lg hover:scale-105 hover:shadow-yellow-400/40 transition-all duration-300"
           disabled={status === "loading"}
         >
           {status === "loading" ? "Sending..." : "Send"}

@@ -1,4 +1,4 @@
-import daisyui from 'daisyui';
+import daisyui from 'daisyui'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -11,6 +11,33 @@ export default {
   },
   plugins: [daisyui],
   daisyui: {
-    themes: ['luxury','synthwave','cupcake','dark','light','nord']
+    themes: [
+      {
+        luxury: {
+          ...require("daisyui/src/theming/themes")["[data-theme=luxury]"],
+          primary: "#fffcfe",
+          secondary: "#0b145e", // din secondary-färg
+          // "secondary-content": "#0b0b0b", // valfritt: textfärg på secondary
+          "base-100": "#010f17",
+        },
+      },
+      'synthwave',
+      'cupcake',
+      'dark',
+      'light',
+      'nord',
+      'forest',
+      'valentine',
+      {
+        acid: {
+          ...require("daisyui/src/theming/themes")["[data-theme=acid]"],
+          primary: "#010f17",
+          secondary: "#0b145e", // din secondary-färg
+          accent: "#00f5ff",
+          neutral: "#1f2937",
+          "base-100": "#dfe0ed",
+          // "secondary-content": "#ffffff",
+        },
+      },]
   }
-  };
+}

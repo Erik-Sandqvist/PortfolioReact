@@ -7,8 +7,6 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "Roboto";
-  background-color:  #081A3A;
-  color: #D3B60A;
 }
 
 @layer utilities {

@@ -9,11 +9,11 @@ module.exports = {
     themes: [
       {
         luxury: {
-          ...themes['luxury'],
-          /* Byt secondary (hex eller HSL med mellanslag) */
-          secondary: '#D3B60A',
-          'secondary-content': '#1a1500', // kontrasttext
-        },
+            ...themes.luxury,
+            'base-100': '#0b0c11',
+            'base-200': '#11141b',
+            'base-300': '#181d26'
+          },
       },
       'cupcake',
       'dark',

@@ -3,7 +3,7 @@ import { FaGithub, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiMongodb, SiExpress } from "react-icons/si";
 
 
-const MernNoteApp = () => {
+const Vinyl4u  = () => {
   return (
     <div className="max-w-4xl mx-auto mt-6 my-8 shadow-xl rounded-2xl overflow-hidden">
       <div className="p-6 md:p-10 space-y-6 mt-16">
@@ -73,4 +73,4 @@ const MernNoteApp = () => {
   );
 };
 
-export default MernNoteApp;
+export default Vinyl4u;

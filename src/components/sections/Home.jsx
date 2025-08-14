@@ -3,8 +3,9 @@ import { Canvas } from '@react-three/fiber'
 import { ScrollCameraController } from '../ScrollCameraController'
 import { ProjectDiv } from '../ProjectDiv'
 import { LogoModel } from './LogoModel'
+import { Footer } from '../Footer'
 
-const THEMES = ['luxury','cupcake','dark','light']
+const THEMES = ['luxury','nord','dark','light']
 
 export const Home = () => {
   const [theme, setTheme] = useState(() =>
@@ -27,7 +28,7 @@ export const Home = () => {
   }, [theme])
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center gap-6  p-6 mt-16">
+    <section className="min-h-screen flex flex-col items-center justify-center gap-6  p-6 mt-16 bg-base">
 
       <h1
         className="text-6xl md:text-5xl font-bold mb- mt-8 bg-gradient-to-r from-[#D3B60A] to-[#eeeef0] bg-clip-text text-transparent leading-right animate-slide-in-right"
@@ -46,13 +47,14 @@ export const Home = () => {
         <Canvas camera={{ position: [0, 0, 10] }}>
           <ambientLight />
           <Suspense fallback={null}>
-            <LogoModel scale={60} />
+            <LogoModel scale={65} />
           </Suspense>
           <ScrollCameraController />
         </Canvas>
       </div>
 
       <ProjectDiv />
+    
     </section>
   )
 }

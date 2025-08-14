@@ -17,8 +17,8 @@ export const ProjectDiv = () => {
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
     <div className="relative z-10 p-6 flex flex-col h-full justify-end text-secondary-content">
-      <h3 className="text-2xl font-bold mb-2">MERN Note App</h3>
-      <p className="text-sm opacity-90">
+      <h3 className="text-2xl font-bold mb-2 text-primary">MERN Note App</h3>
+      <p className="text-sm opacity-90 text-primary">
         Fullstack notes-app. Klicka för att se mer.
       </p>
       <span className="mt-3 inline-flex items-center gap-2 text-primary text-sm font-medium">
@@ -37,8 +37,8 @@ export const ProjectDiv = () => {
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
     <div className="relative z-10 p-6 flex flex-col h-full justify-end text-secondary-content">
-      <h3 className="text-2xl font-bold mb-2">Vinyl4U</h3>
-      <p className="text-sm opacity-90">
+      <h3 className="text-2xl font-bold mb-2 text-primary">Vinyl4U</h3>
+      <p className="text-sm opacity-90 text-primary">
         Vinyl-app projekt. Klicka för att se mer.
       </p>
       <span className="mt-3 inline-flex items-center gap-2 text-primary text-sm font-medium">

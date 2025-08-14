@@ -8,9 +8,11 @@ import { Navbar } from './components/Navbar';
 import { MobileMenu } from './components/MobileMenu';
 import { Home } from './components/sections/Home';
 import { Contact } from './components/sections/Contact';
+import About from './components/sections/About'
 import { RainDots } from './components/RainDots';
 import MernNoteApp from './components/projects/MernNoteApp.jsx';
-import vinyl4u from './components/projects/vinyl4u.jsx';
+import Vinyl4u from './components/projects/vinyl4u.jsx';
+import { Footer } from './components/Footer.jsx';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -45,11 +47,13 @@ function App() {
           {menuOpen && <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects/mern-note-app" element={<MernNoteApp />} />
-            <Route path="/projects/vinyl4u" element={<vinyl4u />} />
+            <Route path="/projects/Vinyl4u" element={<Vinyl4u />} />
           </Routes>
       </div>
+      <Footer/>
     </>
   );
 }
