@@ -9,7 +9,7 @@ export const Footer = () => {
         <p className="text-sm">073 - 544 05 70</p>
         <a
           href="mailto:esandqvist04@gmail.com"
-          className="text-blue-400 hover:underline"
+          className="text-yellow-400 hover:underline"
         >
           esandqvist04@gmail.com
         </a>
