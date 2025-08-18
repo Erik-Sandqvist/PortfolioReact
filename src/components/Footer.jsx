@@ -2,7 +2,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <footer className="flex justify-between items-center sm:px-8 md:px-12 lg:px-24 px-48  py-4 w-full bg-base-100">
+    <footer className="flex justify-between items-center px-5 sm:px-6 md:px-12 lg:px-72  py-2 w-full bg-base-100">
       {/* Vänster sektion */}
       <div>
         <h2 className="font-bold uppercase text-lg text-primary">Erik Sandqvists Portfolio</h2>
@@ -18,7 +18,7 @@ export const Footer = () => {
       {/* Höger sektion */}
       <div className="flex items-center gap-4">
         <a
-          href="https://www.linkedin.com/in/dinprofil" // byt till din länk
+          href="linkedin.com/in/erik-sandqvist-711480290" // byt till din länk
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#0A66C2] p-2 rounded"

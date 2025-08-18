@@ -9,13 +9,13 @@ const MernNoteApp = () => {
       <div className="p-6 md:p-10 space-y-6 mt-16">
         <div>
           <h2 className="text-3xl font-bold text-primary mb-2">📝 MERN Note App</h2>
-          <p className="text-yellow-600 text-base md:text-lg">
+          <p className="text-text-primary text-base md:text-lg">
             Ett fullstack-anteckningsverktyg byggt med <strong>MERN-stack</strong> – optimerat för snabbhet, säkerhet och enkel användning.
             Användare kan logga in, skapa, redigera och radera anteckningar via ett responsivt och modernt gränssnitt.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center text-sm text-yellow-700">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center text-sm text-primary">
           <div className="flex flex-col items-center">
             <SiMongodb className="text-green-600 text-3xl" />
             <span>MongoDB</span>
@@ -33,16 +33,12 @@ const MernNoteApp = () => {
             <span>Node.js</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-xl font-semibold">🔐</span>
-            <span>Authentication</span>
-          </div>
-          <div className="flex flex-col items-center">
             <span className="text-xl font-semibold">📱</span>
             <span>Responsive UI</span>
           </div>
         </div>
 
-        <ul className="list-disc list-inside text-yellow-700 space-y-1">
+        <ul className="list-disc list-inside text-primary space-y-1">
           <li>Fullständigt CRUD-stöd för anteckningar</li>
           <li>JWT-baserad användarautentisering</li>
           <li>Responsiv design för både desktop och mobil</li>

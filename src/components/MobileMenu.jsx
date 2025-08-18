@@ -22,15 +22,15 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         &times;
       </button>
 
-      <a
-        href="#home"
+      <Link
+        to="/"
         onClick={() => setMenuOpen(false)}
         className={`text-2xl font-semibold text-#D3B60A my-4 transition-transform duration-300 ${
           menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
         }`}
       >
         Home
-      </a>
+      </Link>
 
       <Link
         to="/about"
