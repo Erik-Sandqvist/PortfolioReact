@@ -1,12 +1,22 @@
-# React + Vite
+# Erik Sandqvist – Portfolio (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En personlig portfolio byggd med React, Vite, React Router, Three.js/React Three Fiber, Tailwind CSS och DaisyUI. Projektet deployas till GitHub Pages.
 
-Currently, two official plugins are available:
+- Live: https://erik-sandqvist.github.io/PortfolioReact
+- Byggkonfiguration: [vite.config.js](vite.config.js)
+- Router-bootstrapping: [src/main.jsx](src/main.jsx)
+- Huvudapp och routes: [`App`](src/App.jsx)
+- Navigering: [`Navbar`](src/components/Navbar.jsx), [`MobileMenu`](src/components/MobileMenu.jsx)
+- Startsida och 3D: [`Home`](src/components/sections/Home.jsx), [`LogoModel`](src/components/sections/LogoModel.jsx), [`ScrollCameraController`](src/components/ScrollCameraController.tsx)
+- Projektkort: [`ProjectDiv`](src/components/ProjectDiv.jsx)
+- Kontaktformulär (EmailJS): [`Contact`](src/components/sections/Contact.jsx)
+- Övrigt UI: [`LoadingScreen`](src/components/LoadingScreen.jsx), [`RainDots`](src/components/RainDots.jsx), [`Footer`](src/components/Footer.jsx)
+- Asset-hjälpare: [`asset`](src/utils/asset.js)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funktioner
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- SPA med React Router och dynamisk basename som fungerar både lokalt och på GitHub Pages.
+- 3D-modellvisning via React Three Fiber/Drei.
+- Tailwind CSS + DaisyUI med tema-växling.
+- E-post via EmailJS.
+- Responsiv design, mobilmeny och enkla animationer.
