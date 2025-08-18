@@ -16,7 +16,7 @@ export default {
         luxury: {
           ...require("daisyui/src/theming/themes")["[data-theme=luxury]"],
           primary: "#fffcfe",
-          secondary: "#0b145e", // din secondary-färg
+          secondary: "#c4bb12", // din secondary-färg
           // "secondary-content": "#0b0b0b", // valfritt: textfärg på secondary
           "base-100": "#010f17",
         },
@@ -31,11 +31,11 @@ export default {
       {
         acid: {
           ...require("daisyui/src/theming/themes")["[data-theme=acid]"],
-          primary: "#010f17",
-          secondary: "#0b145e", // din secondary-färg
+          primary: "#baae09",
+          secondary: "#c4bb12", // din secondary-färg
           accent: "#00f5ff",
-          neutral: "#1f2937",
-          "base-100": "#92bed4",
+          neutral: "#a3a603",
+          "base-100": "#ccdae0",
           // "secondary-content": "#ffffff",
         },
       },]

@@ -17,14 +17,15 @@ export const Footer = () => {
 
       {/* Höger sektion */}
       <div className="flex items-center gap-4">
-        <a
-          href="linkedin.com/in/erik-sandqvist-711480290" // byt till din länk
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-[#0A66C2] p-2 rounded"
-        >
-          <FaLinkedinIn className="text-white w-5 h-5" />
-        </a>
+      <a
+  href="https://www.linkedin.com/in/erik-sandqvist-711480290"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-[#0A66C2] p-2 rounded"
+  aria-label="LinkedIn"
+>
+  <FaLinkedinIn className="text-white w-5 h-5" />
+</a>
        
       </div>
     </footer>

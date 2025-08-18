@@ -25,16 +25,16 @@ useEffect(() => {
           </div>
 
           <div className="hidden md:flex items-center space-x-8 ml-auto mr-8">
-    <Link to="/" className="text-custom-yellow-2 hover:text-secondary transition-colors text-3xl">
+    <Link to="/" className=" hover:text-secondary transition-colors text-3xl">
     Home
     </Link>
-    <Link to="/about" className="hover:text-white transition-colors text-3xl">
+    <Link to="/about" className="hover:text-secondary transition-colors text-3xl">
     About
     </Link>
-    <a href="#projects" className="hover:text-white transition-colors text-3xl">
+    <a href="#projects" className="hover:text-secondary transition-colors text-3xl">
     Projects
     </a>
-    <Link to="/contact" className="hover:text-white transition-colors text-3xl">
+    <Link to="/contact" className="hover:text-secondary transition-colors text-3xl">
     Contact
     </Link>
   </div>
