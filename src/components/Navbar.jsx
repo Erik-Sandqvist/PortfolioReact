@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { asset } from '../utils/asset'
+import Projects from "./sections/Projects";
 
 export const Navbar = ({ menuOpen, setMenuOpen }) => {
 
@@ -31,9 +32,9 @@ useEffect(() => {
     <Link to="/about" className="hover:text-secondary transition-colors text-3xl">
     About
     </Link>
-    <a href="#projects" className="hover:text-secondary transition-colors text-3xl">
+    <Link to="/Projects" className="hover:text-secondary transition-colors text-3xl">
     Projects
-    </a>
+    </Link>
     <Link to="/contact" className="hover:text-secondary transition-colors text-3xl">
     Contact
     </Link>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, Suspense } from 'react'
+import { Link } from 'react-router-dom'
 import { Canvas } from '@react-three/fiber'
 import { ScrollCameraController } from '../ScrollCameraController'
 import { ProjectDiv } from '../ProjectDiv'
@@ -42,7 +43,6 @@ export const Home = () => {
         I also have experience in media design and enjoy creating visually engaging digital content.
       </p>
 
-
       <div className="w-full h-80">
         <Canvas camera={{ position: [0, 0, 10] }}>
           <ambientLight />
@@ -54,7 +54,9 @@ export const Home = () => {
       </div>
 
       <ProjectDiv />
-    
+      <Link to="/illusion" className="btn btn-primary">
+  Go to Illusion
+</Link>
     </section>
   )
 }

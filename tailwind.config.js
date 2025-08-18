@@ -16,7 +16,7 @@ export default {
         luxury: {
           ...require("daisyui/src/theming/themes")["[data-theme=luxury]"],
           primary: "#fffcfe",
-          secondary: "#c4bb12", // din secondary-färg
+          secondary: "#f7d00c", // din secondary-färg
           // "secondary-content": "#0b0b0b", // valfritt: textfärg på secondary
           "base-100": "#010f17",
         },
