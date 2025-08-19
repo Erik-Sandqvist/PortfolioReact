@@ -18,16 +18,22 @@ export const Navbar = ({ menuOpen, setMenuOpen, showRain, setShowRain }) => {
           {/* Tema-toggle (befintlig) */}
           <input type="checkbox" value="acid" className="toggle theme-controller ml-4" />
 
-          <div className="hidden md:flex items-center ml-4">
-  <label className="flex items-center gap-2 text-sm">
-    <span>Rain</span>
-    <input
-      type="checkbox"
-      className="toggle"
-      checked={showRain}
-      onChange={() => setShowRain(v => !v)}
+          <div className="hidden md:flex items-center ml-6">
+  <button
+    type="button"
+    role="switch"
+    aria-checked={showRain}
+    onClick={() => setShowRain(v => !v)}
+    className={`relative inline-flex h-7 w-12 items-center rounded-full transition-colors duration-200 ${
+      showRain ? 'bg-yellow-500/40' : 'bg-base-300'
+    }`}
+  >
+    <span
+      className={`inline-block h-5 w-5 rounded-full bg-[#D3B60A] shadow transition-transform duration-200 ${
+        showRain ? 'translate-x-6' : 'translate-x-1'
+      }`}
     />
-  </label>
+  </button>
 </div>
 
           {/* Hamburger (mobile) */}
