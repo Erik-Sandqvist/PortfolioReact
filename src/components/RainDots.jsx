@@ -157,7 +157,7 @@ export const RainDots = ({
   }, [dots, gravity, wind, maxSpeed, repelStrength, repelRadius]);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0">
+    <div className="fixed inset-0 pointer-events-none -z-1">
       {dots.map((dot, i) => (
         <span
           key={i}

@@ -47,9 +47,9 @@ export const ProjectDiv = () => {
     </div>
   </Link>
   <Link
-    to="/projects/"
-    className="group relative w-full md:w-[28%] h-80 rounded-lg overflow-hidden shadow-lg focus:outline-none focus:ring-2 focus:ring-primary"
-  >
+  to="/projects/wix"
+  className="group relative w-full md:w-[28%] h-80 rounded-lg overflow-hidden shadow-lg focus:outline-none focus:ring-2 focus:ring-primary"
+>
     <div
       className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
       style={{ backgroundImage: `url(${asset('pics/wix.png')})` }}

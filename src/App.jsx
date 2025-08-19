@@ -13,6 +13,7 @@ import Projects from './components/sections/Projects.jsx';
 import { RainDots } from './components/RainDots';
 import MernNoteApp from './components/projects/MernNoteApp.jsx';
 import Vinyl4u from './components/projects/vinyl4u.jsx';
+import WixPortfolio from './components/projects/WixPortfolio.jsx';
 import { Footer } from './components/Footer.jsx';
 import { Illusion } from './components/sections/Illusion';
 
@@ -68,6 +69,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/mern-note-app" element={<MernNoteApp />} />
           <Route path="/projects/Vinyl4u" element={<Vinyl4u />} />
+          <Route path="/projects/wix" element={<WixPortfolio />} />
           <Route path="/illusion" element={<Illusion />} />
         </Routes>
       </div>
