@@ -2,15 +2,15 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 
 export const RainDots = ({
-  count = 200,           // mängd som innan
+  count = 300,           // mängd som innan
   color = "#D3B60A",     // färg som innan
   minSize = 0.4,         // px
   maxSize = 1.0,         // px
   repelRadius = 140,     // px
   repelStrength = 30000, // kraft
-  gravity = 200,        // px/s^2
-  wind = 0,              // px/s^2
-  maxSpeed = 200,       // px/s clamp
+  gravity = 150,        // px/s^2
+  wind = 5,              // px/s^2
+  maxSpeed = 150,       // px/s clamp
 }) => {
   const [dots, setDots] = useState([]);
   const nodesRef = useRef([]);
@@ -39,18 +39,24 @@ export const RainDots = ({
 
     const rand = (a, b) => a + Math.random() * (b - a);
 
-    const spawn = (d, fromTop = true) => {
-      d.x = rand(0, W());
-      d.y = fromTop ? rand(-H() * 0.2, -10) : rand(0, H());
-      d.vx = rand(-40, 40);
-      d.vy = rand(300, 900);
+    const spawn = (d, mode = 'top') => {
+      d.x = rand(0, W())
+      if (mode === 'top') {
+        d.y = rand(-H() * 0.3, -10)       // ovanför skärmen
+      } else if (mode === 'any') {
+        d.y = rand(0, H())                // fritt i viewporten
+      } else if (mode === 'band') {
+        d.y = rand(-H() * 0.5, H() * 0.5) // bredare band över/inom viewport
+      }
+      d.vx = rand(-40, 40)
+      d.vy = rand(300, 900)
     };
 
     // init fysik-partiklar
     dropsRef.current = dots.map(() => {
-      const d = { x: 0, y: 0, vx: 0, vy: 0 };
-      spawn(d, true);
-      return d;
+      const d = { x: 0, y: 0, vx: 0, vy: 0 }
+      spawn(d, 'any') // sprid initialt över hela höjden
+      return d
     });
 
     let last = performance.now();
@@ -110,7 +116,10 @@ export const RainDots = ({
         clampSpeed(d);
 
         // wrap/reset
-        if (d.y > H() + 20 || d.x < -20 || d.x > W() + 20) spawn(d, true);
+        if (d.y > H() + 20 || d.x < -20 || d.x > W() + 20) {
+          // 30% chans att spawna var som helst för bättre y-spridning
+          spawn(d, Math.random() < 0.3 ? 'any' : 'top')
+        }
 
         // render till DOM
         const el = nodesRef.current[i];
