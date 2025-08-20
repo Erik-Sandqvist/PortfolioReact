@@ -10,38 +10,22 @@ const WixPortfolio = () => {
         <div>
           <h2 className="text-3xl font-bold text-primary mb-2">Wix Portfolio</h2>
           <p className="text-primary text-base md:text-lg">
-            En personlig portfolio byggd i Wix med fokus på tydlig struktur, responsiv design
-            och visuella detaljer. Jag anpassade mallarna med egna sektioner, animeringar och
-            optimerade SEO-inställningar för bättre synlighet. Projektet inkluderar kontaktformulär,
-            projektsidor och integrering av externa länkar.
+          I recently created a professional portfolio using Wix Studio, a powerful platform designed for intuitive web development through drag-and-drop functionality. My goal with this project was not only to design a personal portfolio but also to gain a deeper understanding of how modern no-code tools like Wix can be used to build visually appealing and functional websites.
+          Wix Studio works by allowing developers and designers to build websites through a drag-and-drop editor.
+           Instead of writing code line by line, you can structure the layout visually by moving elements such as text 
+           boxes, images, buttons, and galleries directly onto the page. At the same time, Wix offers customization
+            options where you can adjust design details, manage responsive behavior for different screen sizes, and even 
+            add advanced features like animations or dynamic content. This combination of simplicity and flexibility makes it 
+            an interesting platform to experiment with.
+            During the project, I spent many hours refining the design of my portfolio. I explored different layouts, experimented 
+            with typography and color schemes, and tested interactive elements to ensure the site was both user-friendly and 
+            visually engaging. Working with Wix also gave me insight into the balance between design freedom and structured 
+            development — while the drag-and-drop system speeds up the creative process, it also requires careful planning to 
+            maintain consistency and performance.
+            The final result is a portfolio that reflects both my technical interest and 
+            my creative approach. More importantly, the project strengthened my confidence in using modern 
+            website builders and gave me a clear understanding of how no-code platforms can be applied in real-world projects.
           </p>
-        </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center text-sm text-primary">
-          <div className="flex flex-col items-center">
-            <SiHtml5 className="text-[#E34F26] text-3xl" />
-            <span>HTML5</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <SiCss3 className="text-[#1572B6] text-3xl" />
-            <span>CSS3</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <SiJavascript className="text-[#F7DF1E] text-3xl" />
-            <span>JavaScript</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="text-xl font-semibold">🔍</span>
-            <span>SEO</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="text-xl font-semibold">🎨</span>
-            <span>Animationer</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="text-xl font-semibold">📱</span>
-            <span>Responsiv UI</span>
-          </div>
         </div>
 
         <ul className="list-disc list-inside text-primary space-y-1">
