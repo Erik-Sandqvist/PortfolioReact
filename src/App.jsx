@@ -42,7 +42,7 @@ export default function App() {
           isLoaded ? 'opacity-100' : 'opacity-0'
         } bg-base-100 text-base-content relative`}
       >
-        {showRain && <RainDots count={80} repelRadius={150} />}
+        {showRain && <RainDots color="secondary" count={80} repelRadius={150} />}
 
         <Navbar
           menuOpen={menuOpen}

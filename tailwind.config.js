@@ -31,11 +31,10 @@ export default {
       {
         acid: {
           ...require("daisyui/src/theming/themes")["[data-theme=acid]"],
-          primary: "#baae09",
+          primary: "#998f03",
           secondary: "#010f17", // din secondary-färg
           accent: "#00f5ff",
-          neutral: "#a3a603",
-          "base-100": "#078bb3",
+          "base-100": "#a7c3cc",
           // "secondary-content": "#ffffff",
         },
       },]
