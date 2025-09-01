@@ -29,7 +29,9 @@ export const Home = () => {
   }, [theme])
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center gap-6  p-6 mt-16 bg-base">
+    <section className="min-h-screen flex flex-col items-center justify-center gap-6  p-6 mt-16 ">
+
+   
 
       <h1
         className="text-6xl md:text-5xl font-bold mb- mt-8 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent leading-right animate-slide-in-right"

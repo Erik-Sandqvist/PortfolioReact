@@ -4,8 +4,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 export const RainDots = ({
   count = 300,           // mängd som innan
   color = "secondary",     
-  minSize = 2.8,         // px
-  maxSize = 4.0,         // px
+  minSize = 4.2,         // px
+  maxSize = 4.5,         // px
   repelRadius = 140,     // px
   repelStrength = 30000, // kraft
   gravity = 150,        // px/s^2
@@ -168,7 +168,7 @@ export const RainDots = ({
             opacity: dot.opacity,
             transform: "translate3d(0, -10px, 0)",
           }}
-          className={`absolute top-0 left-0 rounded-full bg-${color} shadow-[0_0_2px_1px] shadow-${color}`}
+          className={`absolute top-0 left-0 rounded-full bg-${color} shadow-[0_0_2px_2px] shadow-${color}`}
 
         />
       ))}

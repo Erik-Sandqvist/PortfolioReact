@@ -38,11 +38,11 @@ export default function App() {
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
 
       <div
-        className={`min-h-screen transition-opacity duration-700 ${
-          isLoaded ? 'opacity-100' : 'opacity-0'
-        } bg-base-100 text-base-content relative`}
-      >
-        {showRain && <RainDots color="secondary" count={80} repelRadius={150} />}
+  className={`min-h-screen transition-opacity duration-700 ${
+    isLoaded ? 'opacity-100' : 'opacity-0'
+  } bg-gradient-to-br from-base-100 via-base-100/10 to-secondary text-base-content relative`}
+>
+        {showRain && <RainDots color="secondary" count={80} repelRadius={150} className="-z-20" />}
 
         <Navbar
           menuOpen={menuOpen}

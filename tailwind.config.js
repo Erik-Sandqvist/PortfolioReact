@@ -1,24 +1,25 @@
 import daisyui from 'daisyui'
+import themes from 'daisyui/src/theming/themes.js'
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'base-primary': 'linear-gradient(135deg,hsl(var(--b1)) 0%,hsl(var(--p)) 100%)',
+      },
+    },
   },
   plugins: [daisyui],
   daisyui: {
     themes: [
       {
         luxury: {
-          ...require("daisyui/src/theming/themes")["[data-theme=luxury]"],
-          primary: "#fffcfe",
-          secondary: "#f7d00c", // din secondary-färg
-          // "secondary-content": "#0b0b0b", // valfritt: textfärg på secondary
-          "base-100": "#010f17",
+          ...themes['[data-theme=luxury]'],
+          primary: '#fffcfe',
+          secondary: '#f7d00c',
+          'base-100': '#010f17',
         },
       },
       'synthwave',
@@ -30,13 +31,13 @@ export default {
       'valentine',
       {
         acid: {
-          ...require("daisyui/src/theming/themes")["[data-theme=acid]"],
-          primary: "#998f03",
-          secondary: "#010f17", // din secondary-färg
-          accent: "#00f5ff",
-          "base-100": "#a7c3cc",
-          // "secondary-content": "#ffffff",
+          ...themes['[data-theme=acid]'],
+          primary: '#998f03',
+          secondary: '#010f17',
+          accent: '#00f5ff',
+          'base-100': '#a7c3cc',
         },
-      },]
-  }
+      },
+    ],
+  },
 }
