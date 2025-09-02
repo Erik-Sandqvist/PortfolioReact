@@ -29,7 +29,7 @@ export const Contact = () => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="w-full max-w-lg bg-opacity-95 rounded-3xl shadow-2xl p-10 border-2 border-custom-yellow-2 backdrop-blur-lg"
+        className="w-full max-w-lg bg-opacity-95 rounded-3xl shadow-2xl p-10 border-2 border-custom-yellow-2 backdrop-blur-lg mt-8"
       >
         <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-custom-yellow-1 to-custom-yellow-2 bg-clip-text text-transparent drop-shadow-lg">
           Contact Me
