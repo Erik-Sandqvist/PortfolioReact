@@ -61,12 +61,12 @@ export function Carousel({
         <>
           <button
             onClick={prev}
-            className="absolute top-1/2 -translate-y-1/2 left-2 bg-white/70 dark:bg-black/50 hover:bg-primary dark:hover:bg-black px-2 py-1 rounded shadow"
+            className="absolute top-1/2 -translate-y-1/2 left-2 bg-primary hover:bg-secondary px-2 py-1 rounded shadow"
             aria-label="Föregående"
           >‹</button>
           <button
             onClick={next}
-            className="absolute top-1/2 -translate-y-1/2 right-2 bg-white/70 dark:bg-black/50 hover:bg-primary dark:hover:bg-black px-2 py-1 rounded shadow"
+            className="absolute top-1/2 -translate-y-1/2 right-2 bg-primary hover:bg-secondary  px-2 py-1 rounded shadow"
             aria-label="Nästa"
           >›</button>
         </>

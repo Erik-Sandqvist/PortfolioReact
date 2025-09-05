@@ -11,13 +11,13 @@ const MernNoteApp = () => {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto mt-6 my-11 shadow-xl rounded-2xl overflow-hidden">
+    <><div className="max-w-4xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
       <div className="p-6 md:p-10 space-y-6 mt-16">
         <div>
           <h2 className="text-3xl font-bold text-primary mb-2">📝 MERN Note App</h2>
           <p className="text-text-primary text-base md:text-lg">
-            Ett fullstack-anteckningsverktyg byggt med <strong>MERN-stack</strong> – optimerat för snabbhet, säkerhet och enkel användning.
-            Användare kan logga in, skapa, redigera och radera anteckningar via ett responsivt och modernt gränssnitt.
+            A full-stack note-taking tool built with the <strong>MERN stack</strong> – optimized for speed, security, and ease of use.
+            Users create, edit, and delete notes through a responsive and modern interface.
           </p>
         </div>
 
@@ -30,26 +30,25 @@ const MernNoteApp = () => {
             <SiExpress className="text-black text-3xl" />
             <span>Express.js</span>
           </div>
-            <div className="flex flex-col items-center">
-              <FaReact className="text-blue-500 text-3xl" />
-              <span>React</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <FaNodeJs className="text-green-700 text-3xl" />
-              <span>Node.js</span>
-            </div>
+          <div className="flex flex-col items-center">
+            <FaReact className="text-blue-500 text-3xl" />
+            <span>React</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <FaNodeJs className="text-green-700 text-3xl" />
+            <span>Node.js</span>
+          </div>
           <div className="flex flex-col items-center">
             <span className="text-xl font-semibold">📱</span>
             <span>Responsive UI</span>
           </div>
         </div>
 
-      
         <ul className="list-disc list-inside text-primary space-y-1">
-          <li>Fullständigt CRUD-stöd för anteckningar</li>
-          <li>Responsiv design för både desktop och mobil</li>
-          <li>REST API byggt med Express och Node</li>
-          <li>Frontend i React med moderna hooks och komponentstruktur</li>
+          <li>Complete CRUD support for notes</li>
+          <li>Responsive design for both desktop and mobile</li>
+          <li>REST API built with Express and Node</li>
+          <li>Frontend in React with modern hooks and component structure</li>
         </ul>
 
         <div className="pt-4 flex gap-4 flex-wrap">
@@ -60,27 +59,26 @@ const MernNoteApp = () => {
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-black text-white rounded-lg hover:bg-gray-800 transition"
           >
             <FaGithub />
-            Visa på GitHub
+            View on GitHub
           </a>
           <a
             href="https://mern-app-c548.onrender.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary text-white rounded-lg hover:bg-blue-700 transition"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary text-base-200 rounded-lg hover:bg-base-300 hover:text-secondary transition"
           >
             App
           </a>
 
         </div>
-        <Carousel
-images={images}
-autoPlay={4000}
-showIndicators
-showArrows
-className="aspect-video"
-/>
+
       </div>
-    </div>
+    </div><Carousel
+        images={images}
+        autoPlay={4000}
+        showIndicators
+        showArrows
+        className="aspect-video max-w-4xl mx-auto shadow-xl rounded-xl overflow-hidden" /></>
   );
 };
 

@@ -97,3 +97,14 @@ html, body {
   }
 }
 
+/* Card fade-in */
+.card-fade {
+  opacity: 0;
+  transform: translateX(var(--from, -40px));
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
+.card-fade--in {
+  opacity: 1;
+  transform: translateX(0);
+}

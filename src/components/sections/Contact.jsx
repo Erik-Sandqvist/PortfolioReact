@@ -1,9 +1,12 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+// import logobig from '../../assets/pics/logobig.png'; // Justerar sökvägen efter din projektstruktur
+
 
 export const Contact = () => {
   const form = useRef();
   const [status, setStatus] = useState(null);
+  // JavaScript 
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -31,15 +34,15 @@ export const Contact = () => {
         onSubmit={sendEmail}
         className="w-full max-w-lg bg-opacity-95 rounded-3xl shadow-2xl p-10 border-2 border-custom-yellow-2 backdrop-blur-lg mt-8"
       >
-        <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-custom-yellow-1 to-custom-yellow-2 bg-clip-text text-transparent drop-shadow-lg">
+        <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-secondary to-base-100 bg-clip-text text-transparent drop-shadow-lg">
           Contact Me
         </h2>
         <div className="mb-6">
-          <label className="block text-custom-yellow-2 text-lg font-semibold mb-2" htmlFor="user_name">
+          <label className="block text-primary text-lg font-semibold mb-2" htmlFor="user_name">
             Name
           </label>
           <input
-            className="w-full px-5 py-3 rounded-xl  text-custom-yellow-1 placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner"
+            className="w-full px-5 py-3 rounded-xl  text-primary placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner"
             type="text"
             name="user_name"
             id="user_name"
@@ -48,7 +51,7 @@ export const Contact = () => {
           />
         </div>
         <div className="mb-6">
-          <label className="block text-custom-yellow-2 text-lg font-semibold mb-2" htmlFor="user_email">
+          <label className="block text-primary text-lg font-semibold mb-2" htmlFor="user_email">
             Email
           </label>
           <input
@@ -61,7 +64,7 @@ export const Contact = () => {
           />
         </div>
         <div className="mb-8">
-          <label className="block text-custom-yellow-2 text-lg font-semibold mb-2" htmlFor="message">
+          <label className="block text-primary text-lg font-semibold mb-2" htmlFor="message">
             Message
           </label>
           <textarea
@@ -74,18 +77,20 @@ export const Contact = () => {
         </div>
         <button
           type="submit"
-          className="w-full py-3 rounded-xl bg-gradient-to-r from-custom-yellow-1 to-custom-yellow-2 font-bold text-xl shadow-lg hover:scale-105 hover:shadow-yellow-400/40 transition-all duration-300"
+          className="w-full py-3 rounded-xl bg-gradient-to-r from-custom-yellow-1 to-custom-yellow-2 font-bold text-xl text-primary shadow-lg hover:scale-105 hover:shadow-yellow-400/40 transition-all duration-300"
           disabled={status === "loading"}
         >
           {status === "loading" ? "Sending..." : "Send"}
         </button>
         {status === "success" && (
-          <p className="mt-4 text-center text-green-400 font-semibold animate-bounce">Message sent! 🎉</p>
+          <p className="mt-4 text-center text-primary font-semibold animate-bounce">Message sent! 🎉</p>
         )}
         {status === "error" && (
           <p className="mt-4 text-center text-red-400 font-semibold">Something went wrong. Try again!</p>
         )}
-      </form>
+      </form>  
     </section>
   );
-};
+}
+
+
