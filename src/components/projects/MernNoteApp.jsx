@@ -69,9 +69,7 @@ const MernNoteApp = () => {
           >
             App
           </a>
-
         </div>
-
       </div>
     </div><Carousel
         images={images}

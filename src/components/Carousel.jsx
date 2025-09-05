@@ -66,7 +66,7 @@ export function Carousel({
           >‹</button>
           <button
             onClick={next}
-            className="absolute top-1/2 -translate-y-1/2 right-2 bg-primary hover:bg-secondary  px-2 py-1 rounded shadow"
+            className="absolute top-1/2 -translate-y-1/2 right-2 bg-primary hover:bg-secondary px-2 py-1 rounded shadow"
             aria-label="Nästa"
           >›</button>
         </>
