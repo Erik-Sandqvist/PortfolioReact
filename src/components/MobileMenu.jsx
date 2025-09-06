@@ -25,7 +25,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen, showRain, setShowRain }) => 
       <Link
         to="/"
         onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-#D3B60A my-4 transition-transform duration-300 ${
+        className={`text-2xl font-semibold text-primary my-4 transition-transform duration-300 ${
           menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
         }`}
       >
@@ -45,7 +45,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen, showRain, setShowRain }) => 
       <Link
        to="/projects"
         onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-#D3B60A my-4 transition-transform duration-300 ${
+        className={`text-2xl font-semibold text-primary my-4 transition-transform duration-300 ${
           menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
         }`}
       >
@@ -55,7 +55,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen, showRain, setShowRain }) => 
       <Link
         to="/contact"
         onClick={() => setMenuOpen(false)}
-        className={`text-2xl font-semibold text-#D3B60A my-4 transition-transform duration-300 ${
+        className={`text-2xl font-semibold text-primary my-4 transition-transform duration-300 ${
           menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
         }`}
       >
@@ -64,7 +64,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen, showRain, setShowRain }) => 
       <div className={`mt-2  flex items-center justify-between ${
         menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
       } transition-transform duration-300`}>
-        <span className="text-2xl font-semibold">Rain</span>
+        <span className="text-2xl text-primary font-semibold mr-2">Rain</span>
         <input
           type="checkbox"
           className="toggle"

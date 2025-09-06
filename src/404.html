@@ -1,1 +1,13 @@
-Ajjjjjjj
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script>
+      // Redirect till index.html och behåll sökvägen
+      var redirect = window.location.protocol + '//' + window.location.host + '/PortfolioReact/';
+      var pathname = window.location.pathname.replace('/PortfolioReact', '');
+      window.location.replace(redirect + '#' + pathname);
+    </script>
+  </head>
+  <body></body>
+</html>

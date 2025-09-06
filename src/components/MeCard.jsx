@@ -1,7 +1,10 @@
 import React from 'react';
 import { asset } from '../utils/asset';
+import { useNavigate } from "react-router-dom";
 
 export const ProfileCard = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex justify-center mt-14">
       <div className="relative z-10 w-full md:w-3/4 lg:w-2/3 backdrop-blur-lg
@@ -26,8 +29,8 @@ export const ProfileCard = () => {
             <p className="mb-2 text-xl"><span className="font-bold text-xl">Date of Birth:</span> July 12, 2004</p>
 
             <button
-              onClick={() => window.location.href = '/contact'}
-              className="mt-72 px-6 py-2 bg-primary text-secondary font-semibold rounded-lg shadow-md hover:bg-secondary hover:text-primary focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+              onClick={() => navigate('/contact')}
+              className="mt-70 px-6 py-2 bg-primary text-secondary font-semibold rounded-lg shadow-md hover:bg-secondary hover:text-primary focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
             >
               Contact Me
             </button>
