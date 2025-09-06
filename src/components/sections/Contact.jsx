@@ -23,10 +23,15 @@ export const Contact = () => {
     setStatus("loading");
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
-      .then ((result) => {
-        alert("Message sent, I will get back to you as soon as possible!");
+      .then(() => {
+        setStatus("success");
         setFormData({ name: "", email: "", message: "" });
-      }).catch(() => alert("An error occurred, please try again")); 
+        setTimeout(() => setStatus(null), 3000); 
+      })
+      .catch(() => {
+        setStatus("error");
+        setTimeout(() => setStatus(null), 4000);
+      });
   };
 
   return (
@@ -49,8 +54,8 @@ export const Contact = () => {
           <input
             className="w-full px-5 py-3 rounded-xl  text-primary placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner"
             type="text"
-            name="user_name"
-            id="user_name"
+            name="from_name"
+            id="from_name"
             required
             value={formData.name}
             placeholder="Your name"
@@ -64,8 +69,8 @@ export const Contact = () => {
           <input
             className="w-full px-5 py-3 rounded-xl  text-custom-yellow-1 placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner"
             type="email"
-            name="user_email"
-            id="user_email"
+            name="email"
+            id="email"
             required
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -103,5 +108,3 @@ export const Contact = () => {
     </section>
   );
 }
-
-
