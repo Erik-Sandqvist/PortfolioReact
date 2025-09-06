@@ -1,27 +1,32 @@
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import emailjs from "emailjs-com";
 // import logobig from '../../assets/pics/logobig.png'; // Justerar sökvägen efter din projektstruktur
 
 
 export const Contact = () => {
+ const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  message: ""
+ });
+
   const form = useRef();
   const [status, setStatus] = useState(null);
   // JavaScript 
 
-  const sendEmail = (e) => {
+  const SERVICE_ID = "service_kbnkyp7";
+  const TEMPLATE_ID = "template_w6p7k1a";
+  const PUBLIC_KEY = "XXv_jnmcF8H5gotyz";
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("loading");
     emailjs
-      .sendForm(
-        "DIN_SERVICE_ID", // Byt ut mot din EmailJS service ID
-        "DIN_TEMPLATE_ID", // Byt ut mot din EmailJS template ID
-        form.current,
-        "XXv_jnmcF8H5gotyz" // Byt ut mot din EmailJS public key
-      )
-      .then(
-        () => setStatus("success"),
-        () => setStatus("error")
-      );
+      .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+      .then ((result) => {
+        alert("Message sent, I will get back to you as soon as possible!");
+        setFormData({ name: "", email: "", message: "" });
+      }).catch(() => alert("An error occurred, please try again")); 
   };
 
   return (
@@ -31,7 +36,7 @@ export const Contact = () => {
     >
       <form
         ref={form}
-        onSubmit={sendEmail}
+        onSubmit={handleSubmit}
         className="w-full max-w-lg bg-opacity-95 rounded-3xl shadow-2xl p-10 border-2 border-custom-yellow-2 backdrop-blur-lg mt-8"
       >
         <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-secondary to-base-100 bg-clip-text text-transparent drop-shadow-lg">
@@ -47,7 +52,9 @@ export const Contact = () => {
             name="user_name"
             id="user_name"
             required
+            value={formData.name}
             placeholder="Your name"
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           />
         </div>
         <div className="mb-6">
@@ -60,6 +67,8 @@ export const Contact = () => {
             name="user_email"
             id="user_email"
             required
+            value={formData.email}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             placeholder="you@email.com"
           />
         </div>
@@ -72,6 +81,8 @@ export const Contact = () => {
             name="message"
             id="message"
             required
+            value={formData.message}
+            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             placeholder="Write your message..."
           />
         </div>
