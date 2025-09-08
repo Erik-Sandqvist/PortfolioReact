@@ -23,7 +23,6 @@ export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showRain, setShowRain] = useState(() => localStorage.getItem('showRain') === 'true');
-
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'luxury');
 
   useEffect(() => {
@@ -35,48 +34,55 @@ export default function App() {
     localStorage.setItem('showRain', showRain);
   }, [showRain]);
 
+  if (!isLoaded) {
+    return <LoadingScreen onComplete={() => setIsLoaded(true)} />;
+  }
+
   return (
     <>
       <ScrollToTop smooth />
-      {isLoaded ? (
-        <div className="min-h-screen flex flex-col">
-          {showRain && <RainDots color="secondary" count={80} repelRadius={150} className="-z-20" />}
+      <div className="min-h-screen flex flex-col bg-gradient-to-br from-base-100 via-base-100/10 to-secondary text-base-content relative">
+        {showRain && (
+          <RainDots
+            color="secondary"
+            count={80}
+            repelRadius={150}
+            className="-z-20"
+          />
+        )}
 
-          <Navbar
+        <Navbar
+          menuOpen={menuOpen}
+          setMenuOpen={setMenuOpen}
+          showRain={showRain}
+          setShowRain={setShowRain}
+          theme={theme}
+          setTheme={setTheme}
+        />
+
+        {menuOpen && (
+          <MobileMenu
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
             showRain={showRain}
             setShowRain={setShowRain}
-            theme={theme}
-            setTheme={setTheme}
           />
+        )}
 
-          {menuOpen && (
-            <MobileMenu
-              menuOpen={menuOpen}
-              setMenuOpen={setMenuOpen}
-              showRain={showRain}
-              setShowRain={setShowRain}
-            />
-          )}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/mern-note-app" element={<MernNoteApp />} />
+          <Route path="/projects/vinyl4u" element={<Vinyl4u />} />
+          <Route path="/projects/wix" element={<WixPortfolio />} />
+          <Route path="/projects/keylinx" element={<Keylinx />} />
+          <Route path="/illusion" element={<Illusion />} />
+        </Routes>
 
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/mern-note-app" element={<MernNoteApp />} />
-            <Route path="/projects/Vinyl4u" element={<Vinyl4u />} />
-            <Route path="/projects/wix" element={<WixPortfolio />} />
-            <Route path="/projects/keylinx" element={<Keylinx />} />
-            <Route path="/illusion" element={<Illusion />} />
-          </Routes>
-
-          <Footer />
-        </div>
-      ) : (
-        <LoadingScreen onFinish={() => setIsLoaded(true)} />
-      )}
+        <Footer />
+      </div>
     </>
   );
 }
