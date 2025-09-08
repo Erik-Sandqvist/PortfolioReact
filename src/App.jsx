@@ -14,8 +14,10 @@ import { RainDots } from './components/RainDots';
 import MernNoteApp from './components/projects/MernNoteApp.jsx';
 import Vinyl4u from './components/projects/vinyl4u.jsx';
 import WixPortfolio from './components/projects/WixPortfolio.jsx';
+import Keylinx from './components/projects/Keylinx.jsx';
 import { Footer } from './components/Footer.jsx';
 import { Illusion } from './components/sections/Illusion';
+import { ScrollToTop } from './components/ScrollToTop';
 
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -35,46 +37,46 @@ export default function App() {
 
   return (
     <>
-      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
+      <ScrollToTop smooth />
+      {isLoaded ? (
+        <div className="min-h-screen flex flex-col">
+          {showRain && <RainDots color="secondary" count={80} repelRadius={150} className="-z-20" />}
 
-      <div
-  className={`min-h-screen transition-opacity duration-700 ${
-    isLoaded ? 'opacity-100' : 'opacity-0'
-  } bg-gradient-to-br from-base-100 via-base-100/10 to-secondary text-base-content relative`}
->
-        {showRain && <RainDots color="secondary" count={80} repelRadius={150} className="-z-20" />}
-
-        <Navbar
-          menuOpen={menuOpen}
-          setMenuOpen={setMenuOpen}
-          showRain={showRain}
-          setShowRain={setShowRain}
-          theme={theme}
-          setTheme={setTheme}
-        />
-
-        {menuOpen && (
-          <MobileMenu
+          <Navbar
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
             showRain={showRain}
             setShowRain={setShowRain}
+            theme={theme}
+            setTheme={setTheme}
           />
-        )}
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/mern-note-app" element={<MernNoteApp />} />
-          <Route path="/projects/Vinyl4u" element={<Vinyl4u />} />
-          <Route path="/projects/wix" element={<WixPortfolio />} />
-          <Route path="/illusion" element={<Illusion />} />
-        </Routes>
-      </div>
+          {menuOpen && (
+            <MobileMenu
+              menuOpen={menuOpen}
+              setMenuOpen={setMenuOpen}
+              showRain={showRain}
+              setShowRain={setShowRain}
+            />
+          )}
 
-      <Footer />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/mern-note-app" element={<MernNoteApp />} />
+            <Route path="/projects/Vinyl4u" element={<Vinyl4u />} />
+            <Route path="/projects/wix" element={<WixPortfolio />} />
+            <Route path="/projects/keylinx" element={<Keylinx />} />
+            <Route path="/illusion" element={<Illusion />} />
+          </Routes>
+
+          <Footer />
+        </div>
+      ) : (
+        <LoadingScreen onFinish={() => setIsLoaded(true)} />
+      )}
     </>
   );
 }

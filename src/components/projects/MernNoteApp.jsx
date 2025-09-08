@@ -12,7 +12,7 @@ const MernNoteApp = () => {
 
   return (
     <><div className="max-w-4xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
-      <div className="p-6 md:p-10 space-y-6 mt-16">
+      <div className="p-6 md:p-10 space-y-6 mt-2">
         <div>
           <h2 className="text-3xl font-bold text-primary mb-2">📝 MERN Note App</h2>
           <p className="text-text-primary text-base md:text-lg">

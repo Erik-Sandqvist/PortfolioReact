@@ -6,7 +6,7 @@ import { SiHtml5, SiCss3, SiJavascript } from "react-icons/si";
 const WixPortfolio = () => {
   return (
     <div className="max-w-4xl mx-auto mt-28 my-8 shadow-xl rounded-2xl overflow-hidden">
-      <div className="p-6 md:p-10 space-y-6 mt-16">
+      <div className="p-6 md:p-10 space-y-6 mt-2">
         <div>
           <h2 className="text-3xl font-bold text-primary mb-2">Wix Portfolio</h2>
           <p className="text-primary text-base md:text-lg">
