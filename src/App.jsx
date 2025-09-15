@@ -15,7 +15,7 @@ import MernNoteApp from './components/projects/MernNoteApp.jsx';
 import Vinyl4u from './components/projects/vinyl4u.jsx';
 import WixPortfolio from './components/projects/WixPortfolio.jsx';
 import Keylinx from './components/projects/Keylinx.jsx';
-import webshop from './components/projects/webshop.jsx';
+// import webshop from './components/projects/webshop.jsx';
 import { Footer } from './components/Footer.jsx';
 import { Illusion } from './components/sections/Illusion';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -79,7 +79,7 @@ export default function App() {
           <Route path="/projects/vinyl4u" element={<Vinyl4u />} />
           <Route path="/projects/wix" element={<WixPortfolio />} />
           <Route path="/projects/keylinx" element={<Keylinx />} />
-          <Route path="/projects/webshop" element={<Webshop />} />
+          {/* <Route path="/projects/webshop" element={<Webshop />} /> */}
           <Route path="/illusion" element={<Illusion />} />
         </Routes>
 
