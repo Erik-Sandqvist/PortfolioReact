@@ -59,6 +59,7 @@ export const Home = () => {
       <Link to="/illusion" className="btn btn-primary">
   Go to Illusion
 </Link>
+<p>blblblakkldsdkl</p>
     </section>
   )
 }
