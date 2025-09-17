@@ -1,4 +1,5 @@
 import { FaLinkedinIn } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -26,7 +27,16 @@ export const Footer = () => {
 >
   <FaLinkedinIn className="text-white w-5 h-5" />
 </a>
-       
+<a
+  href="https://github.com/Erik-Sandqvist"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-[#171515] p-2 rounded"
+  aria-label="GitHub"
+>
+  <FaGithub className="text-white w-5 h-5" />
+</a>
+
       </div>
     </footer>
   );
