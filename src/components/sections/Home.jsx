@@ -33,10 +33,10 @@ export const Home = () => {
 
    
 
-<h1 className="font-onest text-8xl md:text-8xl font-bold mt-8 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent leading-tight animate-slide-in-right">
+<h1 className="font-onest text-8xl md:text-8xl font-medium mt-8 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent leading-tight animate-slide-in-right cursor-default">
    Erik Sandqvist </h1>
 
-      <p className="max-w-lg text-lg text-primary animate-slide-in-right mt">
+      <p className="max-w-lg text-lg text-primary animate-slide-in-right cursor-default">
         I am 21 years old, born and raised in Jönköping. I’m currently a student at Jönköping University, 
         with a strong interest in programming and coding, specializing in web development for both backend and frontend.
         I also have experience in media design and enjoy creating visually engaging digital content.
