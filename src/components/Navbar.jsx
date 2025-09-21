@@ -9,7 +9,7 @@ export const Navbar = ({ menuOpen, setMenuOpen, showRain, setShowRain }) => {
 
   return (
     <nav className="font-onest fixed top-0 w-full z-40 bg-[rgba(8, 26, 58, 0.8)] backdrop-blur-lg border-b border-yellow/10 shadow-lg">
-      <div className="max-w-8xl pl-20">
+      <div className="max-w-8xl pl-10 md:pl-20">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="text-yellow-500 font-bold text-2xl flex items-center h-16 gap-2">
             <img src={asset('pics/logosmall.png')} alt="Logo" className="h-10 w-auto" />
@@ -38,7 +38,7 @@ export const Navbar = ({ menuOpen, setMenuOpen, showRain, setShowRain }) => {
 
           {/* Hamburger (mobile) */}
           <button
-            className="w-20 h-8 relative cursor-pointer z-40 md:hidden ml-auto"
+            className="w-20 h-8 relative cursor-pointer z-40 md:hidden ml-auto mr-8"
             onClick={() => setMenuOpen(prev => !prev)}
             aria-label="Toggle menu"
           >
@@ -46,7 +46,7 @@ export const Navbar = ({ menuOpen, setMenuOpen, showRain, setShowRain }) => {
           </button>
 
           {/* Desktop länkar */}
-          <div className="hidden md:flex items-center space-x-8 ml-auto mr-8">
+          <div className="hidden md:flex items-center space-x-8 ml-auto mr-11">
             <Link to="/" className="hover:text-secondary transition-colors text-3xl">Home</Link>
             <Link to="/about" className="hover:text-secondary transition-colors text-3xl">About</Link>
             <Link to="/projects" className="hover:text-secondary transition-colors text-3xl">Projects</Link>
