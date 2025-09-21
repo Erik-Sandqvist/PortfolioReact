@@ -7,7 +7,11 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'base-primary': 'linear-gradient(135deg,hsl(var(--b1)) 0%,hsl(var(--p)) 100%)',
+        'base-primary':
+          'linear-gradient(135deg,hsl(var(--b1)) 0%,hsl(var(--p)) 100%)',
+      },
+      fontFamily: {
+        onest: ['"Onest"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
     },
   },

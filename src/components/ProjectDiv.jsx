@@ -18,6 +18,27 @@ export const ProjectDiv = () => {
 
   return (
     <div ref={containerRef} className="flex flex-wrap justify-center gap-6 w-full">
+      
+      <Link
+        to="/projects/keylinx"
+        data-card
+        style={{ "--from": "-50px" }}
+        className="card-fade group relative w-full md:w-[28%] h-80 rounded-lg overflow-hidden shadow-lg focus:outline-none focus:ring-2 focus:ring-primary"
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+          style={{ backgroundImage: `url(${asset("pics/keylinx.png")})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
+        <div className="relative z-10 p-6 flex flex-col h-full justify-end text-secondary-content">
+          <h3 className="text-2xl font-bold mb-2 text-primary">Keylinx</h3>
+          <p className="text-sm opacity-90 text-primary">About my internship at Keylinx</p>
+          <span className="mt-3 inline-flex items-center gap-2 text-primary text-sm font-medium">
+            View Details →
+          </span>
+        </div>
+      </Link>
+      
       <Link
         to="/projects/mern-note-app"
         data-card
@@ -78,25 +99,6 @@ export const ProjectDiv = () => {
         </div>
       </Link>
 
-      <Link
-        to="/projects/keylinx"
-        data-card
-        style={{ "--from": "-50px" }}
-        className="card-fade group relative w-full md:w-[28%] h-80 rounded-lg overflow-hidden shadow-lg focus:outline-none focus:ring-2 focus:ring-primary"
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-          style={{ backgroundImage: `url(${asset("pics/keylinx.png")})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
-        <div className="relative z-10 p-6 flex flex-col h-full justify-end text-secondary-content">
-          <h3 className="text-2xl font-bold mb-2 text-primary">Keylinx</h3>
-          <p className="text-sm opacity-90 text-primary">About my internship at Keylinx</p>
-          <span className="mt-3 inline-flex items-center gap-2 text-primary text-sm font-medium">
-            View Details →
-          </span>
-        </div>
-      </Link>
 
       <Link
   to="/projects/fandf"
@@ -126,8 +128,8 @@ export const ProjectDiv = () => {
             style={{ "--from": i % 2 ? "50px" : "-50px" }}
             className="card-fade w-full md:w-[28%] bg-gray-800 rounded-lg p-6 mb-6 h-80 flex flex-col"
         >
-          <h3 className="text-xl font-bold mb-2 text-primary">Projekt {n}</h3>
-          <p className="text-primary">Beskrivning av projekt {n}.</p>
+          <h3 className="text-xl font-bold mb-2 text-primary">Project in the making {n}</h3>
+          <p className="text-primary">A Webshop</p>
         </div>
       ))}
     </div>

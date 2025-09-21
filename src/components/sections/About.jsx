@@ -12,7 +12,7 @@ const About = () => {
         src={`${import.meta.env.BASE_URL}pics/logobig.svg`}
         alt="Logo"
         loading="lazy"
-        className="mx-auto my-8 w-90 sm:w-74 md:w-90 lg:w-116 h-auto"
+        className="mx-auto my-4 w-1/2 h-auto"
       />
     </section>
   );

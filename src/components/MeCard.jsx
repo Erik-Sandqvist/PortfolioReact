@@ -30,7 +30,7 @@ export const ProfileCard = () => {
 
             <button
               onClick={() => navigate('/contact')}
-              className="mt-70 px-6 py-2 bg-primary text-secondary font-semibold rounded-lg shadow-md hover:bg-secondary hover:text-primary focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+              className="mt-auto px-6 py-2 bg-primary text-secondary font-semibold rounded-lg shadow-md hover:bg-secondary hover:text-primary focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
             >
               Contact Me
             </button>

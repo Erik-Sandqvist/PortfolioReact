@@ -33,14 +33,11 @@ export const Home = () => {
 
    
 
-      <h1
-        className="text-6xl md:text-5xl font-bold mb- mt-8 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent leading-right animate-slide-in-right"
-      >
-        My name is Erik Sandqvist
-      </h1>
+<h1 className="font-onest text-8xl md:text-8xl font-bold mt-8 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent leading-tight animate-slide-in-right">
+   Erik Sandqvist </h1>
 
-      <p className="max-w-lg text-primary animate-slide-in-right">
-        I am 20 years old, born and raised in Jönköping. I’m currently a student at Jönköping University, 
+      <p className="max-w-lg text-lg text-primary animate-slide-in-right mt">
+        I am 21 years old, born and raised in Jönköping. I’m currently a student at Jönköping University, 
         with a strong interest in programming and coding, specializing in web development for both backend and frontend.
         I also have experience in media design and enjoy creating visually engaging digital content.
       </p>
@@ -49,7 +46,7 @@ export const Home = () => {
         <Canvas camera={{ position: [0, 0, 10] }}>
           <ambientLight />
           <Suspense fallback={null}>
-            <LogoModel scale={65} />
+            <LogoModel scale={70} />
           </Suspense>
           <ScrollCameraController />
         </Canvas>
