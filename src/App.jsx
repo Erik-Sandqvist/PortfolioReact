@@ -16,7 +16,7 @@ import Vinyl4u from './components/projects/vinyl4u.jsx';
 import WixPortfolio from './components/projects/WixPortfolio.jsx';
 import Keylinx from './components/projects/Keylinx.jsx';
 import Fandf from './components/projects/fandf.jsx';
-// import webshop from './components/projects/webshop.jsx';
+import Store from './components/projects/store.jsx';
 import { Footer } from './components/Footer.jsx';
 import { Illusion } from './components/sections/Illusion';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -81,7 +81,7 @@ export default function App() {
           <Route path="/projects/wix" element={<WixPortfolio />} />
           <Route path="/projects/keylinx" element={<Keylinx />} />
           <Route path="/projects/fandf" element={<Fandf />} />
-          {/* <Route path="/projects/webshop" element={<Webshop />} /> */}
+          <Route path="/projects/store" element={<Store />} />
           <Route path="/illusion" element={<Illusion />} />
         </Routes>
 

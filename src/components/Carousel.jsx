@@ -32,8 +32,8 @@ export function Carousel({
   if (!total) return null;
 
   return (
-    <div className={`relative ${className}`} role="region" aria-label="Bildkarusell">
-      <div className="overflow-hidden rounded-lg mb-5">
+    <div className={`relative mb-8 ${className}`} role="region" aria-label="Bildkarusell">
+      <div className="overflow-hidden rounded-lg">
         <div
           className="flex transition-transform duration-500 ease-out"
           style={{ transform: `translateX(-${index * 100}%)` }}
