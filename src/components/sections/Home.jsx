@@ -58,6 +58,19 @@ export const Home = () => {
       <Link to="/illusion" className="btn btn-primary">
   Go to Illusion
 </Link>
+{/* Video element added here */}
+{/* <div className="w-full max-w-4xl mt-8">
+  <video 
+    className="w-full rounded-lg shadow-lg" 
+    controls
+    autoPlay
+    muted
+    loop
+  >
+    <source src="/film.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div> */}
     </section>
   )
 }

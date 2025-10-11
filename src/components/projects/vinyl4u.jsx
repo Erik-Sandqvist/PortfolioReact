@@ -77,7 +77,8 @@ const Vinyl4u  = () => {
 
         </div>
       </div>
-    </div><Carousel
+    </div>
+    <Carousel
         images={images}
         autoPlay={4000}
         showIndicators

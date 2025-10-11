@@ -24,17 +24,25 @@ import { ScrollToTop } from './components/ScrollToTop';
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showRain, setShowRain] = useState(() => localStorage.getItem('showRain') === 'true');
+  
+  // Use sessionStorage instead of localStorage - this only persists for the current tab session
+  const [showRain, setShowRain] = useState(() => {
+    // Try to get from sessionStorage
+    const saved = sessionStorage.getItem('userRainPreference');
+    return saved !== null ? JSON.parse(saved) : false;
+  });
+  
+  // Save the user's preference to sessionStorage
+  useEffect(() => {
+    sessionStorage.setItem('userRainPreference', JSON.stringify(showRain));
+  }, [showRain]);
+
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'luxury');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   }, [theme]);
-
-  useEffect(() => {
-    localStorage.setItem('showRain', showRain);
-  }, [showRain]);
 
   if (!isLoaded) {
     return <LoadingScreen onComplete={() => setIsLoaded(true)} />;

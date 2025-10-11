@@ -6,6 +6,8 @@ export const Projects = () => {
         <section className="projects mt-40">
         
         <ProjectDiv />
+        <p>More...</p>
+        <ProjectDiv />
         </section>
     );
     }

@@ -34,6 +34,17 @@ export const RainDots = ({
   useEffect(() => {
     if (!dots.length) return;
 
+    // Initialize dots for this session only (not persisted)
+    const initializeDots = () => {
+      // Reset any existing state that might be persisted
+      localStorage.removeItem('rainDotsState'); // Remove any stored state
+      
+      // Initialize animation logic here
+      // ...
+    };
+    
+    initializeDots();
+
     const W = () => window.innerWidth || document.documentElement.clientWidth || 0;
     const H = () => window.innerHeight || document.documentElement.clientHeight || 0;
 
@@ -153,6 +164,8 @@ export const RainDots = ({
       window.removeEventListener("mousemove", onMove);
       window.removeEventListener("mouseleave", onLeave);
       window.removeEventListener("resize", onResize);
+      // Clear any stored state
+      localStorage.removeItem('rainDotsState');
     };
   }, [dots, gravity, wind, maxSpeed, repelStrength, repelRadius]);
 
