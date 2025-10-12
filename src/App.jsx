@@ -25,14 +25,11 @@ export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   
-  // Use sessionStorage instead of localStorage - this only persists for the current tab session
   const [showRain, setShowRain] = useState(() => {
-    // Try to get from sessionStorage
     const saved = sessionStorage.getItem('userRainPreference');
     return saved !== null ? JSON.parse(saved) : false;
   });
   
-  // Save the user's preference to sessionStorage
   useEffect(() => {
     sessionStorage.setItem('userRainPreference', JSON.stringify(showRain));
   }, [showRain]);

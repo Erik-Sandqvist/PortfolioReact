@@ -15,13 +15,11 @@ export const Home = () => {
     'luxury'
   )
 
-  // Apply + persist
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
     localStorage.setItem('theme', theme)
   }, [theme])
 
-  // Debug (se att CSS-variabler ändras)
   useEffect(() => {
     const current = document.documentElement.getAttribute('data-theme')
     const primary = getComputedStyle(document.documentElement).getPropertyValue('--p').trim()
@@ -29,16 +27,13 @@ export const Home = () => {
   }, [theme])
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center gap-6  p-6 mt-16 ">
+    <section className="min-h-screen flex flex-col items-start md:items-center justify-center gap-6 p-6 mt-16 ">
 
-   
+   <h1 className="font-onest text-5xl md:text-9xl font-medium mt-8 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent leading-tight animate-slide-in-right cursor-default">
+     Erik Sandqvist
+   </h1>
 
-<h1 className="font-onest text-6xl md:text-8xl font-medium mt-8 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent leading-tight animate-slide-in-right cursor-default">
-  Erik Sandqvist
-</h1>
-
-
-      <p className="max-w-lg text-lg text-primary animate-slide-in-right cursor-default">
+      <p className="font-onest max-w-2xl text-lg md:text-2xl text-primary animate-slide-in-right cursor-default mb-2">
         I am 21 years old, born and raised in Jönköping. I’m currently a student at Jönköping University, 
         with a strong interest in programming and coding, specializing in web development for both backend and frontend.
         I also have experience in media design and enjoy creating visually engaging digital content.
