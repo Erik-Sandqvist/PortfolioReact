@@ -36,8 +36,8 @@ export default {
       {
         acid: {
           ...themes['[data-theme=acid]'],
-          primary: '#998f03',
-          secondary: '#010f17',
+          primary: '#010f17',
+          secondary: '#998f03',
           accent: '#00f5ff',
           'base-100': '#a7c3cc',
         },
