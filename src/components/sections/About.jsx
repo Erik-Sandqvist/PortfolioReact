@@ -26,7 +26,6 @@ const About = () => {
         It is also made to match the way my name is written, with the same ratio with the lines
       </p>
 
-      {/* About Me Section */}
       <div className="max-w-6xl mx-auto px-4 mt-16 mb-12">
         <h2 className="font-onest text-4xl md:text-5xl font-bold text-primary mb-8 animate-slide-in-right cursor-default">
           About Me
@@ -44,61 +43,43 @@ const About = () => {
           </p>
         </div>
 
-        {/* Education */}
-        <div className="mb-12 bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-          <h3 className="font-onest text-2xl md:text-3xl font-bold text-primary mb-4 cursor-default">
-            🎓 Education
-          </h3>
-          <div className="space-y-2">
-            <p className="font-onest text-xl font-semibold text-primary">
-              Bachelor's Degree in webdevelopment and garaphic design
-            </p>
-            <p className="font-onest text-lg text-primary/80">
-              Jönköping University
-            </p>
-            <p className="font-onest text-base text-primary/60">
-              2023 - 2026
-            </p>
-          </div>
-          <br></br>
-          <div className="space-y-2">
-            <p className="font-onest text-xl font-semibold text-primary">
-              The technical program at ErikDhalbergs gymnasium
-            </p>
-            <p className="font-onest text-base text-primary/60">
-              2020 - 2023
-            </p>
-          </div>
-        </div>
-        
-
-        {/* Professional Experience */}
-        {/* <div className="mb-12">
-          <h3 className="font-onest text-2xl md:text-3xl font-bold text-primary mb-6 cursor-default">
-            💼 Professional Experience
+        <div className="mb-12 backdrop-blur-lg text-primary rounded-lg shadow-xl overflow-hidden supports-[backdrop-filter]:bg-white/10 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+          <h3 className="font-onest text-2xl md:text-3xl font-bold text-primary mb-6 cursor-default flex items-center gap-2">
+            <span className="text-3xl">🎓</span> Education
           </h3>
           
           <div className="space-y-6">
-
-            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                <h4 className="font-onest text-xl font-bold text-primary">
-                  Backend Developer
-                </h4>
-                <span className="font-onest text-base text-primary/60 mt-1 md:mt-0">
-                  Aug 2022 - Present
-                </span>
-              </div>
-              <p className="font-onest text-lg font-semibold text-primary/90 mb-3">
-                Netlight Consulting
+            <div className="border-b border-white/10 pb-4">
+              <p className="font-onest text-xl font-semibold text-primary">
+                Bachelor's Degree in Web Development and Graphic Design
               </p>
-              <p className="font-onest text-base text-primary/70">
-                Developing scalable backend solutions for enterprise clients, working with modern technologies 
-                and agile methodologies to deliver high-quality software solutions.
+              <p className="font-onest text-lg text-primary/80 mt-1">
+                Jönköping University
+              </p>
+              <p className="font-onest text-base text-primary/60 mt-1">
+                2023 - 2026 • 180hp
+              </p>
+            </div>
+            
+            <div className="border-b border-white/10 pb-4">
+              <p className="font-onest text-xl font-semibold text-primary">
+                Summer Course in Cyber Security
+              </p>
+              <p className="font-onest text-base text-primary/60 mt-1">
+                2025 • 10hp
+              </p>
+            </div>
+            
+            <div className="pb-2">
+              <p className="font-onest text-xl font-semibold text-primary">
+                The Technical Program at Erik Dahlbergs Gymnasium
+              </p>
+              <p className="font-onest text-base text-primary/60 mt-1">
+                2020 - 2023
               </p>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   );

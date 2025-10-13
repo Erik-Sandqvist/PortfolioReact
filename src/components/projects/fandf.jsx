@@ -28,7 +28,7 @@ const Fandf = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary text-base-200 rounded-lg hover:bg-base-300 hover:text-secondary transition"
           >
-            Game
+            Game (only works on desktop)
           </a>
             
 
