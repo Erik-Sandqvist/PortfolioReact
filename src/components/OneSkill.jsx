@@ -7,6 +7,7 @@ import {
   SiFigma,
   SiPython,
   SiMongodb,
+  SiBlazor,
 } from "react-icons/si";
 import {
   FaReact,
@@ -17,7 +18,7 @@ import {
   FaDatabase,
   FaQuestionCircle,
 } from "react-icons/fa";
-import { TbArrowsShuffle } from "react-icons/tb";
+import { TbArrowsShuffle, TbComponents, TbBrandAzure } from "react-icons/tb";
 
 const iconMap = {
   javascript: SiJavascript,
@@ -37,6 +38,9 @@ const iconMap = {
   agile: TbArrowsShuffle,
   python: SiPython,
   mongodb: SiMongodb,
+  azure: TbBrandAzure,
+  blazor: SiBlazor,
+  mudblazor: TbComponents,
 };
 
 export const OneSkill = ({ name, level, className = "" }) => {
