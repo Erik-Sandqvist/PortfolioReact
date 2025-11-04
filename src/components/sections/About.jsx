@@ -1,6 +1,7 @@
 import React from 'react';
 import MeCard from '../MeCard';
 import { SkillDiv } from '../SkillDiv';
+import ScrollStack, { ScrollStackItem } from '../ScrollStack';
 
 const About = () => {
   const base = import.meta.env.BASE_URL;
@@ -26,6 +27,8 @@ const About = () => {
         It is also made to match the way my name is written, with the same ratio with the lines
       </p>
 
+ 
+
       <div className="max-w-6xl mx-auto px-4 mt-16 mb-12">
         <h2 className="font-onest text-4xl md:text-5xl font-bold text-primary mb-8 animate-slide-in-right cursor-default">
           About Me
@@ -42,6 +45,38 @@ const About = () => {
             development—from crafting user interfaces to architecting server-side systems.
           </p>
         </div>
+      
+        {/* <ScrollStack useWindowScroll={true}>
+  <ScrollStackItem itemClassName="bg-secondary/50 border border-white/20">
+  <p className="font-onest text-xl font-semibold text-primary">
+                Bachelor's Degree in Web Development and Graphic Design
+              </p>
+              <p className="font-onest text-lg text-primary/80 mt-1">
+                Jönköping University
+              </p>
+              <p className="font-onest text-base text-primary/60 mt-1">
+                2023 - 2026 • 180hp
+              </p>
+  </ScrollStackItem>
+  
+  <ScrollStackItem itemClassName="bg-secondary/50 border border-white/20">
+  <p className="font-onest text-xl font-semibold text-primary">
+                Summer Course in Cyber Security
+              </p>
+              <p className="font-onest text-base text-primary/60 mt-1">
+                2025 • 10hp
+              </p>
+  </ScrollStackItem>
+
+<ScrollStackItem itemClassName="bg-secondary/50 border border-white/20">
+<p className="font-onest text-xl font-semibold text-primary">
+                The Technical Program at Erik Dahlbergs Gymnasium
+              </p>
+              <p className="font-onest text-base text-primary/60 mt-1">
+                2020 - 2023
+              </p>
+  </ScrollStackItem>
+</ScrollStack> */}
 
         <div className="mb-12 backdrop-blur-lg text-primary rounded-lg shadow-xl overflow-hidden supports-[backdrop-filter]:bg-white/10 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
           <h3 className="font-onest text-2xl md:text-3xl font-bold text-primary mb-6 cursor-default flex items-center gap-2">
@@ -81,6 +116,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      
     </section>
   );
 };
