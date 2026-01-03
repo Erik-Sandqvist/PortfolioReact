@@ -50,10 +50,21 @@ export const Home = () => {
       </div>
 
       <ProjectDiv />
-      <Link to="/illusion" className="btn btn-primary">
+      <Link to="/illusion" className="btn btn-primary hover:btn-secondary">
   Go to Illusion
 </Link>
 {/* Video element added here */}
+<div className="w-5/6 mt-8">
+  <video 
+    className="w-full rounded-lg shadow-lg" 
+    autoPlay
+    muted
+    loop
+  >
+    <source src="/homevid.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
 {/* <div className="w-full max-w-4xl mt-8">
   <video 
     className="w-full rounded-lg shadow-lg" 
