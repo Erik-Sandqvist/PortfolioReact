@@ -15,13 +15,11 @@ export const Home = () => {
     'luxury'
   )
 
-  // Apply + persist
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
     localStorage.setItem('theme', theme)
   }, [theme])
 
-  // Debug (se att CSS-variabler ändras)
   useEffect(() => {
     const current = document.documentElement.getAttribute('data-theme')
     const primary = getComputedStyle(document.documentElement).getPropertyValue('--p').trim()
@@ -30,8 +28,6 @@ export const Home = () => {
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center gap-6  p-6 mt-16 ">
-
-   
 
 <h1 className="font-onest text-6xl md:text-8xl font-medium mt-8 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent leading-tight animate-slide-in-right cursor-default">
   Erik Sandqvist
