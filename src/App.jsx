@@ -12,11 +12,12 @@ import About from './components/sections/About';
 import Projects from './components/sections/Projects.jsx';
 import { RainDots } from './components/RainDots';
 import MernNoteApp from './components/projects/MernNoteApp.jsx';
+import Stationkoll from './components/projects/Stationkoll';
 import Vinyl4u from './components/projects/vinyl4u.jsx';
 import WixPortfolio from './components/projects/WixPortfolio.jsx';
 import Keylinx from './components/projects/Keylinx.jsx';
 import Fandf from './components/projects/fandf.jsx';
-// import webshop from './components/projects/webshop.jsx';
+import Store from './components/projects/store.jsx';
 import { Footer } from './components/Footer.jsx';
 import { Illusion } from './components/sections/Illusion';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -24,17 +25,22 @@ import { ScrollToTop } from './components/ScrollToTop';
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showRain, setShowRain] = useState(() => localStorage.getItem('showRain') === 'true');
+  
+  const [showRain, setShowRain] = useState(() => {
+    const saved = sessionStorage.getItem('userRainPreference');
+    return saved !== null ? JSON.parse(saved) : false;
+  });
+  
+  useEffect(() => {
+    sessionStorage.setItem('userRainPreference', JSON.stringify(showRain));
+  }, [showRain]);
+
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'luxury');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   }, [theme]);
-
-  useEffect(() => {
-    localStorage.setItem('showRain', showRain);
-  }, [showRain]);
 
   if (!isLoaded) {
     return <LoadingScreen onComplete={() => setIsLoaded(true)} />;
@@ -77,11 +83,12 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/mern-note-app" element={<MernNoteApp />} />
+          <Route path="/projects/stationkoll" element={<Stationkoll />} />
           <Route path="/projects/vinyl4u" element={<Vinyl4u />} />
           <Route path="/projects/wix" element={<WixPortfolio />} />
           <Route path="/projects/keylinx" element={<Keylinx />} />
           <Route path="/projects/fandf" element={<Fandf />} />
-          {/* <Route path="/projects/webshop" element={<Webshop />} /> */}
+          <Route path="/projects/store" element={<Store />} />
           <Route path="/illusion" element={<Illusion />} />
         </Routes>
 
