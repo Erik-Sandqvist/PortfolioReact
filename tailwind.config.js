@@ -26,13 +26,6 @@ export default {
           'base-100': '#010f17',
         },
       },
-      'synthwave',
-      'cupcake',
-      'dark',
-      'light',
-      'nord',
-      'forest',
-      'valentine',
       {
         acid: {
           ...themes['[data-theme=acid]'],

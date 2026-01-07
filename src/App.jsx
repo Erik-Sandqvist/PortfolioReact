@@ -11,6 +11,7 @@ import { Contact } from './components/sections/Contact';
 import About from './components/sections/About';
 import Projects from './components/sections/Projects.jsx';
 import { RainDots } from './components/RainDots';
+import LightRays from './components/LightRays';
 import MernNoteApp from './components/projects/MernNoteApp.jsx';
 import Stationkoll from './components/projects/Stationkoll';
 import Vinyl4u from './components/projects/vinyl4u.jsx';
@@ -18,6 +19,7 @@ import WixPortfolio from './components/projects/WixPortfolio.jsx';
 import Keylinx from './components/projects/Keylinx.jsx';
 import Fandf from './components/projects/fandf.jsx';
 import Store from './components/projects/store.jsx';
+import Patches from './components/projects/patches';
 import { Footer } from './components/Footer.jsx';
 import { Illusion } from './components/sections/Illusion';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -36,10 +38,20 @@ export default function App() {
   }, [showRain]);
 
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'luxury');
+  const [secondaryColor, setSecondaryColor] = useState('#f7d00c');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
+    
+    // Get secondary color from CSS variable
+    const root = getComputedStyle(document.documentElement);
+    const secondaryHSL = root.getPropertyValue('--s').trim();
+    
+    if (secondaryHSL) {
+      const [h, s, l] = secondaryHSL.split(' ').map(v => parseFloat(v));
+      setSecondaryColor(`hsl(${h}, ${s}%, ${l}%)`);
+    }
   }, [theme]);
 
   if (!isLoaded) {
@@ -50,6 +62,23 @@ export default function App() {
     <>
       <ScrollToTop smooth />
       <div className="min-h-screen flex flex-col bg-gradient-to-br from-base-100 via-base-100/10 to-secondary text-base-content relative">
+        {/* Global Light Rays Background */}
+        <div className="fixed inset-0 w-full h-full pointer-events-none z-0">
+          <LightRays
+            key={theme}
+            raysOrigin="top-center"
+            raysColor={secondaryColor}
+            raysSpeed={1.5}
+            lightSpread={1.2}
+            rayLength={2.5}
+            followMouse={true}
+            mouseInfluence={0.15}
+            noiseAmount={0.05}
+            distortion={0.08}
+            saturation={0.9}
+          />
+        </div>
+
         {showRain && (
           <RainDots
             color="secondary"
@@ -90,6 +119,7 @@ export default function App() {
           <Route path="/projects/fandf" element={<Fandf />} />
           <Route path="/projects/store" element={<Store />} />
           <Route path="/illusion" element={<Illusion />} />
+          <Route path="/projects/patches" element={<Patches />} />
         </Routes>
 
         <Footer />

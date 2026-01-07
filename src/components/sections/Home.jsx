@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 import { Canvas } from '@react-three/fiber'
 import { ScrollCameraController } from '../ScrollCameraController'
 import { ProjectDiv } from '../ProjectDiv'
+import { GraphicDiv } from '../GraphicDiv'
 import { LogoModel } from './LogoModel'
 import { Footer } from '../Footer'
+import CurvedLoop from '../CurvedLoop'
 
 const THEMES = ['luxury','nord','dark','light']
 
@@ -49,12 +51,26 @@ export const Home = () => {
         </Canvas>
       </div>
 
+      <CurvedLoop
+      className="text-primary"
+        marqueeText=" Web Development Projects   *   Fullstack Applications   *   React   *   C#   *   Node.js   *   MongoDB   *   JavaScript   *  UI/UX Design   *   "
+        speed={0.5}
+        curveAmount={-130}
+      />
       <ProjectDiv />
-      <Link to="/illusion" className="btn btn-primary hover:btn-secondary">
+      <Link to="/illusion" className="btn btn-primary hover:btn-secondary m-auto">
   Go to Illusion
 </Link>
+<CurvedLoop
+      className="text-primary"
+        marqueeText="Graphic Design   *   Motion Graphics   *   Adobe Photoshop   *   Adobe After Effects   *   "
+        speed={0.5}
+        curveAmount={130}
+      />
+
+      <GraphicDiv />
 {/* Video element added here */}
-<div className="w-5/6 mt-8">
+{/* <div className="w-5/6 mt-8 m-auto">
   <video 
     className="w-full rounded-lg shadow-lg" 
     autoPlay
@@ -64,7 +80,7 @@ export const Home = () => {
     <source src="/homevid.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
-</div>
+</div> */}
 {/* <div className="w-full max-w-4xl mt-8">
   <video 
     className="w-full rounded-lg shadow-lg" 
