@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
+import SplashCursor from '../SplashCursor';
 // import logobig from '../../assets/pics/logobig.png'; // Justerar sökvägen efter din projektstruktur
 
 
@@ -39,6 +40,7 @@ export const Contact = () => {
       id="contact"
       className="min-h-screen flex items-center justify-center bg-gradient-to-br from-custom-yellow-1/10 to-custom-yellow-2/10 py-16"
     >
+      <SplashCursor />
       <form
         ref={form}
         onSubmit={handleSubmit}

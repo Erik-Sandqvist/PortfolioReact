@@ -78,10 +78,10 @@ const MernNoteApp = () => {
         autoPlay={4000}
         showIndicators
         showArrows
-        className="aspect-video max-w-4xl mx-auto shadow-xl rounded-xl overflow-hidden" 
+        className="aspect-video max-w-6xl mx-auto shadow-xl rounded-xl overflow-hidden" 
     />
 
-    <div className="flex justify-between mt-8 max-w-4xl mx-auto gap-20 mb-8">
+    <div className="flex justify-between mt-8 max-w-4xl mx-auto gap-10 mb-8">
       <Link 
         to="/projects/keylinx" 
         className="btn btn-outline btn-secondary flex items-center gap-2 md:min-w-64 min-w-32"

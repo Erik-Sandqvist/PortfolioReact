@@ -16,7 +16,7 @@ const Stationkoll = () => {
   ];
 
   return (
-    <><div className="max-w-4xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
+    <><div className="max-w-6xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
       <div className="p-6 md:p-10 space-y-6 mt-2">
         <div>
           <h2 className="text-3xl font-bold text-primary mb-2">Stationkoll - Workplace Planning System</h2>
@@ -85,16 +85,16 @@ const Stationkoll = () => {
         autoPlay={4000}
         showIndicators
         showArrows
-        className="aspect-video max-w-4xl mx-auto shadow-xl rounded-xl overflow-hidden" 
+        className="aspect-video max-w-6xl mx-auto shadow-xl rounded-xl overflow-hidden" 
     />
 
-    <div className="mt-8 w-full max-w-4xl mx-auto space-y-6 mb-8 shadow-xl rounded-2xl overflow-hidden">
+    <div className="mt-8 w-full max-w-6xl mx-auto space-y-2 mb-8 shadow-xl rounded-2xl overflow-hidden">
       <div className=" rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-primary mb-3">Technology Stack</h3>
+        <h3 className="text-2xl font-semibold text-primary mb-3 font-onest">Technology Stack</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-primary">
           <div>
-            <h4 className="font-semibold mb-2">Frontend</h4>
-            <ul className="text-sm space-y-1">
+            <h4 className="font-semibold mb-2 font-onest">Frontend</h4>
+            <ul className="text-sm space-y-1 font-onest">
               <li>• React with TypeScript</li>
               <li>• Vite (build tool)</li>
               <li>• Tailwind CSS & shadcn/ui</li>
@@ -102,8 +102,8 @@ const Stationkoll = () => {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-2">Backend & Services</h4>
-            <ul className="text-sm space-y-1">
+            <h4 className="font-semibold mb-2 font-onest">Backend & Services</h4>
+            <ul className="text-sm space-y-1 font-onest">
               <li>• Supabase (PostgreSQL & Auth)</li>
               <li>• TanStack Query (React Query)</li>
               <li>• React Router DOM</li>
@@ -114,19 +114,19 @@ const Stationkoll = () => {
       </div>
 
      <div className=" rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-primary mb-3">Database Schema</h3>
+        <h3 className="text-xl font-semibold text-primary mb-3 font-onest">Database Schema</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-primary">
           <div>
-            <h4 className="font-semibold mb-2">Core Tables</h4>
-            <ul className="text-sm space-y-1">
+            <h4 className="font-semibold mb-2 font-onest">Core Tables</h4>
+            <ul className="text-sm space-y-1 font-onest ">
               <li>📊 <strong>employees</strong> - Master data</li>
               <li>🏢 <strong>employee_stations</strong> - Qualifications</li>
               <li>📅 <strong>daily_assignments</strong> - Work shifts</li>
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-2">Tracking & Configuration</h4>
-            <ul className="text-sm space-y-1">
+            <h4 className="font-semibold mb-2 font-onest">Tracking & Configuration</h4>
+            <ul className="text-sm space-y-1 font-onest">
               <li>📈 <strong>work_history</strong> - 6-month rotation</li>
               <li>📋 <strong>station_needs</strong> - Daily headcount</li>
               
@@ -137,7 +137,7 @@ const Stationkoll = () => {
       </div>
       </div>
 
-    <div className="flex justify-between mt-8 max-w-4xl mx-auto gap-20 mb-8">
+    <div className="flex justify-between mt-8 max-w-5xl mx-auto gap-10 mb-8">
       <Link 
         to="/projects/keylinx" 
         className="btn btn-outline btn-secondary flex items-center gap-2 md:min-w-64 min-w-32"

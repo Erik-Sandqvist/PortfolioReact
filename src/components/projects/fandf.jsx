@@ -11,8 +11,8 @@ const Fandf = () => {
 
   return (
     <>
-      <div className="max-w-4xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
-        <div className="p-6 md:p-10 space-y-6 mt-2">
+      <div className="max-w-6xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
+        <div className="p-6 md:p-10 space-y-2 mt-2 max-w-6xl">
           <div>
             <h2 className="text-3xl font-bold text-primary mb-2">Fast and Fantastic</h2>
             <p className="text-text-primary text-base md:text-lg">
@@ -42,9 +42,9 @@ const Fandf = () => {
         autoPlay={4000}
         showIndicators
         showArrows
-        className="aspect-video max-w-4xl mx-auto shadow-xl rounded-xl overflow-hidden"
+        className="aspect-video max-w-6xl mx-auto shadow-xl rounded-xl overflow-hidden"
       />
-    <div className="flex justify-between mt-8 max-w-4xl mx-auto gap-20 mb-8">
+    <div className="flex justify-between mt-8 max-w-6xl mx-auto gap-10 mb-8">
       <Link 
         to="/projects/wix" 
         className="btn btn-outline btn-secondary flex items-center gap-2 md:min-w-64 min-w-32"

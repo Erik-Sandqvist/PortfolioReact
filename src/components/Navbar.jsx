@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from 'react-router-dom';
-import { asset } from '../utils/asset'
+import { asset } from '../utils/asset';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
 export const Navbar = ({ menuOpen, setMenuOpen, showRain, setShowRain }) => {
   useEffect(() => {
@@ -15,8 +16,12 @@ export const Navbar = ({ menuOpen, setMenuOpen, showRain, setShowRain }) => {
             <img src={asset('pics/logosmall.png')} alt="Logo" className="h-10 w-auto" />
           </Link>
 
-          {/* Tema-toggle (befintlig) */}
-          <input type="checkbox" value="acid" className="toggle theme-controller ml-4" />
+          {/* Tema-toggle med ikoner */}
+          <div className="relative flex items-center ml-4">
+            <FaSun className="absolute right-1 text-yellow-500 text-sm pointer-events-none z-10" />
+            <input type="checkbox" value="acid" className="toggle theme-controller" />
+            <FaMoon className="absolute left-1 text-blue-400 text-sm pointer-events-none z-10" />
+          </div>
 
           <div className="hidden md:flex items-center ml-6">
   <button

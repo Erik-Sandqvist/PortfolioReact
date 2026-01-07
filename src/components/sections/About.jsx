@@ -1,7 +1,6 @@
 import React from 'react';
 import MeCard from '../MeCard';
 import { SkillDiv } from '../SkillDiv';
-import ScrollStack, { ScrollStackItem } from '../ScrollStack';
 
 const About = () => {
   const base = import.meta.env.BASE_URL;
