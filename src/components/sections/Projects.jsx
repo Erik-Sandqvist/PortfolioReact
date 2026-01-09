@@ -1,11 +1,19 @@
 import React from "react";
 import { ProjectDiv } from "../ProjectDiv";
+import { GraphicDiv } from "../GraphicDiv";
 
 export const Projects = () => {
     return (
         <section className="projects mt-40">
-        
+        <h1 className="font-onest ml-2 text-4xl md:ml-32 md:text-6xl font-medium mt-8 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent leading-tight animate-slide-in-right cursor-default">
+          Web Development
+        </h1>
+        <br />
         <ProjectDiv />
+         <h1 className="font-onest ml-2 text-4xl md:ml-32 md:text-6xl font-medium mt-8 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent leading-tight animate-slide-in-right cursor-default">
+          Design
+        </h1>
+        <GraphicDiv />  
         <h1 className="font-onest ml-2 text-6xl md:ml-32 md:text-8xl font-medium mt-8 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent leading-tight animate-slide-in-right cursor-default">
           More Work:
         </h1>

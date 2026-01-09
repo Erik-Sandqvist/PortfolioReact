@@ -20,6 +20,8 @@ import Keylinx from './components/projects/Keylinx.jsx';
 import Fandf from './components/projects/fandf.jsx';
 import Store from './components/projects/store.jsx';
 import Patches from './components/projects/patches';
+import Covers from './components/projects/covers';
+import Ro from './components/projects/ro';
 import { Footer } from './components/Footer.jsx';
 import { Illusion } from './components/sections/Illusion';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -120,6 +122,8 @@ export default function App() {
           <Route path="/projects/store" element={<Store />} />
           <Route path="/illusion" element={<Illusion />} />
           <Route path="/projects/patches" element={<Patches />} />
+          <Route path="/projects/covers" element={<Covers />} />
+          <Route path="/projects/ro" element={<Ro />} />
         </Routes>
 
         <Footer />

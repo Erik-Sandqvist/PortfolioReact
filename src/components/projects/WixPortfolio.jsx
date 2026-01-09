@@ -18,7 +18,7 @@ const WixPortfolio = () => {
     <><div className="max-w-6xl mx-auto mt-28 my-8 shadow-xl rounded-2xl overflow-hidden">
       <div className="p-6 md:p-10 space-y-6 mt-2">
         <div>
-          <h2 className="text-3xl font-bold text-primary mb-2">Wix Portfolio</h2>
+          <h2 className="text-3xl font-bold font-onest text-secondary mb-2">Wix Portfolio</h2>
           <p className="text-primary text-base md:text-lg">
             I recently created a professional portfolio using Wix Studio, a powerful platform designed for intuitive web development through drag-and-drop functionality. My goal with this project was not only to design a personal portfolio but also to gain a deeper understanding of how modern no-code tools like Wix can be used to build visually appealing and functional websites.
             Wix Studio works by allowing developers and designers to build websites through a drag-and-drop editor.

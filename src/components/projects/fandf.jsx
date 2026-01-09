@@ -14,7 +14,7 @@ const Fandf = () => {
       <div className="max-w-6xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
         <div className="p-6 md:p-10 space-y-2 mt-2 max-w-6xl">
           <div>
-            <h2 className="text-3xl font-bold text-primary mb-2">Fast and Fantastic</h2>
+            <h2 className="text-3xl font-bold font-onest text-secondary mb-2">Fast and Fantastic</h2>
             <p className="text-text-primary text-base md:text-lg">
             Me and a partner devloped a game using p5canvas. P5.canvas is a framework based on JavaScript where you can create 
             cool visual games and mechanics. The game is published and you can play it if you click on the link.

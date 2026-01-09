@@ -16,7 +16,7 @@ const Store  = () => {
     <><div className="max-w-6xl mx-auto mt-28 my-8 shadow-xl rounded-2xl overflow-hidden">
       <div className="p-6 md:p-10 space-y-6 mt-2">
         <div>
-          <h2 className="text-3xl font-bold text-primary mb-2">A Webshop in the making</h2>
+          <h2 className="text-3xl font-bold font-onest text-secondary mb-2">A Webshop in the making</h2>
           <p className="text-primary text-base md:text-lg">
           More information coming...</p>
         </div>

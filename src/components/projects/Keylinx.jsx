@@ -25,7 +25,7 @@ const Keylinx = () => {
       <div className="max-w-6xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
         <div className="p-6 md:p-10 space-y-2 mt-2">
           <div>
-            <h2 className="text-3xl font-bold text-primary mb-6">Keylinx (Internship)</h2>
+            <h2 className="text-3xl font-bold font-onest text-secondary mb-6">Keylinx (Internship)</h2>
             
             {/* Flex container for desktop layout */}
             <div className="flex flex-col md:flex-row gap-8">
@@ -192,7 +192,7 @@ const Keylinx = () => {
       <div className="flex justify-between mt-8 max-w-6xl mx-auto gap-10 mb-8">
       <Link 
         to="/projects/store" 
-        className="btn btn-outline btn-secondary flex items-center gap-0 md:min-w-64 min-w-32"
+        className="btn btn-outline btn-secondary !flex !flex-row items-center justify-center gap-2 whitespace-nowrap max-w-xs md:min-w-80 md:max-w-96"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
         Previous Project
@@ -200,7 +200,7 @@ const Keylinx = () => {
       
       <Link 
         to="/projects/stationkoll" 
-        className="btn btn-outline btn-secondary flex items-center gap-0 md:min-w-64 min-w-32"
+        className="btn btn-outline btn-secondary !flex !flex-row items-center justify-center gap-2 whitespace-nowrap max-w-xs md:min-w-80 md:max-w-96"
       >
         Next Project
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>

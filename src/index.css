@@ -93,7 +93,7 @@ html, body {
     100% {opacity:1; transform:translateX(0)}
   }
   .animate-slide-in-right {
-    animation: slide-in-right 1s cubic-bezier(.4,0,.2,1) both;
+    animation: slide-in-right 2s cubic-bezier(.4,0,.2,1) both;
   }
 }
 
@@ -101,7 +101,7 @@ html, body {
 .card-fade {
   opacity: 0;
   transform: translateX(var(--from, -40px));
-  transition: opacity .6s ease, transform .6s ease;
+  transition: opacity 2.5s ease, transform 2.5s ease;
   will-change: opacity, transform;
 }
 .card-fade--in {

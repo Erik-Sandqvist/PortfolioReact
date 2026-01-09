@@ -19,12 +19,15 @@ const Stationkoll = () => {
     <><div className="max-w-6xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
       <div className="p-6 md:p-10 space-y-6 mt-2">
         <div>
-          <h2 className="text-3xl font-bold text-primary mb-2">Stationkoll - Workplace Planning System</h2>
+          <h2 className="text-3xl font-bold text-secondary font-onest mb-2">Stationkoll - Workplace Planning System</h2>
           <p className="text-text-primary text-base md:text-lg">
             A sophisticated workforce management platform for IKEA warehouses that automates employee station assignments 
             and daily planning. Built with <strong>React, TypeScript, and Supabase</strong>, it features intelligent station 
             rotation algorithms, drag-and-drop scheduling, and real-time synchronization to ensure fair workload distribution 
-            across multiple shifts and stations.
+            across multiple shifts and stations. 
+            <br></br>
+            This was a project I started in my free time after I saw a problem with a lot of 
+            manual work and confusion in the workplace planning.
           </p>
         </div>
 
