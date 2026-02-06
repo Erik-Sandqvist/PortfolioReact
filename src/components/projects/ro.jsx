@@ -69,25 +69,21 @@ const Ro = () => {
 
 					<div className="rounded-2xl bg-base-200/60 p-5 shadow-sm space-y-4">
 						<div className="flex items-center justify-between gap-4 flex-wrap">
-							<div>
-								<h3 className="text-xl font-semibold text-primary">Motion piece</h3>
-								<p className="text-sm md:text-base text-text-primary">A short loop showing color transitions and the water mood.</p>
 							</div>
 							<span className="text-xs uppercase tracking-[0.2em] text-secondary">Motion preview</span>
-						</div>
-						<div className="rounded-xl overflow-hidden shadow-md bg-base-100">
+						
+						
 							<video
 								src={videoSrc}
 								autoPlay
 								loop
 								muted
 								playsInline
-								controls
 								className="w-full h-full max-h-[420px] object-cover"
 							>
 								Your browser does not support the video tag.
 							</video>
-						</div>
+						
 					</div>
 				</div>
 			</div>
