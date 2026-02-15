@@ -21,6 +21,7 @@ import Fandf from './components/projects/fandf.jsx';
 import Store from './components/projects/store.jsx';
 import Patches from './components/projects/patches';
 import Covers from './components/projects/covers';
+import Nocco from './components/projects/nocco.jsx';
 import Ro from './components/projects/ro';
 import { Footer } from './components/Footer.jsx';
 import { Illusion } from './components/sections/Illusion';
@@ -123,6 +124,7 @@ export default function App() {
           <Route path="/illusion" element={<Illusion />} />
           <Route path="/projects/patches" element={<Patches />} />
           <Route path="/projects/covers" element={<Covers />} />
+          <Route path="/projects/nocco" element={<Nocco />} />
           <Route path="/projects/ro" element={<Ro />} />
         </Routes>
 

@@ -10,7 +10,7 @@ export const Footer = () => {
         </h2>
         <a
           href="tel:+46735440570"
-          className="block text-sm text-secondary hover:underline"
+          className="block text-sm text-secondary hover:underline "
         >
           073 - 544 05 70
         </a>

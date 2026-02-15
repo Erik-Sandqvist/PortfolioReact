@@ -48,7 +48,7 @@ const Covers = () => {
                 </Link>
                 
                 <Link 
-                    to="/projects/ro" 
+                    to="/projects/nocco" 
                     className="btn btn-outline btn-secondary flex items-center gap-2 md:min-w-64 min-w-32"
                 >
                     Next Project
