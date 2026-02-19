@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import SplashCursor from '../SplashCursor';
 // import logobig from '../../assets/pics/logobig.png'; // Justerar sökvägen efter din projektstruktur
@@ -19,6 +19,13 @@ export const Contact = () => {
   const TEMPLATE_ID = "template_w6p7k1a";
   const PUBLIC_KEY = "XXv_jnmcF8H5gotyz";
 
+  useEffect(() => {
+    if (status === "success") {
+      const audio = new Audio("/sounds/awww.mp3");
+      audio.play().catch(err => console.log("Audio playback failed:", err));
+    }
+  }, [status]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("loading");
@@ -38,15 +45,19 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-custom-yellow-1/10 to-custom-yellow-2/10 py-16"
+      className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-custom-yellow-1/10 to-custom-yellow-2/10 py-16"
     >
       <SplashCursor />
+      <div className="w-full max-w-lg bg-opacity-95 rounded-3xl shadow-2xl p-10 border-2 border-custom-yellow-2 backdrop-blur-lg mt-8">
+        <p className="font-onest bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent text-xl text-center">Contact me using the form below!</p>
+         <p className="font-onest bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-center">(And turn on your sound before hitting send)</p>
+      </div>
       <form
         ref={form}
         onSubmit={handleSubmit}
         className="w-full max-w-lg bg-opacity-95 rounded-3xl shadow-2xl p-10 border-2 border-custom-yellow-2 backdrop-blur-lg mt-8"
       >
-        <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-secondary to-base-100 bg-clip-text text-transparent drop-shadow-lg">
+        <h2 className="text-xl font-bold text-center mb-8 bg-gradient-to-r from-secondary to-base-100 bg-clip-text text-transparent drop-shadow-lg">
           Contact Me
         </h2>
         <div className="mb-6">
@@ -54,7 +65,7 @@ export const Contact = () => {
             Name
           </label>
           <input
-            className="w-full px-5 py-3 rounded-xl  text-primary placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner"
+            className="w-full px-5 py-3 rounded-xl  text-black placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner"
             type="text"
             name="from_name"
             id="from_name"
@@ -69,7 +80,7 @@ export const Contact = () => {
             Email
           </label>
           <input
-            className="w-full px-5 py-3 rounded-xl  text-custom-yellow-1 placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner"
+            className="w-full px-5 py-3 rounded-xl  text-black placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner"
             type="email"
             name="email"
             id="email"
@@ -84,7 +95,7 @@ export const Contact = () => {
             Message
           </label>
           <textarea
-            className="w-full px-5 py-3 rounded-xl  text-custom-yellow-1 placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner resize-none min-h-[120px]"
+            className="w-full px-5 py-3 rounded-xl  text-black placeholder-custom-yellow-2 focus:outline-none focus:ring-2 focus:ring-custom-yellow-2 transition-all duration-300 shadow-inner resize-none min-h-[120px]"
             name="message"
             id="message"
             required
