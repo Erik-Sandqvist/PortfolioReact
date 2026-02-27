@@ -18,7 +18,7 @@ const About = () => {
       />
       
       <h2 className="font-onest max-w-4xl text-2xl font-bold text-primary mx-auto animate-slide-in-right cursor-default pl-4">
-        My thinking regarding my logo:
+        My thinking behind my logo:
       </h2>
       <br />
       <p className="font-onest max-w-4xl text-lg text-primary mx-auto animate-slide-in-right cursor-default mb-4 pl-4">
