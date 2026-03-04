@@ -18,6 +18,7 @@ import Vinyl4u from './components/projects/vinyl4u.jsx';
 import WixPortfolio from './components/projects/WixPortfolio.jsx';
 import Keylinx from './components/projects/Keylinx.jsx';
 import Fandf from './components/projects/fandf.jsx';
+import Expensetracker from './components/projects/expensetracker.jsx';
 import Store from './components/projects/store.jsx';
 import Patches from './components/projects/patches';
 import Covers from './components/projects/covers';
@@ -120,6 +121,7 @@ export default function App() {
           <Route path="/projects/wix" element={<WixPortfolio />} />
           <Route path="/projects/keylinx" element={<Keylinx />} />
           <Route path="/projects/fandf" element={<Fandf />} />
+          <Route path="/projects/expensetracker" element={<Expensetracker />} />
           <Route path="/projects/store" element={<Store />} />
           <Route path="/illusion" element={<Illusion />} />
           <Route path="/projects/patches" element={<Patches />} />
