@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import emailjs from "emailjs-com";
-import SplashCursor from '../SplashCursor';
+import SplashCursor from '../visuals/SplashCursor';
 // import logobig from '../../assets/pics/logobig.png'; // Justerar sökvägen efter din projektstruktur
 
 

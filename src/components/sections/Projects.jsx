@@ -1,5 +1,5 @@
 import React from "react";
-import { ProjectDiv } from "../ProjectDiv";
+import { ProjectDiv } from "../ProjectDivforppage";
 import { GraphicDiv } from "../GraphicDiv";
 
 export const Projects = () => {

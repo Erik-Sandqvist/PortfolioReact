@@ -1,12 +1,12 @@
 import React, { useEffect, useState, Suspense } from 'react'
 import { Link } from 'react-router-dom'
 import { Canvas } from '@react-three/fiber'
-import { ScrollCameraController } from '../ScrollCameraController'
+import { ScrollCameraController } from '../visuals/ScrollCameraController'
 import { ProjectDiv } from '../ProjectDiv'
 import { GraphicDiv } from '../GraphicDiv'
 import { LogoModel } from './LogoModel'
 import { Footer } from '../Footer'
-import CurvedLoop from '../CurvedLoop'
+import CurvedLoop from '../visuals/CurvedLoop'
 
 const THEMES = ['luxury','nord','dark','light']
 

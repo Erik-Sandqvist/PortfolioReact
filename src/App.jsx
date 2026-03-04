@@ -3,15 +3,15 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import './index.css';
 
-import { LoadingScreen } from './components/LoadingScreen';
+import { LoadingScreen } from './components/sections/LoadingScreen';
 import { Navbar } from './components/Navbar';
 import { MobileMenu } from './components/MobileMenu';
 import { Home } from './components/sections/Home';
 import { Contact } from './components/sections/Contact';
 import About from './components/sections/About';
 import Projects from './components/sections/Projects.jsx';
-import { RainDots } from './components/RainDots';
-import LightRays from './components/LightRays';
+import { RainDots } from './components/visuals/RainDots';
+import LightRays from './components/visuals/LightRays';
 import MernNoteApp from './components/projects/MernNoteApp.jsx';
 import Stationkoll from './components/projects/Stationkoll';
 import Vinyl4u from './components/projects/vinyl4u.jsx';
@@ -26,7 +26,7 @@ import Nocco from './components/projects/nocco.jsx';
 import Ro from './components/projects/ro';
 import { Footer } from './components/Footer.jsx';
 import { Illusion } from './components/sections/Illusion';
-import { ScrollToTop } from './components/ScrollToTop';
+import { ScrollToTop } from './components/visuals/ScrollToTop';
 
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
