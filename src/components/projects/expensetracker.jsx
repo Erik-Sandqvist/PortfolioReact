@@ -10,7 +10,7 @@ const Expensetracker = () => {
   const base = import.meta.env.BASE_URL;
   const images = [
     { src: `${base}pics/expensetracker/img1.png`, alt: "Homescreen", caption: "Homescreen" },
-   
+    { src: `${base}pics/expensetracker/img2.png`, alt: "Car management", caption: "Car management" },
   ];
 
   return (
