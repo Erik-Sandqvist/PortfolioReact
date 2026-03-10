@@ -5,18 +5,17 @@ import { Link } from "react-router-dom";
 const Covers = () => {
     const covers = [
         { src: asset("pics/nocco/img1.png"), title: "", caption: "" },
-        // { src: asset("pics/nocco/img2.png"), title: "", caption: "" },
-        // { src: asset("pics/nocco/img3.png"), title: "", caption: "" },
+        { src: asset("pics/nocco/skumtomte.png"), title: "", caption: "" },
     ];
 
     return (
         <>
         <div className="h-full w-full bg-gradient-to-b bg-gradient-to-br from-base via-red-900 to-black flex flex-col items-center justify-center">
-        <div className="max-w-7xl mx-auto mt-24 mb-20 px-6">
+        <div className="max-w-7xl mx-auto mt-24 mb-20 px-6 ">
             <h2 className="text-3xl font-bold text-secondary mb-2">Nocco Posters</h2>
             <p className="text-text-primary mb-8"></p>
 
-            <div className="flex flex-wrap gap-8">
+            <div className="flex flex-col items-center justify-center gap-8">
                 {covers.map((c, i) => (
                     <div key={c.title} className="group">
                         <div
@@ -52,6 +51,7 @@ const Covers = () => {
     </Link>
 </div>
 </div>
+
 </>
     );
 };
