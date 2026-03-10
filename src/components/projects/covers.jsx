@@ -13,7 +13,9 @@ const Covers = () => {
 		<>
 		<div className="max-w-7xl mx-auto mt-24 mb-20 px-6">
 			<h2 className="text-3xl font-bold text-secondary mb-2">Catalog Covers</h2>
-			<p className="text-text-primary mb-8">Three cover designs</p>
+			<p className="text-text-primary mb-8">Three cover designs for JTH catalogs that i design to test myself and
+				impove my skills in Adobe Illustrator. 
+			</p>
 
 			<div className="flex flex-wrap gap-8">
 				{covers.map((c, i) => (
