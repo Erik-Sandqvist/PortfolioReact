@@ -24,6 +24,7 @@ import Patches from './components/projects/patches';
 import Covers from './components/projects/covers';
 import Nocco from './components/projects/nocco.jsx';
 import Ro from './components/projects/ro';
+import Personalbrand from './components/projects/personalbrand.jsx';
 import { Footer } from './components/Footer.jsx';
 import { Illusion } from './components/sections/Illusion';
 import { ScrollToTop } from './components/visuals/ScrollToTop';
@@ -128,6 +129,7 @@ export default function App() {
           <Route path="/projects/covers" element={<Covers />} />
           <Route path="/projects/nocco" element={<Nocco />} />
           <Route path="/projects/ro" element={<Ro />} />
+          <Route path="/projects/personalbrand" element={<Personalbrand />} />
         </Routes>
 
         <Footer />
