@@ -13,7 +13,7 @@ const Covers = () => {
         <>
         <div className="h-full w-full bg-gradient-to-b bg-gradient-to-br from-base via-red-900 to-black flex flex-col items-center justify-center">
         <div className="max-w-7xl mx-auto mt-24 mb-20 px-6">
-            <h2 className="text-3xl font-bold text-primary mb-2">Nocco Posters</h2>
+            <h2 className="text-3xl font-bold text-secondary mb-2">Nocco Posters</h2>
             <p className="text-text-primary mb-8"></p>
 
             <div className="flex flex-wrap gap-8">
@@ -44,7 +44,7 @@ const Covers = () => {
     </Link>
 
     <Link
-        to="/projects/ro"
+        to="/projects/personalbrand"
         className="btn btn-outline btn-secondary flex items-center gap-2 md:min-w-64 min-w-32"
     >
         Next Project

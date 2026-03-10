@@ -30,7 +30,7 @@ const Patches = () => {
         <>
             <div className="relative z-10 max-w-7xl mx-auto mt-28 px-6 mb-12">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">My Patches</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">My Patches</h2>
                     <p className="text-lg text-primary/80 max-w-2xl mx-auto">
                         I was responible for designing patches and a flag for my program during the universitys kick-off 2024. 
                         I mainly used Adobe Illustrator for this project. It was fun and turned out very good.

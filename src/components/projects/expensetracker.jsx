@@ -15,27 +15,33 @@ const Expensetracker = () => {
 
   return (
     <>
-      <div className="max-w-6xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="max-w-7xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
         <div className="p-6 md:p-10 space-y-2 mt-2">
           <div>
             <h2 className="text-3xl font-bold font-onest text-secondary mb-6">Mobile app</h2>
             
             {/* Flex container for desktop layout */}
-            <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex flex-col gap-8">
               
               {/* Left side - Text content */}
               <div className="flex-1 order-2 md:order-1">
                 <p className="text-text-primary text-base md:text-lg">
                   <strong>Intro</strong><br></br>
-                  ExpensesTracker is a cross-platform mobile app for managing vehicle-related spending.
+                  ExpensesTracker is a cross-platform mobile app for managing vehicle-related spending. But it could be expenses related to whatever the user wants.
                     It is designed to let users authenticate, manage cars, and track categorized expenses with
                      a clean tab/stack navigation flow.
                       <br></br>
                       <br></br>
                   <strong>Purpose:</strong>
                    <br></br>
-                       Build a practical personal-finance tool focused on car ownership 
+                       The apps purpose is to provide a practical personal-finance tool focused on car ownership 
                        costs (fuel, maintenance, etc.), with cloud-backed data and user accounts.
+                       The app works for both iOS and Android, built with React Native and Expo for a smooth cross-platform 
+                        experience. It uses Supabase for backend services like authentication and database management, 
+                        and is distributed via TestFlight for iOS testing. The design emphasizes simplicity, usability, and 
+                        a modern aesthetic with a dark theme and intuitive navigation. The app is not avilable on app store or 
+                        google play since it was a personal project to soleve a persenol problem i saw.
                   <br /><br />
                 </p>
               </div>
@@ -93,9 +99,11 @@ const Expensetracker = () => {
         autoPlay={4000}
         showIndicators
         showArrows
-        className="aspect-video max-w-6xl mx-auto shadow-xl rounded-xl overflow-hidden"
+        className="aspect-video max-w-6xl mx-auto shadow-xl rounded-xl overflow-hidden mt-36"
       />
-      <div className="flex justify-between mt-8 max-w-6xl mx-auto gap-10 mb-8">
+     
+    </div>
+     <div className="flex justify-between max-w-6xl mx-auto gap-10 mb-8">
       <Link 
         to="/projects/wixportfolio" 
         className="btn btn-outline btn-secondary !flex !flex-row items-center justify-center gap-2 whitespace-nowrap max-w-xs md:min-w-80 md:max-w-96"
@@ -115,5 +123,9 @@ const Expensetracker = () => {
   </>
   );
 };
+
+
+
+
 
 export default Expensetracker;
