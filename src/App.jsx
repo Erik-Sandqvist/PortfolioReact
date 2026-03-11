@@ -66,7 +66,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop smooth />
-      <div className="min-h-screen flex flex-col bg-gradient-to-br from-base-100 via-base-100/10 to-secondary text-base-content relative">
+      <div className="min-h-screen flex flex-col bg-gradient-to-br from-base-100 via-base-100 to-secondary  text-base-content relative">
         {/* Global Light Rays Background */}
         <div className="fixed inset-0 w-full h-full pointer-events-none z-0">
           <LightRays

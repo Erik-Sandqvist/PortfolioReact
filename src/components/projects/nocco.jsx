@@ -15,7 +15,7 @@ const Covers = () => {
             <h2 className="text-3xl font-bold text-secondary mb-2">Nocco Posters</h2>
             <p className="text-text-primary mb-8"></p>
 
-            <div className="flex flex-col items-center justify-center gap-8">
+            <div className="flex flex-row  items-center justify-center gap-8">
                 {covers.map((c, i) => (
                     <div key={c.title} className="group">
                         <div

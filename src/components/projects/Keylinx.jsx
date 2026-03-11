@@ -13,7 +13,7 @@ import { Carousel } from "../Carousel";
 const Keylinx = () => {
   const base = import.meta.env.BASE_URL;
   const images = [
-    { src: `${base}pics/keylinx/img1.png`, alt: "Homescreen", caption: "Homescreen" },
+    { src: `${base}pics/keylinx/mockup.png`, alt: "Homescreen", caption: "Homescreen" },
     { src: `${base}pics/keylinx/img2.png`, alt: "Cv creation", caption: "Cv creation" },
     { src: `${base}pics/keylinx/img3.png`, alt: "Databasedesign", caption: "Databasedesign" },
     { src: `${base}pics/keylinx/img4.png`, alt: "Lightmode", caption: "Lightmode" },
