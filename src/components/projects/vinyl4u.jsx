@@ -47,13 +47,7 @@ const Vinyl4u  = () => {
           </div>
         </div>
 
-        <ul className="list-disc list-inside text-primary space-y-1">
-          <li>Fullständigt CRUD-stöd för anteckningar</li>
-          <li>JWT-baserad användarautentisering</li>
-          <li>Responsiv design för både desktop och mobil</li>
-          <li>REST API byggt med Express och Node</li>
-          <li>Frontend i React med moderna hooks och komponentstruktur</li>
-        </ul>
+      
 
         <div className="pt-4">
           <a
