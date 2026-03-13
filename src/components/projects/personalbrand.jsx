@@ -59,7 +59,7 @@ const Personalbrand = () => {
                 </div>
             </div>
 
-            <div className="flex justify-between mt-12 max-w-7xl mx-auto px-6 gap-20 mb-8">
+            <div className="flex justify-between mt-8 max-w-6xl mx-auto gap-10 mb-8">
                 <Link 
                     to="/projects/ro" 
                     className="btn btn-outline btn-secondary flex items-center gap-2 md:min-w-64 min-w-32"

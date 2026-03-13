@@ -12,7 +12,8 @@ const Covers = () => {
         <>
         <div className="h-full w-full  bg-gradient-to-br from-base via-red-900 to-black flex flex-col items-center justify-center">
         <div className="max-w-7xl mx-auto mt-24 mb-20 px-6 ">
-            <h2 className="text-3xl font-bold text-secondary mb-2">Nocco Posters</h2>
+            <h2 className="text-3xl font-bold text-secondary mb-2 mt-6">Nocco Posters</h2>
+        <hr className="border-secondary"></hr>
             <p className="text-text-primary mb-8"></p>
 
             <div className="flex flex-row  items-center justify-center gap-8">
@@ -42,6 +43,11 @@ const Covers = () => {
                     </p>
                     <img
                         src={asset("pics/nocco/wall.jpeg")}
+                        alt="Project Overview"
+                        className="max-w-sm rounded-lg shadow-lg object-cover w-full md:w-auto"
+                    />
+                    <img
+                        src={asset("pics/nocco/melon-crush-floor.png")}
                         alt="Project Overview"
                         className="max-w-sm rounded-lg shadow-lg object-cover w-full md:w-auto"
                     />
