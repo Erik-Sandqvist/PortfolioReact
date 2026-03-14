@@ -19,7 +19,7 @@ const Ro = () => {
 
 	return (
 		<>
-		<div className="h-full w-full bg-gradient-to-b bg-gradient-to-br from-base via-green-900 to-black flex flex-col items-center justify-center">	
+		<div className="h-full w-full bg-gradient-to-br from-base via-green-900 to-black flex flex-col items-center justify-center">	
 			<div className="max-w-6xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
 				<div className="p-6 md:p-10 space-y-6 mt-2">
 					<div className="space-y-4">

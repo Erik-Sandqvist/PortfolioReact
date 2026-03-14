@@ -1,6 +1,7 @@
 import React, { useEffect, useState, Suspense } from 'react'
 import { Link } from 'react-router-dom'
 import { Canvas } from '@react-three/fiber'
+import ShinyText from '../visuals/ShinyText';
 import { ScrollCameraController } from '../visuals/ScrollCameraController'
 import { ProjectDiv } from '../ProjectDiv'
 import { GraphicDiv } from '../GraphicDiv'
@@ -34,12 +35,34 @@ export const Home = () => {
    <h1 className="font-onest text-5xl md:text-9xl font-medium mt-8 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent leading-tight animate-slide-in-right cursor-default">
      Erik Sandqvist
    </h1>
-
-      <p className="font-onest max-w-2xl text-lg md:text-2xl text-primary animate-slide-in-right cursor-default mb-2">
-        I am 21 years old, born and raised in Jönköping. I’m currently a student at Jönköping University, 
-        with a strong interest in programming and coding, specializing in web development for both backend and frontend.
-        I also have experience in media design and enjoy creating visually engaging digital content.
-      </p>
+ {/* <div
+        ref={containerRef}
+        className="max-w-2xl mb-2 animate-slide-in-right cursor-default"
+        style={{ position: 'relative' }}
+      >
+        <VariableProximity
+          label={'I am 21 years old, born and raised in Jönköping. I’m currently a student at Jönköping University, with a strong interest in programming and coding, specializing in web development for both backend and frontend. I also have experience in media design and enjoy creating visually engaging digital content.'}
+          className="font-onest text-lg md:text-2xl text-primary leading-relaxed"
+          fromFontVariationSettings="'wght' 400, 'opsz' 9"
+          toFontVariationSettings="'wght' 800, 'opsz' 40"
+          containerRef={containerRef}
+          radius={130}
+          falloff="linear"
+        />
+      </div> */}
+      <ShinyText
+        text="I am 21 years old, born and raised in Jönköping. I’m currently a student at Jönköping University, with a strong interest in programming and coding, specializing in web development for both backend and frontend. I also have experience in media design and enjoy creating visually engaging digital content."
+        className="font-onest max-w-2xl text-lg md:text-2xl animate-slide-in-right cursor-default mb-2 block leading-relaxed"
+        speed={4.6}
+        delay={0.92}
+        color="#fffcfe"
+        shineColor="#f7d00c"
+        spread={90}
+        direction="left"
+        yoyo={false}
+        pauseOnHover={false}
+        disabled={false}
+      />
 
       <div className="w-full h-80">
         <Canvas camera={{ position: [0, 0, 10] }}>
