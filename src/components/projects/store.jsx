@@ -28,8 +28,11 @@ const Store = () => {
             <h2 className="text-3xl font-bold font-onest text-secondary mb-2">
               A Webshop in the making
             </h2>
-            <p className="text-primary text-base md:text-lg">
-              More information coming...
+            <hr className="border-secondary"></hr>
+            <p className="text-primary text-base md:text-lg mt-4">
+              More information coming...<br></br>
+              I am currently building a webshop as a personal project to learn more about full-stack development and e-commerce platforms. 
+              The webshop is being developed using a modern tech stack.
             </p>
             <br></br>
             <div>

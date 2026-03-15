@@ -25,6 +25,7 @@ const Ro = () => {
 					<div className="space-y-4">
 						<p className="uppercase tracking-[0.2em] text-xs text-secondary font-semibold font-onest">Brand identity</p>
 						<h2 className="text-3xl font-bold text-primary font-onest">RO – Brand Manual</h2>
+						<hr className="border-secondary"></hr>
 						<p className="text-text-primary font-onest text-base md:text-lg">
 							A project where I and a team developed a comprehensive brand manual for RO, a fictional wellness retreat. We covered logo design,
 							color palette, typography, imagery, and usage guidelines. The manual explains formats, clear space, contrast, and how the brand

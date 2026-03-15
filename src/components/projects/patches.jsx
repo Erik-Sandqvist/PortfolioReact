@@ -35,7 +35,8 @@ const Patches = () => {
             <div className="relative z-10 max-w-7xl mx-auto mt-28 px-6 mb-12">
                 <div className="text-center mb-12">
                     <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">My Patches</h2>
-                    <p className="text-lg text-primary/80 max-w-3xl mx-auto">
+                    <hr className="border-secondary"></hr>
+                    <p className="text-lg text-primary/80 max-w-3xl mx-auto mt-6">
                         During the preperations for the Jönköping University (JU) kick-off in 2024, I designed three pathces and a flag
                         for the program New Media Design at Jönköping Tekniska Högskola (JTH). The patches were sold during the kick-off and were very popular among the students. 
                         It was a fun project to work on were I got to express my creativity and see the designs come to life.
@@ -61,6 +62,7 @@ const Patches = () => {
                 <p className="text-text-primary">
                     {patch.description}
                 </p>
+                <hr className="border-secondary"></hr>
             </div>
         </div>
     ))}

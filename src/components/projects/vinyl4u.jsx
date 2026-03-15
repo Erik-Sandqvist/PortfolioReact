@@ -20,7 +20,8 @@ const Vinyl4u  = () => {
       <div className="p-6 md:p-10 space-y-6 mt-2">
         <div>
           <h2 className="text-3xl font-bold font-onest text-secondary mb-2">Vinyl4u</h2>
-          <p className="text-primary text-base md:text-lg">
+          <hr className="border-secondary"></hr>
+          <p className="text-primary text-base md:text-lg mt-4">
             Vinyl Shop Web Application
             As part of a collaborative team project, I helped develop a vinyl record e-commerce website using HTML, CSS, and JavaScript. The project involved building a responsive and user-friendly interface, implementing dynamic features, and ensuring smooth navigation.
 

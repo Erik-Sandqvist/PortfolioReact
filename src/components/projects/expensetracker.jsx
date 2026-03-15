@@ -19,10 +19,11 @@ const Expensetracker = () => {
       <div className="max-w-7xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
         <div className="p-6 md:p-10 space-y-2 mt-2">
           <div>
-            <h2 className="text-3xl font-bold font-onest text-secondary mb-6">Mobile app</h2>
+            <h2 className="text-3xl font-bold font-onest text-secondary mb-6">Expense tracker mobile app</h2>
+            <hr className="border-secondary"></hr>
             
             {/* Flex container for desktop layout */}
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-8 mt-4">
               
               {/* Left side - Text content */}
               <div className="flex-1 order-2 md:order-1">
