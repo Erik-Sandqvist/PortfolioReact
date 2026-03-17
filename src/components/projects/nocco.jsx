@@ -6,6 +6,7 @@ const Covers = () => {
     const covers = [
         { src: asset("pics/nocco/img1.png"), title: "", caption: "" },
         { src: asset("pics/nocco/skumtomte.png"), title: "", caption: "" },
+            { src: asset("pics/nocco/carnip.png"), title: "", caption: "" },
     ];
 
     return (
