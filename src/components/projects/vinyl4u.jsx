@@ -23,9 +23,11 @@ const Vinyl4u  = () => {
           <hr className="border-secondary"></hr>
           <p className="text-primary text-base md:text-lg mt-4">
             Vinyl Shop Web Application
-            As part of a collaborative team project, I helped develop a vinyl record e-commerce website using HTML, CSS, and JavaScript. The project involved building a responsive and user-friendly interface, implementing dynamic features, and ensuring smooth navigation.
-
-            We worked closely using GitHub for version control, resolving code conflicts efficiently and maintaining clean, organized code. This experience strengthened my skills in front-end development, teamwork, and collaborative problem-solving while delivering a polished final product.
+            As part of a team project we had in school, I helped develop a vinyl record e-commerce website using HTML, CSS, and JavaScript.
+             The project involved building a responsive and user-friendly interface, implementing dynamic features, and ensuring smooth navigation.
+            We worked closely using GitHub for version control, resolving code conflicts efficiently and maintaining clean, organized code.
+             This experience strengthened my skills in front-end development, teamwork, and collaborative problem-solving while delivering
+              a polished final product.
           </p>
         </div>
 

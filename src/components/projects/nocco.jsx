@@ -6,7 +6,7 @@ const Covers = () => {
     const covers = [
         { src: asset("pics/nocco/img1.png"), title: "", caption: "" },
         { src: asset("pics/nocco/skumtomte.png"), title: "", caption: "" },
-            { src: asset("pics/nocco/carnip.png"), title: "", caption: "" },
+        { src: asset("pics/nocco/carnip.png"), title: "", caption: "" },
     ];
 
     return (
@@ -17,7 +17,7 @@ const Covers = () => {
         <hr className="border-secondary"></hr>
             <p className="text-text-primary mb-8"></p>
 
-            <div className="flex flex-row  items-center justify-center gap-8">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 {covers.map((c, i) => (
                     <div key={c.title} className="group">
                         <div
@@ -29,6 +29,7 @@ const Covers = () => {
                                 className="max-h-screen max-w object-contain"
                             />
                         </div>
+                        <img src=""></img>
                         
                     </div>
                 ))}
@@ -38,7 +39,7 @@ const Covers = () => {
         <hr className="border-secondary"></hr>
                 <div className="flex flex-col md:flex-row w-full mt-6 gap-8">
                     <p className="text-text-primary mb-4 text-xl w-full md:w-1/2 mt-10">
-                        I created two posters of two Nocco flavors, <span className="font-bold text-secondary">Skumtomte</span> and <span className="font-bold text-secondary">Melon Crush</span>. I then also 
+                        I created a few posters based on different Nocco flavors, the ones i am the most happy about are <span className="font-bold text-secondary">Skumtomte</span> and <span className="font-bold text-secondary">Melon Crush</span>. I then also 
                         had one of them printed out and put it up on my wall. It was a fun project to work on and I really
                         enjoyed the process of creating the posters and seeing them come to life.
                     </p>
