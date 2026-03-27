@@ -127,7 +127,7 @@ export const ProjectDiv = () => {
       >
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-          style={{ backgroundImage: `url(${asset("pics/store/storemock.png")})` }}
+          style={{ backgroundImage: `url(${asset("pics/store/sunit-mockup.png")})` }}
         />
          <div className="absolute inset-0 bg-gradient-to-t from-yellow/40 via-black/30 to-black/10" />
         <div className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-black/10 p-6 transition-all duration-300 group-hover:bg-black/5">

@@ -76,15 +76,15 @@ const Store = () => {
               </div>
               <div className="flex flex-col md:flex-col items-center justify-center gap-8 mt-10">
                   <img
-        src={`${base}pics/store/storemock.png`}
+        src={`${base}pics/store/sunit-mockup.png`}
         alt="Store Mockup"
         className="w-full  h-full shadow-xl rounded-xl overflow-hidden"
       />
-      <img
+      {/* <img
         src={`${base}pics/store/img2.png`}
         alt="Store Mockup"
         className="w-full  h-full shadow-xl rounded-xl overflow-hidden"
-      />
+      /> */}
       </div>
        <hr className="border-secondary mt-4"></hr>
             <p className="text-primary text-base md:text-lg mt-4">
