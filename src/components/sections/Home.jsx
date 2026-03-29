@@ -53,10 +53,10 @@ export const Home = () => {
       <ShinyText
         text="I am 21 years old, born and raised in Jönköping. I’m currently a student at Jönköping University, with a strong interest in programming and coding, specializing in web development for both backend and frontend. I also have experience in media design and enjoy creating visually engaging digital content."
         className="font-onest max-w-2xl text-lg md:text-2xl animate-slide-in-right cursor-default mb-2 block leading-relaxed"
-        speed={4.6}
+        speed={6.6}
         delay={0.92}
         color="#fffcfe"
-        shineColor="#f7d00c"
+        shineColor="#73620d"
         spread={90}
         direction="left"
         yoyo={false}
@@ -81,9 +81,9 @@ export const Home = () => {
         curveAmount={-130}
       />
       <ProjectDiv />
-      <Link to="/illusion" className="btn btn-primary hover:btn-secondary m-auto">
+      {/* <Link to="/illusion" className="btn btn-primary hover:btn-secondary m-auto">
   Go to Illusion
-</Link>
+</Link> */}
 <CurvedLoop
       className="text-primary"
         marqueeText="Graphic Design   *   Motion Graphics   *   Adobe Photoshop   *   Adobe After Effects   *   "

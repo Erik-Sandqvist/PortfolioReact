@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from 'react-router-dom'
 import { asset } from '../utils/asset'
 
-export const MobileMenu = ({ menuOpen, setMenuOpen, showRain, setShowRain }) => {
+export const MobileMenu = ({ menuOpen, setMenuOpen, showRain, setShowRain, showLightRays, setShowLightRays }) => {
   return (
     <div
       className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex flex-col items-center justify-center 
@@ -70,6 +70,18 @@ export const MobileMenu = ({ menuOpen, setMenuOpen, showRain, setShowRain }) => 
           className="toggle"
           checked={showRain}
           onChange={() => setShowRain(v => !v)}
+        />
+      </div>
+
+      <div className={`mt-2 flex items-center justify-between ${
+        menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+      } transition-transform duration-300`}>
+        <span className="text-2xl text-primary font-semibold mr-2">Rays</span>
+        <input
+          type="checkbox"
+          className="toggle"
+          checked={showLightRays}
+          onChange={() => setShowLightRays(v => !v)}
         />
       </div>
     </div>

@@ -37,10 +37,19 @@ export default function App() {
     const saved = sessionStorage.getItem('userRainPreference');
     return saved !== null ? JSON.parse(saved) : false;
   });
+
+  const [showLightRays, setShowLightRays] = useState(() => {
+    const saved = sessionStorage.getItem('userLightRaysPreference');
+    return saved !== null ? JSON.parse(saved) : true;
+  });
   
   useEffect(() => {
     sessionStorage.setItem('userRainPreference', JSON.stringify(showRain));
   }, [showRain]);
+
+  useEffect(() => {
+    sessionStorage.setItem('userLightRaysPreference', JSON.stringify(showLightRays));
+  }, [showLightRays]);
 
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'luxury');
   const [secondaryColor, setSecondaryColor] = useState('#f7d00c');
@@ -68,21 +77,23 @@ export default function App() {
       <ScrollToTop smooth />
       <div className="min-h-screen flex flex-col bg-gradient-to-br from-base-100 via-base-100 to-secondary  text-base-content relative">
         {/* Global Light Rays Background */}
-        <div className="fixed inset-0 w-full h-full pointer-events-none z-0">
-          <LightRays
-            key={theme}
-            raysOrigin="top-center"
-            raysColor={secondaryColor}
-            raysSpeed={1.5}
-            lightSpread={1.2}
-            rayLength={2.5}
-            followMouse={true}
-            mouseInfluence={0.15}
-            noiseAmount={0.05}
-            distortion={0.08}
-            saturation={0.9}
-          />
-        </div>
+        {showLightRays && (
+          <div className="fixed inset-0 w-full h-full pointer-events-none z-0">
+            <LightRays
+              key={theme}
+              raysOrigin="top-center"
+              raysColor={secondaryColor}
+              raysSpeed={1.5}
+              lightSpread={1.2}
+              rayLength={2.5}
+              followMouse={true}
+              mouseInfluence={0.15}
+              noiseAmount={0.05}
+              distortion={0.08}
+              saturation={0.9}
+            />
+          </div>
+        )}
 
         {showRain && (
           <RainDots
@@ -98,6 +109,8 @@ export default function App() {
           setMenuOpen={setMenuOpen}
           showRain={showRain}
           setShowRain={setShowRain}
+          showLightRays={showLightRays}
+          setShowLightRays={setShowLightRays}
           theme={theme}
           setTheme={setTheme}
         />
@@ -108,6 +121,8 @@ export default function App() {
             setMenuOpen={setMenuOpen}
             showRain={showRain}
             setShowRain={setShowRain}
+            showLightRays={showLightRays}
+            setShowLightRays={setShowLightRays}
           />
         )}
 

@@ -32,7 +32,7 @@ export default {
           primary: '#010f17',
           secondary: '#998f03',
           accent: '#00f5ff',
-          'base-100': '#a7c3cc',
+          'base-100': '#dce1e3',
         },
       },
     ],
