@@ -17,11 +17,11 @@ export const Navbar = ({ menuOpen, setMenuOpen, showRain, setShowRain, showLight
           </Link>
 
           {/* Tema-toggle med ikoner */}
-          <div className="relative flex items-center ml-4">
+          {/* <div className="relative flex items-center ml-4">
             <FaSun className="absolute right-1 text-yellow-500 text-sm pointer-events-none z-10" />
             <input type="checkbox" value="acid" className="toggle theme-controller" />
             <FaMoon className="absolute left-1 text-blue-400 text-sm pointer-events-none z-10" />
-          </div>
+          </div> */}
 
           <div className="hidden md:flex items-center gap-4 ml-6">
             <div className="flex items-center gap-2">
