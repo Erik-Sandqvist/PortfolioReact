@@ -20,11 +20,14 @@ const Vinyl4u  = () => {
       <div className="p-6 md:p-10 space-y-6 mt-2">
         <div>
           <h2 className="text-3xl font-bold font-onest text-secondary mb-2">Vinyl4u</h2>
-          <p className="text-primary text-base md:text-lg">
+          <hr className="border-secondary"></hr>
+          <p className="text-primary text-base md:text-lg mt-4">
             Vinyl Shop Web Application
-            As part of a collaborative team project, I helped develop a vinyl record e-commerce website using HTML, CSS, and JavaScript. The project involved building a responsive and user-friendly interface, implementing dynamic features, and ensuring smooth navigation.
-
-            We worked closely using GitHub for version control, resolving code conflicts efficiently and maintaining clean, organized code. This experience strengthened my skills in front-end development, teamwork, and collaborative problem-solving while delivering a polished final product.
+            As part of a team project we had in school, I helped develop a vinyl record e-commerce website using HTML, CSS, and JavaScript.
+             The project involved building a responsive and user-friendly interface, implementing dynamic features, and ensuring smooth navigation.
+            We worked closely using GitHub for version control, resolving code conflicts efficiently and maintaining clean, organized code.
+             This experience strengthened my skills in front-end development, teamwork, and collaborative problem-solving while delivering
+              a polished final product.
           </p>
         </div>
 
@@ -47,13 +50,7 @@ const Vinyl4u  = () => {
           </div>
         </div>
 
-        <ul className="list-disc list-inside text-primary space-y-1">
-          <li>Fullständigt CRUD-stöd för anteckningar</li>
-          <li>JWT-baserad användarautentisering</li>
-          <li>Responsiv design för både desktop och mobil</li>
-          <li>REST API byggt med Express och Node</li>
-          <li>Frontend i React med moderna hooks och komponentstruktur</li>
-        </ul>
+      
 
         <div className="pt-4">
           <a

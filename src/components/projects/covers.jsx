@@ -12,8 +12,11 @@ const Covers = () => {
 	return (
 		<>
 		<div className="max-w-7xl mx-auto mt-24 mb-20 px-6">
-			<h2 className="text-3xl font-bold text-primary mb-2">Catalog Covers</h2>
-			<p className="text-text-primary mb-8">Three cover designs</p>
+			<h2 className="text-3xl font-bold text-secondary mb-2">Catalog Covers</h2>
+			<hr className="border-secondary"></hr>
+			<p className="text-lg text-primary mb-8 mt-5">Three cover designs for JTH catalogs that i design to test myself and
+				impove my skills in Adobe Illustrator. 
+			</p>
 
 			<div className="flex flex-wrap gap-8">
 				{covers.map((c, i) => (
@@ -38,7 +41,7 @@ const Covers = () => {
 			</div>
 		</div>
 
-<div className="flex justify-between mt-12 max-w-7xl mx-auto px-6 gap-20 mb-8">
+<div className="flex justify-between mt-8 max-w-6xl mx-auto gap-10 mb-8">
                 <Link 
                     to="/projects/patches" 
                     className="btn btn-outline btn-secondary flex items-center gap-2 md:min-w-64 min-w-32"

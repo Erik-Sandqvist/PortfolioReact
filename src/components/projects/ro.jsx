@@ -19,11 +19,13 @@ const Ro = () => {
 
 	return (
 		<>
+		<div className="h-full w-full bg-gradient-to-br from-base via-green-900 to-black flex flex-col items-center justify-center">	
 			<div className="max-w-6xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
 				<div className="p-6 md:p-10 space-y-6 mt-2">
 					<div className="space-y-4">
 						<p className="uppercase tracking-[0.2em] text-xs text-secondary font-semibold font-onest">Brand identity</p>
 						<h2 className="text-3xl font-bold text-primary font-onest">RO – Brand Manual</h2>
+						<hr className="border-secondary"></hr>
 						<p className="text-text-primary font-onest text-base md:text-lg">
 							A project where I and a team developed a comprehensive brand manual for RO, a fictional wellness retreat. We covered logo design,
 							color palette, typography, imagery, and usage guidelines. The manual explains formats, clear space, contrast, and how the brand
@@ -31,9 +33,11 @@ const Ro = () => {
 						</p>
 					</div>
 
+
+
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-primary">
 						<div className="rounded-2xl bg-base-200/60 p-5 space-y-3 shadow-sm">
-							<h3 className="text-xl font-semibold">Deliverables</h3>
+							<h3 className="text-xl font-semibold text-secondary">Deliverables</h3>
 							<ul className="list-disc list-inside text-sm md:text-base space-y-2">
 								<li>Primary and secondary logo, negative/positive and monochrome variants</li>
 								<li>Color palette with contrast tests and accessibility guidance</li>
@@ -45,7 +49,7 @@ const Ro = () => {
 						</div>
 
 						<div className="rounded-2xl bg-base-200/60 p-5 space-y-4 shadow-sm">
-							<h3 className="text-xl font-semibold">Focus</h3>
+							<h3 className="text-xl font-semibold text-secondary">Focus</h3>
 							<p className="text-sm md:text-base text-text-primary">
 								The foundation is nature and water—calm blues and greens with soft shadows to reflect a tranquil yet confident brand.
 								The manual includes practical do&apos;s and don&apos;ts plus examples of how the identity scales across print, digital, and motion.
@@ -69,20 +73,30 @@ const Ro = () => {
 
 					<div className="rounded-2xl bg-base-200/60 p-5 shadow-sm space-y-4">
 						<div className="flex items-center justify-between gap-4 flex-wrap">
-							</div>
 							<span className="text-xs uppercase tracking-[0.2em] text-secondary">Motion preview</span>
-						
-						
-							<video
-								src={videoSrc}
-								autoPlay
-								loop
-								muted
-								playsInline
-								className="w-full h-full max-h-[420px] object-cover"
+							<Link
+								to="https://youtu.be/ScmRBXGp2jo"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="btn btn-sm btn-ghost gap-2"
 							>
-								Your browser does not support the video tag.
-							</video>
+								Watch on YouTube
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+							</Link>
+						</div>
+						
+						<div className="aspect-video rounded-lg overflow-hidden bg-black">
+							<iframe
+								width="100%"
+								height="100%"
+								src="https://www.youtube.com/embed/ScmRBXGp2jo"
+								title="RO Brand Manual Motion Preview"
+								frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowFullScreen
+								className="w-full h-full"
+							></iframe>
+						</div>
 						
 					</div>
 				</div>
@@ -98,7 +112,7 @@ const Ro = () => {
 
 			<div className="flex justify-between mt-8 max-w-6xl mx-auto gap-10 mb-8">
 				<Link
-					to="/projects/nocco"
+					to="/projects/personalbrand"
 					className="btn btn-outline btn-secondary flex items-center gap-2 md:min-w-64 min-w-32"
 				>
 					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
@@ -112,6 +126,7 @@ const Ro = () => {
 					Next Project
 					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
 				</Link>
+			</div>
 			</div>
 		</>
 	);

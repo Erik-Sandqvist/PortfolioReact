@@ -13,7 +13,7 @@ import { Carousel } from "../Carousel";
 const Keylinx = () => {
   const base = import.meta.env.BASE_URL;
   const images = [
-    { src: `${base}pics/keylinx/img1.png`, alt: "Homescreen", caption: "Homescreen" },
+    { src: `${base}pics/keylinx/mockup.png`, alt: "Homescreen", caption: "Homescreen" },
     { src: `${base}pics/keylinx/img2.png`, alt: "Cv creation", caption: "Cv creation" },
     { src: `${base}pics/keylinx/img3.png`, alt: "Databasedesign", caption: "Databasedesign" },
     { src: `${base}pics/keylinx/img4.png`, alt: "Lightmode", caption: "Lightmode" },
@@ -25,10 +25,10 @@ const Keylinx = () => {
       <div className="max-w-6xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
         <div className="p-6 md:p-10 space-y-2 mt-2">
           <div>
-            <h2 className="text-3xl font-bold font-onest text-secondary mb-6">Keylinx (Internship)</h2>
-            
+            <h2 className="text-3xl font-bold font-onest text-secondary mb-4">Keylinx (Internship)</h2>
+            <hr className="border-secondary"></hr>
             {/* Flex container for desktop layout */}
-            <div className="flex flex-col md:flex-row gap-8">
+            <div className="mt-4 flex flex-col md:flex-row gap-8">
               
               {/* Left side - Text content */}
               <div className="flex-1 order-2 md:order-1">
@@ -100,8 +100,8 @@ const Keylinx = () => {
                       </div>
                     </div>
                   </div>
-                  <br></br>
-                  <hr></hr>
+                  
+                  <hr className="border-secondary"></hr>
                   <div>
                     <h4 className="text-lg font-semibold mb-3">Backend</h4>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -133,7 +133,7 @@ const Keylinx = () => {
                   </div>
 
                   <br></br>
-                  <hr></hr>
+                  <hr className="border-secondary"></hr>
                   <div>
                     <h4 className="text-lg font-semibold mb-3">Frontend & Design</h4>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -151,7 +151,7 @@ const Keylinx = () => {
                       </div>
                     </div>
                   </div>
-                  <hr></hr>
+                  <hr className="border-secondary"></hr>
                   <br></br>
                   <div>
                     <h4 className="text-lg font-semibold mb-3">Tools & Methodologies</h4>
@@ -177,7 +177,7 @@ const Keylinx = () => {
           </div>
 
  
-<hr></hr>
+<hr className="border-secondary"></hr>
         
         </div>
       </div>
