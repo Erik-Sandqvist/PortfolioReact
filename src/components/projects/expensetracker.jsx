@@ -11,6 +11,7 @@ const Expensetracker = () => {
   const images = [
     { src: `${base}pics/expensetracker/img1.png`, alt: "Homescreen", caption: "Homescreen" },
     { src: `${base}pics/expensetracker/img2.png`, alt: "Car management", caption: "Car management" },
+    { src: `${base}pics/expensetracker/img3.png`, alt: "Expense tracking", caption: "Expense tracking" },
   ];
 
   return (
