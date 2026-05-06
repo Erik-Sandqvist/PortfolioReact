@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { asset } from '../utils/asset';
 import { useNavigate } from 'react-router-dom';
 
@@ -20,11 +21,29 @@ export const ProfileCard = () => {
           <div className="w-full md:w-1/2 p-8 md:p-8 flex flex-col justify-start">
             <h1 className="text-3xl font-bold mb-2">Erik Sandqvist</h1>
             <p className="text-lg font-semibold mb-4">Web developer</p>
-
+            <div className="flex gap-3 mb-4">
+              <a
+                href="https://www.linkedin.com/in/erik-sandqvist-711480290"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#0A66C2] p-2 rounded w-10 h-10 flex items-center justify-center"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn className="text-white w-5 h-5" />
+              </a>
+              <a
+                href="https://github.com/erik-sandqvist"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#333] p-2 rounded w-10 h-10 flex items-center justify-center"
+                aria-label="GitHub"
+              >
+                <FaGithub className="text-white w-5 h-5" />
+              </a>
+            </div>
             <p className="mb-2 text-xl"><span className="font-bold text-xl">Phone:</span> 073-544 05 70</p>
             <p className="mb-2 text-xl"><span className="font-bold text-xl">Email:</span> esandqvist04@gmail.com</p>
-            <p className="mb-2 text-xl"><span className="font-bold text-xl">City:</span> Jönköping, Sweden</p>
-            <p className="mb-2 text-xl"><span className="font-bold text-xl">Date of Birth:</span> July 12, 2004</p>
+            <p className="mb-2 text-xl"><span className="font-bold text-xl">Country:</span> Sweden</p>
 
             <div className="mt-auto pt-14 border-t border-white/10">
               <div className="w-full flex flex-wrap items-center gap-3 justify-center md:justify-start mb-4">
