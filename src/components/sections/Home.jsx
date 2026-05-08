@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Suspense } from 'react'
+import React, { Suspense } from 'react'
 import { Link } from 'react-router-dom'
 import { Canvas } from '@react-three/fiber'
 import ShinyText from '../visuals/ShinyText';
@@ -8,33 +8,33 @@ import { GraphicDiv } from '../GraphicDiv'
 import { LogoModel } from './LogoModel'
 import { Footer } from '../Footer'
 import CurvedLoop from '../visuals/CurvedLoop'
-
-const THEMES = ['luxury','nord','dark','light']
+import LineWaves from '../LineWaves'
 
 export const Home = () => {
-  const [theme, setTheme] = useState(() =>
-    localStorage.getItem('theme') ||
-    document.documentElement.getAttribute('data-theme') ||
-    'luxury'
-  )
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('theme', theme)
-  }, [theme])
-
-  useEffect(() => {
-    const current = document.documentElement.getAttribute('data-theme')
-    const primary = getComputedStyle(document.documentElement).getPropertyValue('--p').trim()
-    console.log('Theme:', current, 'Primary:', primary)
-  }, [theme])
-
   return (
-    <section className="min-h-screen flex flex-col items-start md:items-center justify-center gap-6 p-6 mt-16 ">
+    <section className="min-h-screen relative mt-16 p-6">
+      <div className="absolute inset-0 z-0">
+        <LineWaves
+          speed={0.1}
+          innerLineCount={8}
+          outerLineCount={26}
+          warpIntensity={0.6}
+          rotation={-45}
+          edgeFadeWidth={0}
+          colorCycleSpeed={1}
+          brightness={0.2}
+          color1="#EAB308"
+          color2="#EAB308"
+          color3="#a68003"
+          enableMouseInteraction
+          mouseInfluence={20}
+        />
+      </div>
 
-   <h1 className="font-onest text-5xl md:text-9xl font-medium mt-8 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent leading-tight animate-slide-in-right cursor-default">
-     Erik Sandqvist
-   </h1>
+      <div className="flex flex-col items-start md:items-center justify-center gap-6 relative z-10">
+        <h1 className="font-onest text-5xl md:text-9xl font-medium mt-8 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent leading-tight animate-slide-in-right cursor-default">
+          Erik Sandqvist
+        </h1>
  {/* <div
         ref={containerRef}
         className="max-w-2xl mb-2 animate-slide-in-right cursor-default"
@@ -63,7 +63,7 @@ export const Home = () => {
         pauseOnHover={false}
         disabled={false}
       /> */}
-         <ShinyText
+         {/* <ShinyText
         text="Webdeveloper"
         className="font-onest max-w-2xl text-xl md:text-3xl font-bold animate-slide-in-right cursor-default mb-2 block leading-relaxed"
         speed={6.6}
@@ -75,7 +75,7 @@ export const Home = () => {
         yoyo={false}
         pauseOnHover={false}
         disabled={false}
-      />
+      /> */}
 
       <div className="w-full h-80">
         <Canvas camera={{ position: [0, 0, 10] }}>
@@ -129,6 +129,7 @@ export const Home = () => {
     Your browser does not support the video tag.
   </video>
 </div> */}
+      </div>
     </section>
   )
 }

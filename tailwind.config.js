@@ -26,15 +26,6 @@ export default {
           'base-100': '#010f17',
         },
       },
-      {
-        acid: {
-          ...themes['[data-theme=acid]'],
-          primary: '#010f17',
-          secondary: '#998f03',
-          accent: '#00f5ff',
-          'base-100': '#dce1e3',
-        },
-      },
     ],
   },
 }

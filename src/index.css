@@ -110,3 +110,138 @@ html, body {
   opacity: 1;
   transform: translateX(0);
 }
+
+/* Home glow lines */
+.home-glow-lines {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Home wave lines */
+.home-glow-waves {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wave-path {
+  fill: none;
+  stroke: rgba(247, 208, 12, 0.75);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 10px rgba(247, 208, 12, 0.45));
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: wave-drift 14s ease-in-out infinite;
+}
+
+.wave-path.wave-2 {
+  stroke: rgba(255, 255, 255, 0.35);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.35));
+  animation-duration: 18s;
+  animation-delay: -4s;
+}
+
+.wave-path.wave-3 {
+  stroke: rgba(247, 208, 12, 0.55);
+  stroke-width: 3;
+  filter: drop-shadow(0 0 14px rgba(247, 208, 12, 0.4));
+  animation-duration: 22s;
+  animation-delay: -7s;
+}
+
+.wave-path.wave-4 {
+  stroke: rgba(255, 255, 255, 0.25);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.3));
+  animation-duration: 26s;
+  animation-delay: -10s;
+}
+
+@keyframes wave-drift {
+  0% {
+    transform: translateX(-6%) translateY(0);
+  }
+  25% {
+    transform: translateX(-2%) translateY(-10px);
+  }
+  50% {
+    transform: translateX(3%) translateY(8px);
+  }
+  75% {
+    transform: translateX(6%) translateY(-6px);
+  }
+  100% {
+    transform: translateX(-6%) translateY(0);
+  }
+}
+
+.glow-line {
+  position: absolute;
+  height: 2px;
+  width: 140vw;
+  opacity: 0.7;
+  filter: blur(0.4px) drop-shadow(0 0 8px rgba(247, 208, 12, 0.45));
+  background: linear-gradient(90deg, transparent 0%, rgba(247, 208, 12, 0.9) 35%, rgba(255, 255, 255, 0.7) 50%, rgba(247, 208, 12, 0.9) 65%, transparent 100%);
+  animation: glow-line-wave 16s linear infinite;
+}
+
+.glow-line.is-secondary {
+  opacity: 0.45;
+  filter: blur(0.8px) drop-shadow(0 0 12px rgba(255, 255, 255, 0.25));
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 40%, rgba(247, 208, 12, 0.6) 60%, transparent 100%);
+  animation-duration: 22s;
+}
+
+.glow-line.is-slow {
+  animation-duration: 28s;
+}
+
+.glow-line.line-1 {
+  top: 18%;
+  left: -30vw;
+  transform: rotate(-8deg);
+}
+
+.glow-line.line-2 {
+  top: 42%;
+  left: -40vw;
+  transform: rotate(6deg);
+}
+
+.glow-line.line-3 {
+  top: 68%;
+  left: -35vw;
+  transform: rotate(-4deg);
+}
+
+.glow-line.line-4 {
+  top: 82%;
+  left: -45vw;
+  transform: rotate(10deg);
+}
+
+@keyframes glow-line-wave {
+  0% {
+    transform: translateX(-20vw) translateY(0) rotate(var(--glow-rot, 0deg));
+  }
+  25% {
+    transform: translateX(20vw) translateY(-10px) rotate(var(--glow-rot, 0deg));
+  }
+  50% {
+    transform: translateX(60vw) translateY(8px) rotate(var(--glow-rot, 0deg));
+  }
+  75% {
+    transform: translateX(100vw) translateY(-6px) rotate(var(--glow-rot, 0deg));
+  }
+  100% {
+    transform: translateX(140vw) translateY(0) rotate(var(--glow-rot, 0deg));
+  }
+}
