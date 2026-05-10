@@ -13,7 +13,7 @@ export const Navbar = ({ menuOpen, setMenuOpen, showRain, setShowRain, showLight
       <div className="max-w-8xl pl-10 md:pl-20">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="text-yellow-500 font-bold text-2xl flex items-center h-16 gap-2">
-            <img src={asset('pics/logosmall.png')} alt="Logo" className="h-10 w-auto" />
+            <img src={asset('pics/logosmallwhite.png')} alt="Logo" className="h-10 w-auto" />
           </Link>
 
           {/* Tema-toggle med ikoner */}
@@ -37,7 +37,7 @@ export const Navbar = ({ menuOpen, setMenuOpen, showRain, setShowRain, showLight
                 }`}
               >
                 <span
-                  className={`inline-block h-5 w-5 rounded-full bg-[#D3B60A] shadow transition-transform duration-200 ${
+                  className={`inline-block h-5 w-5 rounded-full bg-[#fffcfe] shadow transition-transform duration-200 ${
                     showRain ? 'translate-x-6' : 'translate-x-1'
                   }`}
                 />
@@ -57,7 +57,7 @@ export const Navbar = ({ menuOpen, setMenuOpen, showRain, setShowRain, showLight
                 }`}
               >
                 <span
-                  className={`inline-block h-5 w-5 rounded-full bg-[#D3B60A] shadow transition-transform duration-200 ${
+                  className={`inline-block h-5 w-5 rounded-full bg-[#fffcfe] shadow transition-transform duration-200 ${
                     showLightRays ? 'translate-x-6' : 'translate-x-1'
                   }`}
                 />

@@ -5,7 +5,7 @@ import React from 'react';
 import { asset } from '../../utils/asset' 
 
 export function LogoModel({ scale = 10 }) {
-  const gltf = useGLTF(asset('scene5.glb'))
+  const gltf = useGLTF(asset('logowhitespin2.glb'))
   const ref = useRef();
 
   useFrame(() => {

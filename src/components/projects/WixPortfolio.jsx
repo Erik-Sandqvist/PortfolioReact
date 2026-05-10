@@ -35,21 +35,13 @@ const WixPortfolio = () => {
           </p>
         </div>
 
-        <ul className="list-disc list-inside text-primary space-y-1">
-          <li>Custom theme and sections</li>
-          <li>Responsive layout and optimized images</li>
-          <li>Animations and hover effects</li>
-          <li>Contact form</li>
-          <li>Basic SEO (titles, meta tags, alt text, sitemap)</li>
-        </ul>
-
         <div className="pt-4">
 
           <a
             href="https://esandqvist04.wixsite.com/eriks-sandqvist-port"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 ml-4 px-5 py-2.5 bg-secondary text-white rounded-lg hover:bg-blue-700 transition"
+            className="inline-flex items-center gap-2 ml-4 px-5 py-2.5 bg-primary text-white hover:text-primary rounded-lg hover:bg-secondary transition"
           >
             Live
           </a>

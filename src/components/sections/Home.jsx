@@ -51,19 +51,6 @@ export const Home = () => {
           falloff="linear"
         />
       </div> */}
-      {/* <ShinyText
-        text="I am 21 years old, born and raised in Jönköping. I’m currently a student at Jönköping University, with a strong interest in programming and coding, specializing in web development for both backend and frontend. I also have experience in media design and enjoy creating visually engaging digital content."
-        className="font-onest max-w-2xl text-lg md:text-2xl animate-slide-in-right cursor-default mb-2 block leading-relaxed"
-        speed={6.6}
-        delay={0.92}
-        color="#fffcfe"
-        shineColor="#73620d"
-        spread={90}
-        direction="left"
-        yoyo={false}
-        pauseOnHover={false}
-        disabled={false}
-      /> */}
          {/* <ShinyText
         text="Webdeveloper"
         className="font-onest max-w-2xl text-xl md:text-3xl font-bold animate-slide-in-right cursor-default mb-2 block leading-relaxed"
