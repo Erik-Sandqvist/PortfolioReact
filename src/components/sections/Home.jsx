@@ -33,7 +33,7 @@ export const Home = () => {
         </div>
 
         <div className="flex flex-col items-start md:items-center justify-center gap-6 relative z-10">
-        <h1 className="font-onest text-5xl md:text-9xl font-medium mt-8 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent leading-tight animate-slide-in-right cursor-default">
+        <h1 className="font-onest text-5xl md:text-9xl font-medium mt-8 bg-secondary bg-clip-text text-transparent leading-tight animate-slide-in-right cursor-default">
           Erik Sandqvist
         </h1>
  {/* <div

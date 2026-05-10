@@ -20,15 +20,15 @@ const Expensetracker = () => {
       <div className="max-w-7xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
         <div className="p-6 md:p-10 space-y-2 mt-2">
           <div>
-            <h2 className="text-3xl font-bold font-onest text-secondary mb-6">Expense tracker mobile app</h2>
-            <hr className="border-secondary"></hr>
+            <h2 className="text-3xl font-bold font-onest text-primary mb-6">Expense tracker mobile app</h2>
+            <hr className="border-primary"></hr>
             
             {/* Flex container for desktop layout */}
             <div className="flex flex-col gap-8 mt-4">
               
               {/* Left side - Text content */}
               <div className="flex-1 order-2 md:order-1">
-                <p className="text-text-primary text-base md:text-lg">
+                <p className="text-text-secondary text-base md:text-lg">
                   <strong>Intro</strong><br></br>
                   ExpensesTracker is a cross-platform mobile app for managing vehicle-related spending. But it could be expenses related to whatever the user wants.
                     It is designed to let users authenticate, manage cars, and track categorized expenses with
@@ -50,7 +50,7 @@ const Expensetracker = () => {
 
               {/* Right side - Icons */}
               <div className="flex-1 order-1 md:order-2">
-                <div className="space-y-8 text-primary text-sm">
+                <div className="space-y-8 text-secondary text-sm">
                   <div>
                     <h4 className="text-lg font-semibold mb-8">Tech Stack</h4>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">

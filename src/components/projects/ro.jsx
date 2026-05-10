@@ -23,10 +23,10 @@ const Ro = () => {
 			<div className="max-w-6xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
 				<div className="p-6 md:p-10 space-y-6 mt-2">
 					<div className="space-y-4">
-						<p className="uppercase tracking-[0.2em] text-xs text-secondary font-semibold font-onest">Brand identity</p>
-						<h2 className="text-3xl font-bold text-primary font-onest">RO – Brand Manual</h2>
+						<p className="uppercase tracking-[0.2em] text-xs text-primary font-semibold font-onest">Brand identity</p>
+						<h2 className="text-3xl font-bold text-secondary font-onest">RO – Brand Manual</h2>
 						<hr className="border-secondary"></hr>
-						<p className="text-text-primary font-onest text-base md:text-lg">
+						<p className="text-text-secondary font-onest text-base md:text-lg">
 							A project where I and a team developed a comprehensive brand manual for RO, a fictional wellness retreat. We covered logo design,
 							color palette, typography, imagery, and usage guidelines. The manual explains formats, clear space, contrast, and how the brand
 							should behave across digital and print channels. Here are a few spreads and visualizations.
@@ -35,7 +35,7 @@ const Ro = () => {
 
 
 
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-primary">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-secondary">
 						<div className="rounded-2xl bg-base-200/60 p-5 space-y-3 shadow-sm">
 							<h3 className="text-xl font-semibold text-secondary">Deliverables</h3>
 							<ul className="list-disc list-inside text-sm md:text-base space-y-2">
@@ -49,8 +49,8 @@ const Ro = () => {
 						</div>
 
 						<div className="rounded-2xl bg-base-200/60 p-5 space-y-4 shadow-sm">
-							<h3 className="text-xl font-semibold text-secondary">Focus</h3>
-							<p className="text-sm md:text-base text-text-primary">
+							<h3 className="text-xl font-semibold text-primary">Focus</h3>
+							<p className="text-sm md:text-base text-text-secondary">
 								The foundation is nature and water—calm blues and greens with soft shadows to reflect a tranquil yet confident brand.
 								The manual includes practical do&apos;s and don&apos;ts plus examples of how the identity scales across print, digital, and motion.
 							</p>

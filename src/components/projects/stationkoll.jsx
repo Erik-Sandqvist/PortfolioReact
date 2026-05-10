@@ -19,9 +19,9 @@ const Stationkoll = () => {
     <><div className="max-w-6xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
       <div className="p-6 md:p-10 space-y-6 mt-2">
         <div>
-          <h2 className="text-3xl font-bold text-secondary font-onest mb-2">Stationkoll - Workplace Planning System</h2>
+          <h2 className="text-3xl font-bold text-primary font-onest mb-2">Stationkoll - Workplace Planning System</h2>
           <hr className="border-secondary"></hr>
-          <p className="text-text-primary text-base md:text-lg mt-4">
+          <p className="text-text-secondary text-base md:text-lg mt-4">
             I built a sophisticated workforce management platform for IKEA warehouses that automates employee station assignments 
             and daily planning. Built with <strong>React, TypeScript, and Supabase</strong>, it features intelligent station 
             rotation algorithms, drag-and-drop scheduling, and real-time synchronization to ensure fair workload distribution 
@@ -33,7 +33,7 @@ const Stationkoll = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center text-sm text-primary">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center text-sm text-secondary">
           <div className="flex flex-col items-center">
             <FaReact className="text-blue-500 text-3xl" />
             <span>React</span>
@@ -61,8 +61,8 @@ const Stationkoll = () => {
         </div>
 
         <div>
-          <h3 className="text-xl font-semibold text-primary mb-3">Key Features</h3>
-          <ul className="list-disc list-inside text-primary space-y-2">
+          <h3 className="text-xl font-semibold text-secondary mb-3">Key Features</h3>
+          <ul className="list-disc list-inside text-secondary space-y-2">
             <li><strong>Employee Management:</strong> Add/remove employees, assign competencies, track shifts (Shift 1, Shift 2, Night, Staffing Agency)</li>
             <li><strong>Daily Planning:</strong> Define station needs and automatic employee distribution with smart rotation</li>
             <li><strong>Station Rotation Algorithm:</strong> Prevents consecutive assignments to same station, prioritizes least-visited stations over 6 months</li>

@@ -15,14 +15,14 @@ const MernNoteApp = () => {
     <><div className="max-w-4xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
       <div className="p-6 md:p-10 space-y-6 mt-2">
         <div>
-          <h2 className="text-3xl font-bold text-primary mb-2">📝 MERN Note App</h2>
-          <p className="text-text-primary text-base md:text-lg">
+          <h2 className="text-3xl font-bold text-secondary mb-2">📝 MERN Note App</h2>
+          <p className="text-text-secondary text-base md:text-lg">
             A full-stack note-taking tool built with the <strong>MERN stack</strong> – optimized for speed, security, and ease of use.
             Users create, edit, and delete notes through a responsive and modern interface.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center text-sm text-primary">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center text-sm text-secondary">
           <div className="flex flex-col items-center">
             <SiMongodb className="text-green-600 text-3xl" />
             <span>MongoDB</span>
@@ -45,7 +45,7 @@ const MernNoteApp = () => {
           </div>
         </div>
 
-        <ul className="list-disc list-inside text-primary space-y-1">
+        <ul className="list-disc list-inside text-secondary space-y-1">
           <li>Complete CRUD support for notes</li>
           <li>Responsive design for both desktop and mobile</li>
           <li>REST API built with Express and Node</li>

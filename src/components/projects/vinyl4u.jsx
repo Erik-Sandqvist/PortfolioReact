@@ -19,9 +19,9 @@ const Vinyl4u  = () => {
     <><div className="max-w-6xl mx-auto mt-28 my-8 shadow-xl rounded-2xl overflow-hidden">
       <div className="p-6 md:p-10 space-y-6 mt-2">
         <div>
-          <h2 className="text-3xl font-bold font-onest text-secondary mb-2">Vinyl4u</h2>
+          <h2 className="text-3xl font-bold font-onest text-primary mb-2">Vinyl4u</h2>
           <hr className="border-secondary"></hr>
-          <p className="text-primary text-base md:text-lg mt-4">
+          <p className="text-secondary text-base md:text-lg mt-4">
             Vinyl Shop Web Application
             As part of a team project we had in school, I helped develop a vinyl record e-commerce website using HTML, CSS, and JavaScript.
              The project involved building a responsive and user-friendly interface, implementing dynamic features, and ensuring smooth navigation.
@@ -31,7 +31,7 @@ const Vinyl4u  = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center text-sm text-primary">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center text-sm text-secondary">
           <div className="flex flex-col items-center">
             <SiHtml5 className="text-[#E34F26] text-3xl" />
             <span>HTML5</span>

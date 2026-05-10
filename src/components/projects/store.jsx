@@ -25,10 +25,10 @@ const Store = () => {
       <div className="max-w-7xl mx-auto mt-28 my-8 shadow-xl rounded-2xl overflow-hidden">
         <div className="p-6 md:p-10 space-y-6 mt-2">
           <div>
-            <h2 className="text-3xl font-bold font-onest text-secondary mb-2">
+            <h2 className="text-3xl font-bold font-onest text-primary mb-2">
             Webshop</h2>
             <hr className="border-secondary"></hr>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center text-sm text-primary mt-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center text-sm text-secondary mt-6">
                 <div className="flex flex-col items-center">
                   <SiVite className="text-3xl text-secondary" />
                   <span>Vite</span>
@@ -87,7 +87,7 @@ const Store = () => {
       /> */}
       </div>
        <hr className="border-secondary mt-4"></hr>
-            <p className="text-primary text-base md:text-lg mt-4">
+            <p className="text-secondary text-base md:text-lg mt-4">
               I am currently building a webshop as a project to learn more about full-stack development and e-commerce platforms.
               I am also learning alot about cookies. 
               The webshop is being developed using a modern tech stack.

@@ -29,9 +29,9 @@ return (
             />
             <div className="absolute inset-0 bg-gradient-to-t from-yellow/60 via-black/0 to-black/10" />
             <div className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-black/10 p-6 transition-all duration-300 group-hover:bg-black/5">
-                <h3 className="text-2xl font-bold mb-2 text-primary">Ro Wellnes</h3>
-                <p className="text-sm opacity-90 text-primary">Brand and marketing</p>
-                <span className="mt-3 inline-flex items-center gap-2 text-primary text-sm font-medium">
+                <h3 className="text-2xl font-bold mb-2 text-secondary">Ro Wellnes</h3>
+                <p className="text-sm opacity-90 text-secondary">Brand and marketing</p>
+                <span className="mt-3 inline-flex items-center gap-2 text-secondary text-sm font-medium">
                     View Details →
                 </span>
             </div>
@@ -49,9 +49,9 @@ return (
             />
             <div className="absolute inset-0 bg-gradient-to-t from-yellow/40 via-black/30 to-black/10" />
             <div className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-black/10 p-6 transition-all duration-300 group-hover:bg-black/5">
-                <h3 className="text-2xl font-bold mb-2 text-primary">Patches</h3>
-                <p className="text-sm opacity-90 text-primary">Patches I created for the schools Kick-off 2024</p>
-                <span className="mt-3 inline-flex items-center gap-2 text-primary text-sm font-medium">
+                <h3 className="text-2xl font-bold mb-2 text-secondary">Patches</h3>
+                <p className="text-sm opacity-90 text-secondary">Patches I created for the schools Kick-off 2024</p>
+                <span className="mt-3 inline-flex items-center gap-2 text-secondary text-sm font-medium">
                     View Details →
                 </span>
             </div>
@@ -68,9 +68,9 @@ return (
             />
             <div className="absolute inset-0 bg-gradient-to-t from-yellow/40 via-black/30 to-black/10" />
             <div className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-black/10 p-6 transition-all duration-300 group-hover:bg-black/5">
-                <h3 className="text-2xl font-bold mb-2 text-primary">JTH Covers</h3>
-                <p className="text-sm opacity-90 text-primary">Covers I created for the schools program catalog</p>
-                <span className="mt-3 inline-flex items-center gap-2 text-primary text-sm font-medium">
+                <h3 className="text-2xl font-bold mb-2 text-secondary">JTH Covers</h3>
+                <p className="text-sm opacity-90 text-secondary">Covers I created for the schools program catalog</p>
+                <span className="mt-3 inline-flex items-center gap-2 text-secondary text-sm font-medium">
                     View Details →
                 </span>
             </div>
@@ -87,9 +87,9 @@ return (
             />
             <div className="absolute inset-0 bg-gradient-to-t from-yellow/40 via-black/30 to-black/10" />
             <div className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-black/10 p-6 transition-all duration-300 group-hover:bg-black/5">
-                <h3 className="text-2xl font-bold mb-2 text-primary">Nocco Posters</h3>
-                <p className="text-sm opacity-90 text-primary">Posters I created for the schools Nocco 2024</p>
-                <span className="mt-3 inline-flex items-center gap-2 text-primary text-sm font-medium">
+                <h3 className="text-2xl font-bold mb-2 text-secondary">Nocco Posters</h3>
+                <p className="text-sm opacity-90 text-secondary">Posters I created for the schools Nocco 2024</p>
+                <span className="mt-3 inline-flex items-center gap-2 text-secondary text-sm font-medium">
                     View Details →
                 </span>
             </div>
@@ -106,9 +106,9 @@ return (
             />
             <div className="absolute inset-0 bg-gradient-to-t from-yellow/40 via-black/30 to-black/10" />
             <div className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-black/10 p-6 transition-all duration-300 group-hover:bg-black/5">
-                <h3 className="text-2xl font-bold mb-2 text-primary">Personal Branding</h3>
-                <p className="text-sm opacity-90 text-primary">Other graphic design projects I have done</p>
-                <span className="mt-3 inline-flex items-center gap-2 text-primary text-sm font-medium">
+                <h3 className="text-2xl font-bold mb-2 text-secondary">Personal Branding</h3>
+                <p className="text-sm opacity-90 text-secondary">Other graphic design projects I have done</p>
+                <span className="mt-3 inline-flex items-center gap-2 text-secondary text-sm font-medium">
                     View Details →
                 </span>
             </div>

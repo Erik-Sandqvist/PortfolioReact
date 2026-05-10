@@ -21,8 +21,8 @@ export default {
       {
         luxury: {
           ...themes['[data-theme=luxury]'],
-          primary: '#fffcfe',
-          secondary: '#f7d00c',
+          primary: '#f7d00c',
+          secondary: '#fffcfe',
           'base-100': '#010f17',
         },
       },

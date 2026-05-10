@@ -12,9 +12,9 @@ const Covers = () => {
 	return (
 		<>
 		<div className="max-w-7xl mx-auto mt-24 mb-20 px-6">
-			<h2 className="text-3xl font-bold text-secondary mb-2">Catalog Covers</h2>
-			<hr className="border-secondary"></hr>
-			<p className="text-lg text-primary mb-8 mt-5">Three cover designs for JTH catalogs that i design to test myself and
+			<h2 className="text-3xl font-bold text-primary mb-2">Catalog Covers</h2>
+			<hr className="border-primary"></hr>
+			<p className="text-lg text-secondary mb-8 mt-5">Three cover designs for JTH catalogs that i design to test myself and
 				impove my skills in Adobe Illustrator. 
 			</p>
 
@@ -22,7 +22,7 @@ const Covers = () => {
 				{covers.map((c, i) => (
 					<div key={c.title} className="group">
 						<div
-							className={`relative rounded-xl overflow-hidden shadow-2xl flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary ${
+							className={`relative rounded-xl overflow-hidden shadow-2xl flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-secondary ${
 								i === 0 ? "-rotate-1" : i === 1 ? "rotate-1" : "-rotate-1"
 							}`}
 						>
@@ -33,8 +33,8 @@ const Covers = () => {
 							/>
 						</div>
 						<div className="mt-3">
-							<h3 className="text-xl font-semibold text-primary">{c.title}</h3>
-							<p className="text-sm text-text-primary">{c.caption}</p>
+							<h3 className="text-xl font-semibold text-secondary">{c.title}</h3>
+							<p className="text-sm text-text-secondary">{c.caption}</p>
 						</div>
 					</div>
 				))}

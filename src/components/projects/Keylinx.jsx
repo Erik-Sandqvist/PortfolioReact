@@ -25,14 +25,14 @@ const Keylinx = () => {
       <div className="max-w-6xl mx-auto mt-28 my-11 shadow-xl rounded-2xl overflow-hidden">
         <div className="p-6 md:p-10 space-y-2 mt-2">
           <div>
-            <h2 className="text-3xl font-bold font-onest text-secondary mb-4">Keylinx (Internship)</h2>
+            <h2 className="text-3xl font-bold font-onest text-primary mb-4">Keylinx (Internship)</h2>
             <hr className="border-secondary"></hr>
             {/* Flex container for desktop layout */}
             <div className="mt-4 flex flex-col md:flex-row gap-8">
               
               {/* Left side - Text content */}
               <div className="flex-1 order-2 md:order-1">
-                <p className="text-text-primary text-base md:text-lg">
+                <p className="text-text-secondary text-base md:text-lg">
                   <strong>Intro</strong><br></br>
                   During my internship at Keylinx, a full-stack web development consultancy, I contributed to a team project developing an 
                   internal web application for employee and task management. The experience allowed me to gain hands-on experience in both 
@@ -82,7 +82,7 @@ const Keylinx = () => {
 
               {/* Right side - Icons */}
               <div className="flex-1 order-1 md:order-2">
-                <div className="space-y-8 text-primary text-sm">
+                <div className="space-y-8 text-secondary text-sm">
                   <div>
                     <h4 className="text-lg font-semibold mb-8">Programming Languages & Frameworks</h4>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">

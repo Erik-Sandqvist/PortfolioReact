@@ -30,8 +30,8 @@ const Personalbrand = () => {
         <>
             <div className="relative z-10 max-w-screen-2xl mx-auto mt-28 px-6 mb-12">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">My Personal Branding</h2>
-                    <p className="text-lg text-primary/80 max-w-2xl mx-auto">
+                    <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">My Personal Branding</h2>
+                    <p className="text-lg text-secondary/80 max-w-2xl mx-auto">
                         I created a personal brand for myself. I wanted to
                          create a brand that was simple, yet memorable. And most importantly, something that felt like me. 
 
@@ -52,7 +52,7 @@ const Personalbrand = () => {
                                 />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-2xl font-bold text-primary">{item.title}</h3>
+                                <h3 className="text-2xl font-bold text-secondary">{item.title}</h3>
                             </div>
                         </div>
                     ))}

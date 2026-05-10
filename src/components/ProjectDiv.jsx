@@ -30,9 +30,9 @@ export const ProjectDiv = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-yellow/40 via-black/30 to-black/10" />
         <div className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-black/10 p-6 transition-all duration-300 group-hover:bg-black/5">
-          <h3 className="text-2xl font-bold mb-2 text-primary">Keylinx</h3>
-          <p className="text-sm opacity-90 text-primary">About my internship at Keylinx</p>
-          <span className="mt-3 inline-flex items-center gap-2 text-primary text-sm font-medium">
+          <h3 className="text-2xl font-bold mb-2 text-secondary">Keylinx</h3>
+          <p className="text-sm opacity-90 text-secondary">About my internship at Keylinx</p>
+          <span className="mt-3 inline-flex items-center gap-2 text-secondary text-sm font-medium">
             View Details →
           </span>
         </div>
@@ -50,9 +50,9 @@ export const ProjectDiv = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-yellow/40 via-black/30 to-black/10" />
         <div className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-black/10 p-6 transition-all duration-300 group-hover:bg-black/5">
-          <h3 className="text-2xl font-bold mb-2 text-primary">Station handeler for Ikea</h3>
-          <p className="text-sm opacity-90 text-primary">Solved a real problem with my software</p>
-          <span className="mt-3 inline-flex items-center gap-2 text-primary text-sm font-medium">
+          <h3 className="text-2xl font-bold mb-2 text-secondary">Station handeler for Ikea</h3>
+          <p className="text-sm opacity-90 text-secondary">Solved a real problem with my software</p>
+          <span className="mt-3 inline-flex items-center gap-2 text-secondary text-sm font-medium">
             View Details →
           </span>
         </div>
@@ -70,9 +70,9 @@ export const ProjectDiv = () => {
         />
        <div className="absolute inset-0 bg-gradient-to-t from-yellow/40 via-black/30 to-black/10" />
         <div className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-black/10 p-6 transition-all duration-300 group-hover:bg-black/5">
-          <h3 className="text-2xl font-bold mb-2 text-primary">Vinyl4U</h3>
-          <p className="text-sm opacity-90 text-primary">Vinyl shop project</p>
-          <span className="mt-3 inline-flex items-center gap-2 text-primary text-sm font-medium">
+          <h3 className="text-2xl font-bold mb-2 text-secondary">Vinyl4U</h3>
+          <p className="text-sm opacity-90 text-secondary">Vinyl shop project</p>
+          <span className="mt-3 inline-flex items-center gap-2 text-secondary text-sm font-medium">
             View Details →
           </span>
         </div>
@@ -90,9 +90,9 @@ export const ProjectDiv = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-yellow/40 via-black/30 to-black/10" />
         <div className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-black/10 p-6 transition-all duration-300 group-hover:bg-black/5">
-          <h3 className="text-2xl font-bold mb-2 text-primary">Wix Portfolio</h3>
-          <p className="text-sm opacity-90 text-primary">Also a portfolio built in Wix</p>
-          <span className="mt-3 inline-flex items-center gap-2 text-primary text-sm font-medium">
+          <h3 className="text-2xl font-bold mb-2 text-secondary">Wix Portfolio</h3>
+          <p className="text-sm opacity-90 text-secondary">Also a portfolio built in Wix</p>
+          <span className="mt-3 inline-flex items-center gap-2 text-secondary text-sm font-medium">
             View Details →
           </span>
         </div>
@@ -111,9 +111,9 @@ export const ProjectDiv = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-yellow/40 via-black/30 to-black/10" />
         <div className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-black/10 p-6 transition-all duration-300 group-hover:bg-black/5">
-          <h3 className="text-2xl font-bold mb-2 text-primary">Expense tracker</h3>
-          <p className="text-sm opacity-90 text-primary">A fullstack expense tracker</p>
-          <span className="mt-3 inline-flex items-center gap-2 text-primary text-sm font-medium">
+          <h3 className="text-2xl font-bold mb-2 text-secondary">Expense tracker</h3>
+          <p className="text-sm opacity-90 text-secondary">A fullstack expense tracker</p>
+          <span className="mt-3 inline-flex items-center gap-2 text-secondary text-sm font-medium">
             View Details →
           </span>
         </div>
@@ -131,9 +131,9 @@ export const ProjectDiv = () => {
         />
          <div className="absolute inset-0 bg-gradient-to-t from-yellow/40 via-black/30 to-black/10" />
         <div className="absolute bottom-0 left-0 right-0 backdrop-blur-sm bg-black/10 p-6 transition-all duration-300 group-hover:bg-black/5">
-          <h3 className="text-2xl font-bold mb-2 text-primary">Webshop</h3>
-          <p className="text-sm opacity-90 text-primary">In the making</p>
-          <span className="mt-3 inline-flex items-center gap-2 text-primary text-sm font-medium">
+          <h3 className="text-2xl font-bold mb-2 text-secondary">Webshop</h3>
+          <p className="text-sm opacity-90 text-secondary">In the making</p>
+          <span className="mt-3 inline-flex items-center gap-2 text-secondary text-sm font-medium">
             View Details →
           </span>
         </div>
