@@ -57,10 +57,10 @@ export const OneSkill = ({ name, level, className = "" }) => {
       }
     >
       <div className="flex items-center gap-3">
-        <Icon className="text-3xl text-primary drop-shadow" />
+        <Icon className="text-3xl text-secondary drop-shadow" />
         <span className="font-semibold">{name}</span>
       </div>
-      <span className="text-xs uppercase tracking-wide text-primary/80">
+      <span className="text-xs uppercase tracking-wide text-secondary/80">
         {level}
       </span>
     </div>

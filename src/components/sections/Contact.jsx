@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import emailjs from "emailjs-com";
-import SplashCursor from '../visuals/SplashCursor';
+// import SplashCursor from '../visuals/SplashCursor';
 // import logobig from '../../assets/pics/logobig.png'; // Justerar sökvägen efter din projektstruktur
 
 
@@ -20,10 +20,10 @@ export const Contact = () => {
   const PUBLIC_KEY = "XXv_jnmcF8H5gotyz";
 
   useEffect(() => {
-    if (status === "success") {
-      const audio = new Audio("/sounds/awww.mp3");
-      audio.play().catch(err => console.log("Audio playback failed:", err));
-    }
+    // if (status === "success") {
+    //   const audio = new Audio("/sounds/awww.mp3");
+    //   audio.play().catch(err => console.log("Audio playback failed:", err));
+    // }
   }, [status]);
 
   const handleSubmit = (e) => {
@@ -47,10 +47,8 @@ export const Contact = () => {
       id="contact"
       className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-custom-yellow-1/10 to-custom-yellow-2/10 py-16"
     >
-      <SplashCursor />
       <div className="w-full max-w-lg bg-opacity-95 rounded-3xl shadow-2xl p-10 border-2 border-custom-yellow-2 backdrop-blur-lg mt-8">
         <p className="font-onest bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent text-xl text-center">Contact me using the form below!</p>
-         <p className="font-onest bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-center">(And turn on your sound before hitting send)</p>
       </div>
       <form
         ref={form}
@@ -61,7 +59,7 @@ export const Contact = () => {
           Contact Me
         </h2>
         <div className="mb-6">
-          <label className="block text-primary text-lg font-semibold mb-2" htmlFor="user_name">
+          <label className="block text-secondary text-lg font-semibold mb-2" htmlFor="user_name">
             Name
           </label>
           <input
@@ -76,7 +74,7 @@ export const Contact = () => {
           />
         </div>
         <div className="mb-6">
-          <label className="block text-primary text-lg font-semibold mb-2" htmlFor="user_email">
+          <label className="block text-secondary text-lg font-semibold mb-2" htmlFor="user_email">
             Email
           </label>
           <input
@@ -91,7 +89,7 @@ export const Contact = () => {
           />
         </div>
         <div className="mb-8">
-          <label className="block text-primary text-lg font-semibold mb-2" htmlFor="message">
+          <label className="block text-secondary text-lg font-semibold mb-2" htmlFor="message">
             Message
           </label>
           <textarea

@@ -25,7 +25,7 @@ export const Navbar = ({ menuOpen, setMenuOpen, showRain, setShowRain, showLight
 
           <div className="hidden md:flex items-center gap-4 ml-6">
             <div className="flex items-center gap-2">
-              <span className="text-sm text-primary">Rain</span>
+              <span className="text-sm text-secondary">Rain</span>
               <button
                 type="button"
                 role="switch"
@@ -45,7 +45,7 @@ export const Navbar = ({ menuOpen, setMenuOpen, showRain, setShowRain, showLight
             </div>
 
             <div className="flex items-center gap-2">
-              <span className="text-sm text-primary">Rays</span>
+              <span className="text-sm text-secondary">Rays</span>
               <button
                 type="button"
                 role="switch"

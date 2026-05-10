@@ -8,7 +8,7 @@ export const ProfileCard = () => {
 
   return (
     <div className="flex justify-center mt-14">
-      <div className="relative z-10 w-full md:w-3/4 lg:w-2/3 backdrop-blur-lg text-primary rounded-lg shadow-xl overflow-hidden supports-[backdrop-filter]:bg-white/10">
+      <div className="relative z-10 w-full md:w-3/4 lg:w-2/3 backdrop-blur-lg text-secondary rounded-lg shadow-xl overflow-hidden supports-[backdrop-filter]:bg-white/10">
         <div className="flex flex-col md:flex-row md:h-[620px]">
           <div className="w-full md:w-1/2 h-80 sm:h-96 md:h-full overflow-hidden">
             <img

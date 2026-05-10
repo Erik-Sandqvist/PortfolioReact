@@ -13,7 +13,7 @@ import LineWaves from '../LineWaves'
 export const Home = () => {
   return (
     <section className="relative mt-16 overflow-hidden">
-      <div className="min-h-screen relative p-6">
+      <div className="h-2/5 relative p-6">
         <div className="absolute inset-0 z-0 max-w-full">
           <LineWaves
             speed={0.1}
@@ -92,7 +92,7 @@ export const Home = () => {
       </div>
 
       <CurvedLoop
-      className="text-primary"
+      className="text-primary z-10" 
         marqueeText=" Web Development Projects   *   Fullstack Applications   *   React   *   C#   *   Node.js   *   MongoDB   *   JavaScript   *  UI/UX Design   *   "
         speed={0.5}
         curveAmount={-130}
