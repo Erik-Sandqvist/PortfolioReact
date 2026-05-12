@@ -23,12 +23,12 @@ export const Home = () => {
             rotation={-45}
             edgeFadeWidth={0}
             colorCycleSpeed={1}
-            brightness={0.2}
+            brightness={0.1}
             color1="#EAB308"
             color2="#EAB308"
             color3="#a68003"
             enableMouseInteraction
-            mouseInfluence={20}
+            mouseInfluence={0}
           />
         </div>
 
