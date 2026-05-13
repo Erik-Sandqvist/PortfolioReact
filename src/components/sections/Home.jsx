@@ -9,11 +9,27 @@ import { LogoModel } from './LogoModel'
 import { Footer } from '../Footer'
 import CurvedLoop from '../visuals/CurvedLoop'
 import LineWaves from '../LineWaves'
+// Component ported from https://codepen.io/JuanFuentes/full/rgXKGQ
+// Font used - https://compressa.preusstype.com/
+import TextPressure from '../TextPressure'
 
 export const Home = () => {
+  const base = import.meta.env.BASE_URL;
+
   return (
-    <section className="relative mt-16 overflow-hidden">
-      <div className="h-2/5 relative p-6">
+    <section className="relative mt-16">
+      {/* <div className="relative h-screen overflow-hidden">
+        <div
+          className="absolute inset-0 z-0 bg-top bg-repeat-x"
+          style={{
+            backgroundImage: `url(${base}sky.jpg)`,
+            backgroundAttachment: "fixed",
+            backgroundSize: "auto"
+          }}
+          aria-hidden="true"
+        /> */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" aria-hidden="true" />
+        <div className="h-2/5 relative p-6">
         <div className="absolute inset-0 z-0 max-w-full">
           <LineWaves
             speed={0.1}
@@ -33,9 +49,20 @@ export const Home = () => {
         </div>
 
         <div className="flex flex-col items-start md:items-center justify-center gap-6 relative z-10">
-        <h1 className="font-onest text-5xl md:text-9xl font-medium mt-8 bg-secondary bg-clip-text text-transparent leading-tight animate-slide-in-right cursor-default">
-          Erik Sandqvist
-        </h1>
+        <div className="relative w-full md:w-4/5 h-[140px] md:h-[240px] mt-14 md:mt-0">
+          <TextPressure
+            text="Erik Sandqvist"
+            flex
+            alpha={false}
+            stroke={false}
+            width
+            weight
+            italic
+            textColor="#ffffff"
+            strokeColor="#5227FF"
+            minFontSize={48}
+          />
+        </div>
  {/* <div
         ref={containerRef}
         className="max-w-2xl mb-2 animate-slide-in-right cursor-default"
@@ -73,10 +100,10 @@ export const Home = () => {
           </Suspense>
           <ScrollCameraController />
         </Canvas>
-      </div>
+        </div>
+        </div>
 
         </div>
-      </div>
 
       <CurvedLoop
       className="text-primary z-10" 
@@ -96,30 +123,7 @@ export const Home = () => {
       />
 
       <GraphicDiv />
-{/* Video element added here */}
-{/* <div className="w-5/6 mt-8 m-auto">
-  <video 
-    className="w-full rounded-lg shadow-lg" 
-    autoPlay
-    muted
-    loop
-  >
-    <source src="/homevid.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div> */}
-{/* <div className="w-full max-w-4xl mt-8">
-  <video 
-    className="w-full rounded-lg shadow-lg" 
-    controls
-    autoPlay
-    muted
-    loop
-  >
-    <source src="/film.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div> */}
+      <Footer />
     </section>
   )
 }
