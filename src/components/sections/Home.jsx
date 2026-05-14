@@ -28,7 +28,7 @@ export const Home = () => {
           }}
           aria-hidden="true"
         /> */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" aria-hidden="true" />
+        <div className="absolute inset-0 z-0" />
         <div className="h-2/5 relative p-6">
         <div className="absolute inset-0 z-0 max-w-full">
           <LineWaves
@@ -49,7 +49,7 @@ export const Home = () => {
         </div>
 
         <div className="flex flex-col items-start md:items-center justify-center gap-6 relative z-10">
-        <div className="relative w-full md:w-4/5 h-[140px] md:h-[240px] mt-14 md:mt-0">
+        <div className="relative w-full md:w-4/5 h-[140px] md:h-[240px] mt-14 md:mt-0 font-onest">
           <TextPressure
             text="Erik Sandqvist"
             flex
@@ -123,7 +123,6 @@ export const Home = () => {
       />
 
       <GraphicDiv />
-      <Footer />
     </section>
   )
 }
