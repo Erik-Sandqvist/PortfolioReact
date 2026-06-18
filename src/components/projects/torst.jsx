@@ -14,11 +14,33 @@ import { Carousel } from "../Carousel";
 
 const Torst = () => {
   const base = import.meta.env.BASE_URL;
+  const asset = (fileName) => encodeURI(`${base}pics/torst/${fileName}`);
   const images = [
     {
-      src: `${base}pics/torst/cover.png`,
+      src: asset("cover.png"),
       alt: "Törst cover",
       caption: "Törst - website for a pub/bar",
+    },
+   
+    {
+      src: asset("Screenshot 2026-06-18 221133.png"),
+      alt: "Törst screenshot 2",
+      caption: "Beer and food section",
+    },
+    {
+      src: asset("Screenshot 2026-06-18 221152.png"),
+      alt: "Törst screenshot 3",
+      caption: "Navigation and hero area",
+    },
+    {
+      src: asset("Screenshot 2026-06-18 221220.png"),
+      alt: "Törst screenshot 4",
+      caption: "CMS-driven page layout",
+    },
+    {
+      src: asset("Screenshot 2026-06-18 221235.png"),
+      alt: "Törst screenshot 5",
+      caption: "Responsive section composition",
     },
   ];
 
@@ -85,6 +107,43 @@ const Torst = () => {
             </div>
           </div>
 
+            <div className="space-y-4">
+              <div className="flex items-end justify-between gap-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-primary">Selected screens</h3>
+                  <p className="text-sm text-secondary/80">A quick look at the design, content, and booking flow.</p>
+                </div>
+                <span className="text-xs uppercase tracking-[0.24em] text-secondary/70">Gallery</span>
+              </div>
+
+              <div className="grid gap-4 lg:grid-cols-[1.35fr_0.65fr]">
+                <figure className="overflow-hidden rounded-2xl border border-secondary/20 bg-black/10 shadow-lg">
+                  <img
+                    src={asset("cover.png")}
+                    alt="Törst cover"
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </figure>
+
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+                  {images.slice(1, 5).map((image) => (
+                    <figure
+                      key={image.src}
+                      className="overflow-hidden rounded-2xl border border-secondary/20 bg-black/10 shadow-lg"
+                    >
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="aspect-[4/3] w-full object-cover transition-transform duration-300 hover:scale-[1.02]"
+                        loading="lazy"
+                      />
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            </div>
+
           <div className="pt-2 flex flex-wrap gap-3">
             <a
                 href="https://torst.vercel.app/"
@@ -97,14 +156,6 @@ const Torst = () => {
           </div>
         </div>
       </div>
-
-      <Carousel
-        images={images}
-        autoPlay={4000}
-        showIndicators
-        showArrows
-        className="aspect-video max-w-6xl mx-auto shadow-xl rounded-xl overflow-hidden"
-      />
 
       <div className="flex justify-between mt-8 max-w-5xl mx-auto gap-10 mb-8">
         <Link

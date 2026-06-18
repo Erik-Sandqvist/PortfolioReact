@@ -1,28 +1,43 @@
 import { useFrame, useThree } from '@react-three/fiber';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 
 
 export function ScrollCameraController() {
   const { camera } = useThree();
-  const [scroll, setScroll] = useState(0);
+  const scrollRef = useRef(0);
+  const rafRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScroll(window.scrollY);
+    const updateCamera = () => {
+      const angle = scrollRef.current * 0.004; // adjust sensitivity
+      camera.position.x = Math.sin(angle) * 5;
+      camera.position.z = Math.cos(angle) * 5;
+      camera.position.y = 2; // camera height
+      camera.lookAt(0, 0, 0); // always look at the model
+      rafRef.current = null;
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = () => {
+      scrollRef.current = window.scrollY;
 
-  useFrame(() => {
-    const angle = scroll * 0.004; // justera för känslighet
-    camera.position.x = Math.sin(angle) * 5;
-    camera.position.z = Math.cos(angle) * 5;
-    camera.position.y = 2; // höjd på kameran
-    camera.lookAt(0, 0, 0); // alltid titta mot modellen
-  });
+      if (rafRef.current !== null) {
+        return;
+      }
+
+      rafRef.current = window.requestAnimationFrame(updateCamera);
+    };
+
+    updateCamera();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafRef.current !== null) {
+        window.cancelAnimationFrame(rafRef.current);
+      }
+    };
+  }, [camera]);
 
   return null;
 }
