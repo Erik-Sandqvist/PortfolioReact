@@ -14,7 +14,7 @@ import { RainDots } from './components/visuals/RainDots';
 import LightRays from './components/visuals/LightRays';
 import MernNoteApp from './components/projects/MernNoteApp.jsx';
 import Stationkoll from './components/projects/Stationkoll';
-import Vinyl4u from './components/projects/vinyl4u.jsx';
+import Torst from './components/projects/torst.jsx';
 import Burnbright from './components/projects/Burnbright.jsx';
 import Keylinx from './components/projects/Keylinx.jsx';
 import Fandf from './components/projects/fandf.jsx';
@@ -133,7 +133,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/mern-note-app" element={<MernNoteApp />} />
           <Route path="/projects/stationkoll" element={<Stationkoll />} />
-          <Route path="/projects/vinyl4u" element={<Vinyl4u />} />
+          <Route path="/projects/torst" element={<Torst />} />
           <Route path="/projects/burnbright" element={<Burnbright />} />
           <Route path="/projects/keylinx" element={<Keylinx />} />
           <Route path="/projects/fandf" element={<Fandf />} />
