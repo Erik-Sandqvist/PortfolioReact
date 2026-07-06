@@ -10,6 +10,7 @@ export const SkillDiv = () => {
         <OneSkill name="CSS" level="Advanced" />
         <OneSkill name="React" level="Advanced" />
         <OneSkill name="TypeScript" level="Advanced " />
+        <OneSkill name="DevOps" level="Advanced" />
         <OneSkill name="Git" level="Intermediate" />
         <OneSkill name=".Net" level="Intermediate" />
         <OneSkill name="Azure" level="Intermediate" />
@@ -21,7 +22,6 @@ export const SkillDiv = () => {
         <OneSkill name="C#" level="Intermediate" />
         <OneSkill name="SQL" level="Intermediate" />
         <OneSkill name="REST APIs" level="Intermediate" />
-        <OneSkill name="DevOps" level="Intermediate" />
         <OneSkill name="Agile" level="Intermediate" />
         <OneSkill name="Scrum" level="Intermediate" />
         <OneSkill name="Python" level="New" />
