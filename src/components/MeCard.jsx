@@ -48,7 +48,7 @@ export const ProfileCard = () => {
             <div className="mt-auto pt-14 border-t border-white/10">
               <div className="w-full flex flex-wrap items-center gap-3 justify-center md:justify-start mb-4">
                 <a
-                  href={asset('erik-sandqvist.pdf')}
+                  href={asset('Erik-Sandqvist-CV-eng.pdf')}
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Öppna CV i ny flik"
@@ -61,7 +61,7 @@ export const ProfileCard = () => {
                 </a>
 
                 <a
-                  href={asset('erik-sandqvist.pdf')}
+                  href={asset('Erik-Sandqvist-CV-eng.pdf')}
                   download="Erik_Sandqvist_CV.pdf"
                   title="Download CV"
                   className="inline-flex items-center gap-2 h-11 px-5 rounded-lg bg-base-200 text-secondary hover:bg-secondary hover:text-primary transition duration-200 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"

@@ -28,6 +28,7 @@ const TextPressure = ({
   fontFamily = 'Compressa VF',
   // This font is just an example, you should not use it in commercial projects.
   fontUrl = 'https://res.cloudinary.com/dr6lvwubh/raw/upload/v1529908256/CompressaPRO-GX.woff2',
+  fallbackFontFamily = "'Roboto Flex', 'Segoe UI', sans-serif",
 
   width = true,
   weight = true,
@@ -55,6 +56,7 @@ const TextPressure = ({
   const [fontSize, setFontSize] = useState(minFontSize);
   const [scaleY, setScaleY] = useState(1);
   const [lineHeight, setLineHeight] = useState(1);
+  const [supportsVariation, setSupportsVariation] = useState(true);
 
   const chars = text.split('');
 
@@ -118,6 +120,15 @@ const TextPressure = ({
   }, [setSize]);
 
   useEffect(() => {
+    const hasVariationSupport =
+      typeof CSS !== 'undefined' &&
+      typeof CSS.supports === 'function' &&
+      CSS.supports('font-variation-settings', "'wght' 500");
+
+    setSupportsVariation(hasVariationSupport);
+  }, []);
+
+  useEffect(() => {
     let rafId;
     const animate = () => {
       mouseRef.current.x += (cursorRef.current.x - mouseRef.current.x) / 15;
@@ -145,9 +156,26 @@ const TextPressure = ({
 
           const newFontVariationSettings = `'wght' ${wght}, 'wdth' ${wdth}, 'ital' ${italVal}`;
 
-          if (span.style.fontVariationSettings !== newFontVariationSettings) {
-            span.style.fontVariationSettings = newFontVariationSettings;
+          if (supportsVariation) {
+            if (span.style.fontVariationSettings !== newFontVariationSettings) {
+              span.style.fontVariationSettings = newFontVariationSettings;
+            }
+          } else {
+            const fallbackScaleX = width ? (0.85 + wdth / 400).toFixed(3) : '1';
+            const fallbackWeight = weight ? String(wght) : '400';
+            const fallbackStyle = italic && Number(italVal) > 0.5 ? 'italic' : 'normal';
+
+            if (span.style.transform !== `scaleX(${fallbackScaleX})`) {
+              span.style.transform = `scaleX(${fallbackScaleX})`;
+            }
+            if (span.style.fontWeight !== fallbackWeight) {
+              span.style.fontWeight = fallbackWeight;
+            }
+            if (span.style.fontStyle !== fallbackStyle) {
+              span.style.fontStyle = fallbackStyle;
+            }
           }
+
           if (alpha && span.style.opacity !== alphaVal) {
             span.style.opacity = alphaVal;
           }
@@ -159,16 +187,23 @@ const TextPressure = ({
 
     animate();
     return () => cancelAnimationFrame(rafId);
-  }, [width, weight, italic, alpha]);
+  }, [width, weight, italic, alpha, supportsVariation]);
 
   const styleElement = useMemo(() => {
-    return (
-      <style>{`
+    const fontFaceRule = fontUrl
+      ? `
           @font-face {
             font-family: '${fontFamily}';
             src: url('${fontUrl}');
             font-style: normal;
+            font-display: swap;
           }
+        `
+      : '';
+
+    return (
+      <style>{`
+          ${fontFaceRule}
           .stroke span {
             position: relative;
             color: ${textColor};
@@ -198,7 +233,7 @@ const TextPressure = ({
           flex ? 'flex justify-between' : ''
         } ${stroke ? 'stroke' : ''} uppercase text-center`}
         style={{
-          fontFamily,
+          fontFamily: `${fontFamily}, ${fallbackFontFamily}`,
           fontSize: fontSize,
           lineHeight,
           transform: `scale(1, ${scaleY})`,

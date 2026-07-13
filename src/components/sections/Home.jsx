@@ -52,6 +52,8 @@ export const Home = () => {
         <div className="relative w-full md:w-4/5 h-[140px] md:h-[240px] mt-14 md:mt-0 font-onest">
           <TextPressure
             text="Erik Sandqvist"
+            fontFamily="Roboto Flex"
+            fontUrl=""
             flex
             alpha={false}
             stroke={false}
