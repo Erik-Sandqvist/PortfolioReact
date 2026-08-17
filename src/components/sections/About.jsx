@@ -27,13 +27,35 @@ const About = () => {
           </p>
         </div>
       
+         <div className="mb-6 rounded-lg border border-primary/40 bg-primary/10 p-5 flex items-start gap-4">
+            <span className="text-3xl shrink-0">📜</span>
+            <div>
+              <div className="flex flex-wrap items-center gap-2 mb-1">
+                <p className="font-onest text-xl font-semibold text-secondary">
+                  AZ-104: Microsoft Azure Administrator Associate
+                </p>
+                <span className="font-onest text-xs font-bold uppercase tracking-wide bg-primary text-black rounded-full px-2 py-0.5">
+                  Certification
+                </span>
+              </div>
+              <p className="font-onest text-lg text-secondary/80 mt-1">
+                Microsoft Certification
+              </p>
+              <p className="font-onest text-base text-secondary/60 mt-1">
+                2026
+              </p>
+              <p className="font-onest text-base text-secondary/60 mt-1">
+                Certified in managing Azure identities, governance, storage, compute, and virtual networks, as well as implementing and monitoring cloud infrastructure.
+              </p>
+            </div>
+          </div>
 
         <div className="mb-12 backdrop-blur-lg text-secondary rounded-lg shadow-xl overflow-hidden supports-[backdrop-filter]:bg-white/10 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
           <h3 className="font-onest text-2xl md:text-3xl font-bold text-secondary mb-6 cursor-default flex items-center gap-2">
             <span className="text-3xl">🎓</span> Education
           </h3>
-          
-          <div className="space-y-6">
+        
+        <div className="space-y-6">
             <div className="border-b border-white/10 pb-4">
               <p className="font-onest text-xl font-semibold text-secondary">
                 Bachelor's Degree in Web Development and Graphic Design
@@ -86,6 +108,7 @@ const About = () => {
               </p>
             </div>
           </div>
+          
 </div>
 
       <img
@@ -102,8 +125,9 @@ const About = () => {
       <p className="font-onest max-w-4xl text-lg text-secondary mx-auto animate-slide-in-right cursor-default mb-4 pl-4">
         It is simple, the design of the logo was inspired by lines of code and by the Swedish flag since I am from Sweden and I like to code.
         It is also made to match the way my name is written, with the same ratio with the lines
-      </p>    
-      </div>     
+      </p>
+
+      </div>
     </section>
   );
 };
