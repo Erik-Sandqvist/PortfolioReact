@@ -107,7 +107,7 @@ const Expensetracker = () => {
     </div>
      <div className="flex justify-between max-w-6xl mx-auto gap-10 mb-8">
       <Link 
-        to="/projects/wixportfolio" 
+        to="/projects/burnbright" 
         className="btn btn-outline btn-secondary !flex !flex-row items-center justify-center gap-2 whitespace-nowrap max-w-xs md:min-w-80 md:max-w-96"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
