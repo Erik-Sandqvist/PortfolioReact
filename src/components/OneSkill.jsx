@@ -8,6 +8,7 @@ import {
   SiPython,
   SiMongodb,
   SiBlazor,
+  SiLinux,
 } from "react-icons/si";
 import {
   FaReact,
@@ -38,6 +39,7 @@ const iconMap = {
   agile: TbArrowsShuffle,
   python: SiPython,
   mongodb: SiMongodb,
+  linux: SiLinux,
   azure: TbBrandAzure,
   blazor: SiBlazor,
   mudblazor: TbComponents,

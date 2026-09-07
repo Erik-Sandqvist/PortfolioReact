@@ -21,6 +21,7 @@ export const SkillDiv = () => {
         <OneSkill name="Figma" level="Intermediate" />
         <OneSkill name="C#" level="Intermediate" />
         <OneSkill name="SQL" level="Intermediate" />
+        <OneSkill name="Linux" level="Intermediate" />
         <OneSkill name="REST APIs" level="Intermediate" />
         <OneSkill name="Agile" level="Intermediate" />
         <OneSkill name="Scrum" level="Intermediate" />
