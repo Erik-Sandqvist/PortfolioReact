@@ -18,8 +18,14 @@ import {
   FaCss3Alt,
   FaDatabase,
   FaQuestionCircle,
+  FaJava,
 } from "react-icons/fa";
-import { TbArrowsShuffle, TbComponents, TbBrandAzure } from "react-icons/tb";
+import {
+  TbArrowsShuffle,
+  TbComponents,
+  TbBrandAzure,
+  TbTestPipe,
+} from "react-icons/tb";
 
 const iconMap = {
   javascript: SiJavascript,
@@ -43,6 +49,8 @@ const iconMap = {
   azure: TbBrandAzure,
   blazor: SiBlazor,
   mudblazor: TbComponents,
+  java: FaJava,
+  testing: TbTestPipe,
 };
 
 export const OneSkill = ({ name, level, className = "" }) => {
