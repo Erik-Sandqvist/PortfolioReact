@@ -5,7 +5,7 @@ const FULL_TEXT = "Erik Sandqvist";
 
 const TYPE_MS = 40; // ~0.6s to type the name
 const MIN_MS = 700; // don't flash past the name on a fast load
-const MAX_MS = 60000; // TEMP-TEST
+const MAX_MS = 60000; // TEMP
 const FADE_MS = 450;
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -73,7 +73,7 @@ export const LoadingScreen = ({ onComplete, waitForScene = false }) => {
       </div>
 
       <div className="w-[200px] h-[2px] bg-secondary/15 rounded relative overflow-hidden">
-        <div className="w-[40%] h-full bg-primary shadow-[0_0_15px_hsl(var(--p))] animate-loading-bar"></div>
+        <div className="w-[40%] h-full bg-primary animate-loading-bar"></div>
       </div>
     </div>
   );

@@ -84,7 +84,9 @@ html, body {
 .animate-loading-bar {
   width: 40%;
   animation: loading-sweep 1.4s cubic-bezier(.65,.05,.36,1) infinite;
-  box-shadow: 0 0 10px hsl(var(--p) / 0.7);
+  /* daisyUI 4 exposes --p as oklch components, so hsl() here parses as
+     invalid and the whole declaration is dropped. */
+  box-shadow: 0 0 10px oklch(var(--p) / 0.7);
 }
 
 
