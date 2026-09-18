@@ -6,6 +6,7 @@ import { ScrollCameraController } from '../visuals/ScrollCameraController'
 import { ProjectDiv } from '../ProjectDiv'
 import { GraphicDiv } from '../GraphicDiv'
 import { LogoModel } from './LogoModel'
+import { SceneReadySignal } from '../visuals/SceneReadySignal'
 import { Footer } from '../Footer'
 import CurvedLoop from '../visuals/CurvedLoop'
 import LineWaves from '../LineWaves'
@@ -99,6 +100,7 @@ export const Home = () => {
           <ambientLight />
           <Suspense fallback={null}>
             <LogoModel scale={70} />
+            <SceneReadySignal />
           </Suspense>
           <ScrollCameraController />
         </Canvas>

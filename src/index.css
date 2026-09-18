@@ -84,7 +84,7 @@ html, body {
 .animate-loading-bar {
   width: 40%;
   animation: loading-sweep 1.4s cubic-bezier(.65,.05,.36,1) infinite;
-  box-shadow: 0 0 10px rgba(59, 130, 246, 0.7); /* Replace with the actual color value */
+  box-shadow: 0 0 10px hsl(var(--p) / 0.7);
 }
 
 

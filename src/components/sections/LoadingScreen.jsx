@@ -1,39 +1,82 @@
-// import { use } from "react";
-// import { useState } from "react"; 
-import { useEffect, useState } from "react"; //4.3k (gzipped: 1.9k)
+import { useEffect, useState } from "react";
+import { sceneReady } from "../../utils/appReady";
 
-export const LoadingScreen = ({ onComplete}) => {
-const [text, setText] = useState("");
-const fullText = "Erik Sandqvist";
+const FULL_TEXT = "Erik Sandqvist";
 
-useEffect(() => {
- let index = 0;
- const interval = setInterval(() => {
-   setText(fullText.substring(0, index));
-  index++;
+const TYPE_MS = 40; // ~0.6s to type the name
+const MIN_MS = 700; // don't flash past the name on a fast load
+const MAX_MS = 60000; // TEMP-TEST
+const FADE_MS = 450;
 
-  if (index > fullText.length) {
-     clearInterval(interval);
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-     setTimeout(() => {
-       onComplete(); 
-     }, 500); 
-   }
- }, 100);
+// Two frames: one to commit the mount, one to be reasonably sure it painted.
+const painted = () =>
+  new Promise((resolve) =>
+    requestAnimationFrame(() => requestAnimationFrame(resolve))
+  );
 
-  return () => clearInterval(interval);
-}, [onComplete]);
+export const LoadingScreen = ({ onComplete, waitForScene = false }) => {
+  const [text, setText] = useState("");
+  const [leaving, setLeaving] = useState(false);
 
-return (
-  <div className="fixed inset-0 z-50  text-secondary flex flex-col items-center justify-center">
-    <div className="mb-4 text-4xl font-mono font-bold">
-      {text} <span className="animate-blink ml-1">|</span>
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setText(FULL_TEXT.substring(0, index));
+      index++;
+      if (index > FULL_TEXT.length) clearInterval(interval);
+    }, TYPE_MS);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const ready = [
+      document.fonts ? document.fonts.ready : Promise.resolve(),
+      painted(),
+      wait(MIN_MS),
+    ];
+
+    // On Home, hold until the 3D canvas has drawn its first frame — that mount
+    // is the jank this screen exists to cover. Other routes have no canvas, so
+    // the cap below is what ends the wait if something stalls.
+    if (waitForScene) ready.push(sceneReady);
+
+    Promise.race([Promise.all(ready), wait(MAX_MS)]).then(() => {
+      if (!cancelled) setLeaving(true);
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [waitForScene]);
+
+  // Unmount only once the fade has finished, so the app isn't revealed abruptly.
+  useEffect(() => {
+    if (!leaving) return;
+    const timeout = setTimeout(onComplete, FADE_MS);
+    return () => clearTimeout(timeout);
+  }, [leaving, onComplete]);
+
+  return (
+    <div
+      aria-hidden={leaving}
+      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-base-100 text-secondary transition-opacity duration-[450ms] ease-out ${
+        leaving ? "opacity-0 pointer-events-none" : "opacity-100"
+      }`}
+    >
+      <div className="mb-4 text-4xl font-mono font-bold">
+        {text} <span className="animate-blink ml-1">|</span>
+      </div>
+
+      <div className="w-[200px] h-[2px] bg-secondary/15 rounded relative overflow-hidden">
+        <div className="w-[40%] h-full bg-primary shadow-[0_0_15px_hsl(var(--p))] animate-loading-bar"></div>
+      </div>
     </div>
+  );
+};
 
-    <div className="w-[200px] h-[2px] bg-gray-800 rounded relative overflow-hidden">
-      <div className="w-[40%] h-full bg-secondary shadow-[0_0_15px_#3b82f6] animate-loading-bar"></div>
-    </div>
-  </div>
-);
-
-}
+export default LoadingScreen;

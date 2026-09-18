@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect, useCallback } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import './index.css';
 
@@ -30,8 +30,26 @@ import { Illusion } from './components/sections/Illusion';
 import { ScrollToTop } from './components/visuals/ScrollToTop';
 
 export default function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Once per session — a refresh or a shared deep link goes straight in.
+  const [showIntro, setShowIntro] = useState(() => {
+    try {
+      return sessionStorage.getItem('introSeen') !== '1';
+    } catch {
+      return true;
+    }
+  });
+
+  const finishIntro = useCallback(() => {
+    try {
+      sessionStorage.setItem('introSeen', '1');
+    } catch {
+      // Blocked storage (private mode): the intro simply shows again next load.
+    }
+    setShowIntro(false);
+  }, []);
   
   const [showRain, setShowRain] = useState(() => {
     const saved = sessionStorage.getItem('userRainPreference');
@@ -67,10 +85,6 @@ export default function App() {
       setSecondaryColor(`hsl(${h}, ${s}%, ${l}%)`);
     }
   }, [theme]);
-
-  if (!isLoaded) {
-    return <LoadingScreen onComplete={() => setIsLoaded(true)} />;
-  }
 
   return (
     <>
@@ -149,6 +163,13 @@ export default function App() {
 
         <Footer />
       </div>
+
+      {showIntro && (
+        <LoadingScreen
+          onComplete={finishIntro}
+          waitForScene={location.pathname === '/'}
+        />
+      )}
     </>
   );
 }
