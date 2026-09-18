@@ -5,7 +5,7 @@ const FULL_TEXT = "Erik Sandqvist";
 
 const TYPE_MS = 40; // ~0.6s to type the name
 const MIN_MS = 700; // don't flash past the name on a fast load
-const MAX_MS = 60000; // TEMP
+const MAX_MS = 2500; // never trap a visitor on a slow one
 const FADE_MS = 450;
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
