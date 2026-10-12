@@ -29,27 +29,13 @@ const Flowers = () => {
 
               <div className="flex-1 order-2 md:order-1">
                 <p className="text-text-secondary text-base md:text-lg">
-                  <strong>Intro</strong><br></br>
                   Bloom is a single-page scroll through ten flowers, where the whole page takes its colour
                   from whichever flower is on screen. It runs warm to cool, from a scarlet poppy through to
                   a jade water lily.
                   <br></br>
                   <br></br>
-                  <strong>How it works</strong>
+                 
                   <br></br>
-                  The colour shift is driven by one IntersectionObserver that collapses the viewport to a line
-                  across its middle. A section takes over the theme when it crosses that line, and everything
-                  on the page is drawn from four CSS custom properties registered with @property, so the
-                  gradients fade between flowers instead of snapping. Animated SVG flora is layered on top of
-                  the hero and the panels.
-                  <br></br>
-                  <br></br>
-                  <strong>Images</strong>
-                  <br></br>
-                  The photographs come from Wikimedia Commons and are downloaded, cropped and encoded by a small
-                  build pipeline, so the site makes no external requests at runtime. Every photo is credited in
-                  the colophon at the bottom of the page.
-                  <br /><br />
                 </p>
                 <a
                   href="https://github.com/Erik-Sandqvist/flowers"
