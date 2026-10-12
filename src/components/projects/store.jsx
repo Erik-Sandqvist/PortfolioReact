@@ -137,7 +137,7 @@ const Store = () => {
         </Link>
 
         <Link
-          to="/projects/keylinx"
+          to="/projects/flowers"
           className="btn btn-outline btn-secondary flex items-center gap-2 md:min-w-64 min-w-32"
         >
           Next Project

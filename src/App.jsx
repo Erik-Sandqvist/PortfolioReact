@@ -20,6 +20,7 @@ import Keylinx from './components/projects/Keylinx.jsx';
 import Fandf from './components/projects/fandf.jsx';
 import Expensetracker from './components/projects/expensetracker.jsx';
 import Store from './components/projects/store.jsx';
+import Flowers from './components/projects/flowers.jsx';
 import Patches from './components/projects/patches';
 import Covers from './components/projects/covers';
 import Nocco from './components/projects/nocco.jsx';
@@ -153,6 +154,7 @@ export default function App() {
           <Route path="/projects/fandf" element={<Fandf />} />
           <Route path="/projects/expensetracker" element={<Expensetracker />} />
           <Route path="/projects/store" element={<Store />} />
+          <Route path="/projects/flowers" element={<Flowers />} />
           <Route path="/illusion" element={<Illusion />} />
           <Route path="/projects/patches" element={<Patches />} />
           <Route path="/projects/covers" element={<Covers />} />
