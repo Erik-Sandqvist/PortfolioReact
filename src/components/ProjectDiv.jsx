@@ -1,19 +1,20 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "../index.css";
 import { asset } from "../utils/asset";
 
 export const ProjectDiv = () => {
   const containerRef = useRef(null);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    const cards = containerRef.current.querySelectorAll("[data-card]");
+    const cards = containerRef.current.querySelectorAll("[data-card]:not(.card-fade--in)");
     cards.forEach((el, i) => {
       setTimeout(() => {
         el.classList.add("card-fade--in");
       }, 120 * i);
     });
-  }, []);
+  }, [showAll]);
 
   return (
     <div ref={containerRef} className="flex flex-wrap justify-center gap-6 w-full">
@@ -118,12 +119,12 @@ export const ProjectDiv = () => {
           </span>
         </div>
       </Link>
- 
+
       <Link
         to="/projects/store"
         data-card
         style={{ "--from": "-50px" }}
-        className="card-fade group relative w-full md:w-[28%] h-80 rounded-lg overflow-hidden shadow-lg focus:outline-none focus:ring-2 focus:ring-primary mb-3"
+        className="card-fade group relative w-full md:w-[28%] h-80 rounded-lg overflow-hidden shadow-lg focus:outline-none focus:ring-2 focus:ring-primary"
       >
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
@@ -138,6 +139,23 @@ export const ProjectDiv = () => {
           </span>
         </div>
       </Link>
+
+      {showAll && (
+        <>
+          {/* Add new project cards here – they are revealed by the Show more button */}
+        </>
+      )}
+
+      <div className="relative w-full flex justify-center mb-3">
+        <button
+          type="button"
+          onClick={() => setShowAll((prev) => !prev)}
+          aria-expanded={showAll}
+          className="btn btn-outline btn-secondary"
+        >
+          {showAll ? "Show less" : "Show more"}
+        </button>
+      </div>
 
     </div>
   );
